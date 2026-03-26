@@ -3,6 +3,7 @@ title: Agent Workflow in Practice
 description: A practical workflow for planning, execution, and review with AI agents.
 date: 2026-03-01
 draft: false
+translationKey: agent-workflow-in-practice
 tags:
   - agents
   - best-practices

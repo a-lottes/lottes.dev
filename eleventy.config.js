@@ -143,6 +143,28 @@ module.exports = function (eleventyConfig) {
         return collection.find(post => post.fileSlug === slug);
     });
 
+    // Resolve translated blog post URL by shared translation key.
+    eleventyConfig.addFilter("findPostTranslationUrl", function findPostTranslationUrl(collection = [], currentUrl = "", targetLang = "") {
+        if (!Array.isArray(collection) || !currentUrl || !targetLang) {
+            return currentUrl;
+        }
+
+        const currentPost = collection.find(post => post && post.url === currentUrl);
+        const translationKey = currentPost && currentPost.data ? currentPost.data.translationKey : undefined;
+        if (!translationKey) {
+            return currentUrl;
+        }
+
+        const translatedPost = collection.find(post => {
+            return post
+                && post.data
+                && post.data.lang === targetLang
+                && post.data.translationKey === translationKey;
+        });
+
+        return translatedPost && translatedPost.url ? translatedPost.url : currentUrl;
+    });
+
     // Customize Markdown library settings:
     eleventyConfig.amendLibrary("md", mdLib => {
         mdLib.use(markdownItAnchor, {

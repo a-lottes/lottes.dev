@@ -3,6 +3,7 @@ title: Guardrails pour applications IA
 description: Mettre en place des garde-fous pour des systemes IA plus fiables et maitrisables.
 date: 2026-02-04
 draft: false
+translationKey: guardrails-for-ai-applications
 tags:
   - applications-ia
   - guardrails

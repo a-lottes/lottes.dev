@@ -3,6 +3,7 @@ title: Guardrails fur KI-Applikationen
 description: Wie Schutzmechanismen KI-Systeme sicherer, nachvollziehbarer und robuster machen.
 date: 2026-02-04
 draft: false
+translationKey: guardrails-for-ai-applications
 tags:
   - ki-applikationen
   - guardrails

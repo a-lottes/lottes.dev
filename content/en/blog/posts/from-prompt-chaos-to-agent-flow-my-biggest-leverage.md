@@ -3,6 +3,7 @@ title: From Prompt Chaos to Agent Flow My Biggest Leverage Building This App
 description: Why moving from manual prompt juggling to agentic end-to-end workflows significantly improved my development efficiency.
 date: 2026-03-26
 draft: false
+translationKey: from-prompt-chaos-to-agent-flow
 tags:
   - agents
   - workflow

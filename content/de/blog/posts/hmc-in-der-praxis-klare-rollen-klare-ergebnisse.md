@@ -3,6 +3,7 @@ title: HMC in der Praxis klare Rollen, klare Ergebnisse
 description: Wie Mensch-Maschine-Kollaboration in Teams planbar und verlasslich wird.
 date: 2026-01-10
 draft: false
+translationKey: hmc-clear-roles-clear-outcomes
 tags:
   - hmc
   - zusammenarbeit

@@ -3,6 +3,7 @@ title: Du chaos de prompts au flux agentique mon plus grand levier sur cette app
 description: Pourquoi le passage d'un multi-prompting manuel a des workflows agentiques de bout en bout a nettement ameliore mon efficacite.
 date: 2026-03-26
 draft: false
+translationKey: from-prompt-chaos-to-agent-flow
 tags:
   - agents
   - workflow

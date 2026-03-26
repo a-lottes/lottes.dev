@@ -16,6 +16,16 @@
           {% if not (lang == page.lang) %}
             <li>
               {% set url = page.url | locale_url(lang) %}
+              {% set isBlogPage = page.url.indexOf('/blog/') != -1 %}
+              {% if isBlogPage and (page.url.indexOf('/blog/tags/') != -1 or page.url.indexOf('/blog/page/') != -1 or page.url.endsWith('/blog/')) %}
+                {% set url = page.url.replace('/' + page.lang + '/', '/' + lang + '/') %}
+              {% endif %}
+              {% if isBlogPage and collections and collections.posts %}
+                {% set translatedPostUrl = collections.posts | findPostTranslationUrl(page.url, lang) %}
+                {% if translatedPostUrl != page.url %}
+                  {% set url = translatedPostUrl %}
+                {% endif %}
+              {% endif %}
               <a class="fr-translate__language fr-nav__link" {% if not (page.url == url) %}href="{{ url }}"
                  {% else %}aria-disabled="{{ page.url == url }}" {% endif %}lang="{{ lang }}" hreflang="{{ lang }}">
                 {{ lang | upper }} - {{ "lang_name" | i18n({}, lang) }}

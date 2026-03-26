@@ -3,6 +3,7 @@ title: HMC in Practice Clear Roles, Clear Outcomes
 description: How human-machine collaboration becomes predictable and trustworthy in teams.
 date: 2026-01-10
 draft: false
+translationKey: hmc-clear-roles-clear-outcomes
 tags:
   - hmc
   - collaboration

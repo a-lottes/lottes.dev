@@ -3,6 +3,7 @@ title: Vom Prompt-Chaos zum Agent-Flow mein groesster Hebel beim Bau dieser App
 description: Warum ich von manueller Prompt-Jonglage zu agentischen End-to-End-Workflows gewechselt bin und dadurch deutlich effizienter arbeite.
 date: 2026-03-26
 draft: false
+translationKey: from-prompt-chaos-to-agent-flow
 tags:
   - agenten
   - workflow
