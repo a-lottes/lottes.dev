@@ -2,7 +2,7 @@
   {% set navigationLinks = collections.all | filterCollectionLang | eleventyNavigation %}
   <ul class="fr-nav__list">
     {% for link in navigationLinks %}
-      {% set linkUrl = link.url | locale_url(lang) %}
+      {% set linkUrl = link.url or link.externalUrl %}
       <li class="fr-nav__item">
         {% if not link.children | length %}
           <a class="fr-nav__link" href="{{ linkUrl }}"{% if linkUrl == page.url %} aria-current="page"{% endif %}>
@@ -16,7 +16,7 @@
             <ul class="fr-menu__list">
               {% for sublink in link.children %}
                 <li>
-                  {% set sublinkUrl = sublink.url | locale_url(lang) or sublink.externalUrl %}
+                  {% set sublinkUrl = sublink.url or sublink.externalUrl %}
                   <a class="fr-nav__link"
                      href="{{ sublinkUrl }}" {% if sublink.externalUrl %} target="_blank" rel="noopener"{% endif %}{% if sublinkUrl == page.url %} aria-current="page"{% endif %}>
                     {{ sublink.title }}

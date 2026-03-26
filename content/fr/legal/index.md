@@ -1,36 +1,39 @@
 ---
-title: Exemple de mentions légales
+title: Mentions légales
 layout: layouts/page.njk
-description: Mentions légales à compléter
-slugOverride: mentions legales
+description: Informations légales de ce site.
+slugOverride: mentions-legales
 showBreadcrumb: true
 ---
-## Identification de l'éditeur
 
-[ A COMPLETER ]
+## Éditeur du site
 
-## Directeur de la publication
+Andreas Lottes  
+Rehbachstr. 95  
+66125 Saarbrucken  
+Allemagne
 
-[ A COMPLETER ]
+E-mail : <andreas@lottes.dev>
 
-## Prestataire d'hébergement
+## Responsable de la publication
 
-[ A COMPLETER ]
+Andreas Lottes  
+Rehbachstr. 95  
+66125 Saarbrucken  
+Allemagne
 
-## Crédits
+## TVA
 
-- [1F3DB.svg](https://openmoji.org/data/color/svg/1F3DB.svg) par [Martin Wehl](https://openmoji.org/library/#author=Martin%20Wehl) sous licence [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0>).
+Ce site ne dispose pas de numéro de TVA intracommunautaire.
 
-[ A COMPLETER ]
+## Champ d'application
 
-## Code source du site
-
-[ A COMPLETER ]
+Ces mentions légales s'appliquent au site accessible sous le domaine `www.lottes.dev` ainsi qu'à ses versions linguistiques.
 
 ## Accessibilité
 
 [Voir la déclaration d'accessibilité](/fr/accessibilite/).
 
-## Traitement des données à caractère personnel
+## Données personnelles
 
-[Voir les informations concernant les cookies utilisées sur ce site](/fr/donnees-personnelles/).
+[Voir les informations concernant les cookies utilisés sur ce site](/fr/donnees-personnelles/).

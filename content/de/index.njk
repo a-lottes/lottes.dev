@@ -1,0 +1,82 @@
+---
+title: Erfahrungen mit Agenten, KI-Applikationen und HMC
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Startseite
+  order: 1
+numberOfLatestPostsToShow: 3
+---
+<div class="fr-py-6w fr-background-alt--blue-cumulus">
+  <div class="fr-container">
+    <div class="fr-grid-row fr-grid-row--center">
+      <div class="fr-col-10 fr-col-md-6">
+        <h1>{{ title }}</h1>
+        <p class="fr-text--lead">
+          Auf diesem Blog teile ich persönliche Erfahrungen aus der Arbeit mit Agenten, KI-Applikationen und HMC.
+          Du findest hier praxisnahe Learnings, erprobte Workflows und Best Practices für Teams, die KI
+          verantwortungsvoll und wirksam in ihren Alltag integrieren möchten.
+        </p>
+      </div>
+      <div class="fr-hidden fr-unhidden-md fr-col-md-4">
+        <img src="/icons/1F3DB.svg" alt="" width="256">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fr-container fr-my-6w">
+  <div class="fr-grid-row fr-grid-row--gutters">
+    <div class="fr-col-12 fr-col-md-4">
+      <div class="fr-card fr-enlarge-link">
+        <div class="fr-card__body">
+          <h2 class="fr-card__title"><a href="/{{ lang }}/blog/">Agenten in der Praxis</a></h2>
+          <p class="fr-card__desc">Konkrete Erfahrungsberichte zu Planung, Prompting, Tool-Nutzung und Qualitätssicherung in agentischen Workflows.</p>
+        </div>
+      </div>
+    </div>
+    <div class="fr-col-12 fr-col-md-4">
+      <div class="fr-card fr-enlarge-link">
+        <div class="fr-card__body">
+          <h2 class="fr-card__title"><a href="/{{ lang }}/blog/">KI-Applikationen bauen</a></h2>
+          <p class="fr-card__desc">Von der Idee bis zum Betrieb: Architektur, Guardrails, Datenqualitat und observierbare Betriebsprozesse.</p>
+        </div>
+      </div>
+    </div>
+    <div class="fr-col-12 fr-col-md-4">
+      <div class="fr-card fr-enlarge-link">
+        <div class="fr-card__body">
+          <h2 class="fr-card__title"><a href="/{{ lang }}/blog/">HMC und Best Practices</a></h2>
+          <p class="fr-card__desc">Mensch-Maschine-Kollaboration mit klarem Rollenverstandnis, guter Governance und reproduzierbaren Ergebnissen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fr-container fr-my-6w">
+  <h2>Was dich hier erwartet</h2>
+  <p>
+    Der Fokus liegt auf umsetzbarem Wissen statt Buzzwords: kurze Leitfaden, fundierte Analysen,
+    ehrliche Retrospektiven und Vorlagen, die du direkt in Projekten nutzen kannst.
+  </p>
+
+  {% set postsCount = collections.posts | filterCollectionLang | length %}
+  {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+  <h2>Neueste {{ latestPostsCount }} Beitrag{% if latestPostsCount != 1 %}e{% endif %}</h2>
+
+  {% set postslist = collections.posts | filterCollectionLang | head(-1 * numberOfLatestPostsToShow) | reverse %}
+  {% set postslistCounter = postsCount %}
+  {% include "postslist.njk" %}
+
+  {% set morePosts = postsCount - numberOfLatestPostsToShow %}
+  {% if morePosts > 0 %}
+    <p>{{ morePosts }} weitere Beitrag{% if morePosts != 1 %}e{% endif %} finden Sie im <a href="/{{ lang }}/blog/">Archiv</a>.</p>
+  {% endif %}
+
+  {# List every content page in the project #}
+  {#
+  <ul>
+    {%- for entry in collections.all %}
+    <li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
+    {%- endfor %}
+  </ul>
+  #}
+</div>

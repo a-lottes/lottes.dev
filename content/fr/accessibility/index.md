@@ -1,106 +1,66 @@
 ---
-title: Exemple de déclaration d’accessibilité
-layout: layouts/post.njk
-description: Déclaration d’accessibilité à compléter
+title: Déclaration d’accessibilité
+layout: layouts/page.njk
+description: Informations sur l’accessibilité de ce site et sur les limitations actuellement connues.
 slugOverride: accessibilite
 showBreadcrumb: true
 ---
 
-<span class="aModifier">[Nom de l’entité]</span> s’engage à rendre ses sites internet, intranet, extranet et ses progiciels accessibles (et ses applications mobiles et mobilier urbain numérique) conformément à l’article 47 de la loi n°2005-102 du 11 février 2005.
-
-À cette fin, <span class="aModifier">[Nom de l’entité]</span> met en œuvre la stratégie et les actions suivantes :
-
-- Schéma pluriannuel de mise en accessibilité 2022-2024 <span class="aModifier">[url]</span> ;
-- Actions réalisées en 2020-2021 <span class="aModifier">[url]</span> ;
-- Plan d’actions 2022-2024 <span class="aModifier">[url]</span>.
-
-Cette déclaration d’accessibilité s’applique à <span class="aModifier">[www.nomdusite.gouv.fr]</span>.
+Je gère ce site en tant que personne individuelle et je travaille en continu pour rendre les contenus aussi accessibles que possible.
 
 ## État de conformité
 
-<span class="aModifier">[Nom du site (url du site)]</span> est <strong class="aModifier">non/partiellement/totalement</strong> conforme avec le référentiel général d’amélioration de l’accessibilité (RGAA), version 4 en raison des non-conformités et des dérogations énumérées ci-dessous.
+Ce site est actuellement **partiellement conforme** aux exigences d’accessibilité.
 
-### Résultats des tests
-
-L’audit de conformité réalisé par <span class="aModifier">[nom de l’entité qui a réalisé l’audit]</span> révèle que :
-
-- <span class="aModifier">[nn]</span>% des critères du RGAA version 4 sont respectés ;
-- (Facultatif) Le taux moyen de conformité du site s’élève à <span class="aModifier">[nn]</span>% ;
-- (Facultatif) Accès à la grille d’audit RGAA <span class="aModifier">[url]</span> pour télécharger la grille d’audit.
+Cette appréciation repose sur une auto-évaluation éditoriale des pages principales ainsi que sur des vérifications techniques de base dans des navigateurs récents.
 
 ## Contenus non accessibles
 
-### Non-conformités
+Malgré les améliorations en cours, les obstacles suivants peuvent encore apparaître :
 
-Exemples :
+- Certains contrastes de couleurs peuvent être insuffisants dans des composants utilisant des fonds alternatifs.
+- Tous les documents liés ou médias externes ne sont pas encore disponibles dans des formats totalement accessibles.
+- Certains liens ou titres, notamment dans des contenus plus anciens, peuvent manquer de précision.
+- Certains contenus dynamiques peuvent ne pas être restitués de manière identique selon les combinaisons navigateur et lecteur d’écran.
 
-- La vidéo de présentation de la demande d’aide n’a pas de transcription. Pour toute question sur cette démarche, vous pouvez contacter le NN NN NN NN NN. La version 2020 respectera les critères du RGAA sur les alternatives texte pour les documents multimédias.
-- Le bouton d’envoi du formulaire de déclaration contient un intitulé « Retour » au lieu de « Envoi ». Cette erreur sera corrigée avant le 31 mars 2020
-- La connexion au compte personnel contient une vérification que vous n’êtes pas un robot avec un captcha visuel. Il est possible d’effectuer sa démarche par téléphone ou au guichet pour les personnes empêchées d’accéder à leur compte...
+## Améliorations en cours
 
-### Dérogations pour charge disproportionnée
+Les actions suivantes sont priorisées :
 
-Exemple :
-Les archives des comptes rendus des séances du conseil municipal jusqu’en 2010 sont au format PDF image. Il est cependant possible d’en demander un exemplaire texte par courriel
-
-### Contenus non soumis à l’obligation d’accessibilité
-
-Exemples :
-
-- Cartes de l’Institut géographique national associées à l’annuaire
-- Reproduction du manuscrit du Moyen-Âge...
+- Revoir systématiquement les contrastes et les états de focus, puis les harmoniser.
+- Améliorer la qualité descriptive des liens et des titres dans les contenus existants.
+- Compléter ou affiner les textes alternatifs des images et visuels pertinents.
+- Tester régulièrement la navigation clavier et la restitution par lecteurs d’écran dans les composants récurrents.
 
 ## Établissement de cette déclaration d’accessibilité
 
-Cette déclaration a été établie le <span class="aModifier">[JJ/MM/AAAA]</span>.
-Elle a été mise à jour le <span class="aModifier">[JJ/MM/AAAA]</span>.
+Cette déclaration a été établie le **26/03/2026** et mise à jour le **26/03/2026**.
 
-### Technologies utilisées pour la réalisation du site
+Les vérifications ont porté en particulier sur :
 
-- HTML5
-- CSS
-- ...
-
-### Environnement de test
-
-Les vérifications de restitution de contenus ont été réalisées sur la base de la combinaison fournie par la base de référence du RGAA, avec les versions suivantes :
-
-- Firefox et NVDA
-- Safari et VoiceOver
-- ...
-
-### Outils pour évaluer l’accessibilité
-
-- color contrast analyzer
-- inspecteur de code
-- ...
-
-### Pages du site ayant fait l’objet de la vérification de conformité
-
-- page d’accueil <span class="aModifier">[url]</span>
-- page contact <span class="aModifier">[url]</span>
-- page mentions légales <span class="aModifier">[url]</span>
-- page accessibilité <span class="aModifier">[url]</span>
-- page plan du site <span class="aModifier">[url]</span>
-- page d’aide <span class="aModifier">[url]</span>
-- ...
+- la page d’accueil,
+- la page d’index du blog et les articles,
+- les éléments de contact,
+- la page d’accessibilité.
 
 ## Retour d’information et contact
 
-Si vous n’arrivez pas à accéder à un contenu ou à un service, vous pouvez contacter le responsable de <span class="aModifier">[nom du site]</span> pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme.
+Si vous rencontrez un problème d’accessibilité sur ce site ou si vous avez besoin d’un contenu dans un format plus accessible, merci de me contacter.
 
-- Envoyer un message <span class="aModifier">[url du formulaire en ligne]</span> ;
-- Contacter <span class="aModifier">[Nom de l’entité responsable du service en ligne et coordonnées]</span>.
+- E-mail : <andreas@lottes.dev>
+- Page de contact : [/fr/contact/](/fr/contact/)
+
+Je traite les signalements rapidement et je m’efforce d’apporter une réponse claire ainsi qu’une solution praticable.
 
 ## Voies de recours
 
-Si vous constatez un défaut d’accessibilité vous empêchant d’accéder à un contenu ou une fonctionnalité du site, que vous nous le signalez et que vous ne parvenez pas à obtenir une réponse de notre part, vous êtes en droit de faire parvenir vos doléances ou une demande de saisine au Défenseur des droits.
+Si, après m’avoir signalé un défaut d’accessibilité, vous n’obtenez pas de réponse satisfaisante, vous pouvez saisir le Défenseur des droits.
 
-Plusieurs moyens sont à votre disposition :
+Plusieurs moyens sont possibles :
 
-- Écrire un message au Défenseur des droits
-- Contacter le délégué du Défenseur des droits dans votre région
-- Envoyer un courrier par la poste (gratuit, ne pas mettre de timbre)
+- Écrire un message au Défenseur des droits,
+- Contacter le délégué du Défenseur des droits dans votre région,
+- Envoyer un courrier postal (sans timbre) à l’adresse suivante :
   Défenseur des droits
   Libre réponse 71120
   75342 Paris CEDEX 07

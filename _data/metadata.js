@@ -1,6 +1,6 @@
 module.exports = {
-    title: "Nom du site / service",
-    url: "https://url_du_site.gouv.fr/",
+    title: "Agentic and Generative AI",
+    url: "https://www.lottes.dev/",
     newsletter: [
         {
             url: "",
@@ -10,20 +10,20 @@ module.exports = {
     ],
     facebook_url: "",
     mastodon_url: "",
-    twitter_url: "",
+    twitter_url: "https://twitter.com/a_Lottes",
     instagram_url: "",
-    linkedin_url: "",
+    linkedin_url: "https://www.linkedin.com/in/andreas-lottes/",
     youtube_url: "",
     peertube_url: "",
-    github_url: "",
+    github_url: "https://github.com/a-lottes",
     sourcehut_url: "",
     repository_url: "https://github.com/codegouvfr/eleventy-dsfr",
-    language: "fr",
-    description: "baseline - précisions sur l‘organisation",
+    language: "de",
+    description: "A New Era of Human-Machine Collaboration",
     author: {
-        name: "Nom du service",
-        email: "contact@nom.du.service.gouv.fr",
-        url: "https://url_du_service.gouv.fr/"
+        name: "Andreas Lottes",
+        email: "andreas@lottes.dev",
+        url: "https://www.lottes.dev/"
     },
-    service: "Nom de l’entité (ministère, secrétariat d‘état, gouvernement)"
+    service: "Tech Blog"
 }

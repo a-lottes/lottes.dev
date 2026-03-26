@@ -54,13 +54,15 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginBundle);
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
     eleventyConfig.addPlugin(EleventyI18nPlugin, {
-        defaultLanguage: "fr",
+        defaultLanguage: "de",
         errorMode: "allow-fallback"
     });
     eleventyConfig.addPlugin(i18n, {
         translations,
         fallbackLocales: {
-            "en": "fr"
+            "de": "en",
+            "en": "de",
+            "fr": "de"
         }
     });
     eleventyConfig.addPlugin(pluginCalendar);

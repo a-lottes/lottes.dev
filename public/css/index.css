@@ -138,6 +138,59 @@ div.fr-callout__text p {
 .fr-follow .fr-btn--sourcehut:before {
     -webkit-mask-image: url(/icons/logo/sourcehut.svg) !important;
     mask-image: url(/icons/logo/sourcehut.svg) !important;
+}  
+
+/* Replace the default DSFR logo mark with a custom image */
+.fr-logo:before,
+.fr-header__logo .fr-logo:before,
+.fr-footer__brand .fr-logo:before {
+    content: "" !important;
+    display: block !important;
+    width: clamp(8rem, 18vw, 12rem) !important;
+    height: auto !important;
+    aspect-ratio: 402 / 63 !important;
+    margin-bottom: 0.5rem !important;
+    background-color: transparent !important;
+    background-image: url("/img/logo_lottes.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: left center !important;
+    background-size: contain !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+}
+
+/* Header logo should be half the generic logo width */
+.fr-header__logo .fr-logo:before {
+    width: clamp(4rem, 9vw, 6rem) !important;
+}
+
+/* Replace the DSFR motto block under the logo */
+.fr-logo:after,
+.fr-header__logo .fr-logo:after,
+.fr-footer__brand .fr-logo:after {
+    content: "Agentic AI\AGen AI\Ahmc" !important;
+    display: block !important;
+    width: clamp(3rem, 8vw, 5.25rem) !important;
+    height: auto !important;
+    min-width: 0 !important;
+    padding-top: 0 !important;
+    margin-top: 0.25rem !important;
+    background-image: none !important;
+    white-space: pre-line !important;
+    font-family: "Times New Roman", Times, serif !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+    font-size: 0.7rem !important;
+    line-height: 0.85rem !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    color: #161616 !important;
+}
+
+:root[data-fr-theme="dark"] .fr-logo:after,
+:root[data-fr-theme="dark"] .fr-header__logo .fr-logo:after,
+:root[data-fr-theme="dark"] .fr-footer__brand .fr-logo:after {
+    color: #f5f5fe !important;
 }
 
 /* Custom */

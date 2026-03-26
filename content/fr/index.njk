@@ -1,5 +1,5 @@
 ---
-title: Un exemple de site institutionnel
+title: Retours d'experience sur les agents, les applications IA et la HMC
 layout: layouts/home.njk
 eleventyNavigation:
   key: Accueil
@@ -12,9 +12,9 @@ numberOfLatestPostsToShow: 3
       <div class="fr-col-10 fr-col-md-6">
         <h1>{{ title }}</h1>
         <p class="fr-text--lead">
-          Ce site statique, généré avec <a href="https://www.11ty.dev/" target="_blank" rel="noopener"><strong>eleventy</strong></a>,
-          utilise le <a href="https://www.systeme-de-design.gouv.fr/" target="_blank" rel="noopener"><strong>Système de Design de
-              l'État</strong></a>.
+          Ce blog partage des retours de terrain personnels sur les agents, les applications IA et la HMC.
+          Vous y trouverez des enseignements concrets, des workflows eprouves et des bonnes pratiques pour
+          integrer l'IA de maniere responsable et efficace.
         </p>
       </div>
       <div class="fr-hidden fr-unhidden-md fr-col-md-4">
@@ -24,18 +24,52 @@ numberOfLatestPostsToShow: 3
   </div>
 </div>
 <div class="fr-container fr-my-6w">
+  <div class="fr-grid-row fr-grid-row--gutters">
+    <div class="fr-col-12 fr-col-md-4">
+      <div class="fr-card fr-enlarge-link">
+        <div class="fr-card__body">
+          <h2 class="fr-card__title"><a href="/{{ lang }}/blog/">Agents en pratique</a></h2>
+          <p class="fr-card__desc">Retours concrets sur la planification, le prompting, l'usage des outils et les controles qualite.</p>
+        </div>
+      </div>
+    </div>
+    <div class="fr-col-12 fr-col-md-4">
+      <div class="fr-card fr-enlarge-link">
+        <div class="fr-card__body">
+          <h2 class="fr-card__title"><a href="/{{ lang }}/blog/">Construire des applications IA</a></h2>
+          <p class="fr-card__desc">De l'idee a l'exploitation: architecture, guardrails, qualite des donnees et observabilite.</p>
+        </div>
+      </div>
+    </div>
+    <div class="fr-col-12 fr-col-md-4">
+      <div class="fr-card fr-enlarge-link">
+        <div class="fr-card__body">
+          <h2 class="fr-card__title"><a href="/{{ lang }}/blog/">HMC et bonnes pratiques</a></h2>
+          <p class="fr-card__desc">Collaboration humain-machine avec des roles clairs, une gouvernance utile et des resultats repetables.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fr-container fr-my-6w">
+  <h2>Ce que vous trouverez ici</h2>
+  <p>
+    L'objectif est de privilegier le concret plutot que le buzz: guides courts, analyses detaillees,
+    retours d'experience sinceres et modeles reutilisables dans des projets reels.
+  </p>
+
   {% set postsCount = collections.posts | filterCollectionLang | length %}
   {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
   <h2>{% if latestPostsCount != 1 %}Les {{ latestPostsCount }} derniers articles{% else %}Le dernier article{% endif %}</h2>
 
-  {% set postslist = collections.posts | filterCollectionLang | head(-1 * numberOfLatestPostsToShow) %}
+  {% set postslist = collections.posts | filterCollectionLang | head(-1 * numberOfLatestPostsToShow) | reverse %}
   {% set postslistCounter = postsCount %}
   {% include "postslist.njk" %}
 
   {% set morePosts = postsCount - numberOfLatestPostsToShow %}
   {% if morePosts > 0 %}
     <p>{{ morePosts }} {% if morePosts != 1 %}articles supplémentaires peuvent être consultés{% else %}article supplémentaire peut être consulté{% endif %}
-      dans <a href="{{ "/blog" | locale_url }}">la documentation</a>.</p>
+      dans <a href="/{{ lang }}/blog/">la documentation</a>.</p>
   {% endif %}
 
   {# List every content page in the project #}
