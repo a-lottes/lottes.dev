@@ -1,151 +1,135 @@
-[![img](https://img.shields.io/badge/code.gouv.fr-publi%C3%A9-orange.svg)](https://code.gouv.fr/documentation/#quels-degres-douverture-pour-les-codes-sources)
-![build](https://img.shields.io/github/actions/workflow/status/codegouvfr/eleventy-dsfr/11ty-gh-pages.yml?label=deployed%20to%20gh-pages)
+# lottes.dev
 
-# eleventy-dsfr
+Statische, mehrsprachige Website (DE/EN/FR) auf Basis von [Eleventy](https://www.11ty.dev/) und [DSFR](https://www.systeme-de-design.gouv.fr/).
 
-`eleventy-dsfr` permet de déployer un site statique au
-[DSFR](https://www.systeme-de-design.gouv.fr/) avec le générateur
-[Eleventy](https://www.11ty.dev/).
+## Tech Stack
 
-Voir la démonstration sur [GitHub
-Pages](https://codegouvfr.github.io/eleventy-dsfr/fr/).
+- Eleventy 2
+- Nunjucks + Markdown
+- DSFR (Design System)
+- Pagefind (Suche)
+- Eleventy Navigation + Pagination
+- RSS/JSON Feed + ICS Kalender
 
-Pour d'autres exemples de réutilisation, cf. [Démonstration et
-réutilisations](#démonstration-et-réutilisations).
+## Projektziele
 
-![Screenshot of the website front page.](eleventy-dsfr.png)
+- Mehrsprachige Inhalte in Deutsch, Englisch und Franzoesisch
+- Saubere Navigation mit Sprachwechsel im Header
+- Blog inklusive Tags, Pagination und Feed
+- Deployment auf Netlify
 
-## Fonctionnalités
+## Schnellstart
 
-- **Style** :
-    - DSFR :
-        - Installation et mise à jour automatique via `npm`.
-        - [Voir les composants déjà implémentés](_includes/components)
-    - [Voir les mises en pages déjà implémentées](_includes/layouts)
-- **a11y et responsivity** : Respecte les recommandations du DSFR.
-- **i18n** : Prise en charge de l'internationalisation des textes et contenus via plusieurs filtres et le [système d'i18n d'Eleventy](https://www.11ty.dev/docs/i18n/).
-- **Navigation** : Utilise le [système de navigation d'Eleventy](https://www.11ty.dev/docs/plugins/navigation/) et gère la navigation de second niveau.
-- **Syntaxe markdown** : Améliorée via l'ajout de [conteneurs personnalisés](./markdown-custom-containers.js).
-- **Images** : Utilise l'[utilitaire d'image d'Eleventy](https://www.11ty.dev/docs/plugins/image/) pour traiter les images (par défaut pour certains composants, par exemple le composant [`card.njk`](_includes/components/card.njk)).
-- **Recherche** : Utilise [pagefind](https://pagefind.app/) pour la recherche.
-- **Pagination** : Utilise le [système de pagination d'Eleventy](https://www.11ty.dev/docs/pagination/) et gère la pagination de second niveau.
-- **Flux RSS** : Utilise le [plugin RSS d'Eleventy](https://www.11ty.dev/docs/plugins/rss/).
-- **Calendrier** : Utilise la bibliothèque [ics](https://www.npmjs.com/package/ics) pour générer un calendrier [`calendar.ics`](https://codegouvfr.github.io/eleventy-dsfr/calendar.ics) à la racine du site, ainsi que les événements `.ics` associés, à partir d'événements.
-- **Mesure d'audience** : Intègre la solution [matomo](public/js/matomo.js).
-- **Pages déjà générées** :
-    - Pages d'accueil, À propos, section Blog (en français et en anglais).
-    - Flux RSS pour Atom et JSON
-    - Plan du site et `sitemap.xml`
-    - Page non trouvée (404)
-    - Les pages obligatoires liées aux obligations légales : “accessibilité : non/partiellement/totalement conforme”, mentions légales, données personnelles et gestion des cookies.
+### Voraussetzungen
 
-## Prise en main
+- Node.js 20 empfohlen
+- npm
+
 ### Installation
 
-**Cloner le dépôt** :
-
 ```bash
-git clone https://github.com/codegouvfr/eleventy-dsfr.git my-site-name
-```
-
-**Naviguer dans le dossier** :
-
-```bash
-cd my-site-name
-```
-
-**Installer les dépendances** :
-
-```bash
+git clone https://github.com/a-lottes/lottes.dev.git
+cd lottes.dev
 npm install
 ```
 
-**Exécuter Eleventy** :
-
-Construire un livrable, indexé avec pagefind pour la recherche :
-
-```bash
-npm run build
-```
-
-L'exécuter sur le serveur de développement local :
+### Lokale Entwicklung
 
 ```bash
 npm start
 ```
 
-Ou exécuter un [mode de débogage](https://www.11ty.dev/docs/debugging/).
+### Build
 
-### Réutilisation
-
-- Modifier les fichiers [`_data/metadata.js`](_data/metadata.js) et [`_data/data.js`](_data/data.js) pour renseigner les informations du site.
-- Modifier le fichier [`package.json`](package.json) pour modifier les informations du dépôt.
-- Compléter les pages obligatoires : [`content/fr/accessibility`](content/fr/accessibility/index.md), [`content/fr/personal-data`](content/fr/personal-data/index.md), [`content/fr/legal`](content/fr/legal/index.md).
-
-### Développement
-
-- Modifier le fichier [`eleventy.config.js`](eleventy.config.js) pour configurer les paramètres d'Eleventy différemment.
-- Ajouter des composants du DSFR dans le dossier [`_includes/components`](_includes/components) et des [mises en page](https://www.11ty.dev/docs/layouts/) dans le
-  dossier [`_includes/layouts`](_includes/layouts).
-    - Ajouter de nouveaux conteneurs markdown dans le fichier [`markdown-custom-containers.js`](markdown-custom-containers.js).
-
-_[Voir aussi la documentation des composants](https://codegouvfr.github.io/eleventy-dsfr/fr/blog/tags/composant/)_
-
-- Ajouter des chaînes de caractères localisées dans le dossier `_data/i18n/[lang]/index.js`.
-    - Pour ajouter une nouvelle traduction, ajouter un dossier `[lang]` dans [`content`](content), un nouveau fichier `_data/i18n/[lang]/index.js` et l'inclure dans [`_data/i18n/index.js`](_data/i18n/index.js).
-- Ajouter des styles personnalisés et des images dans le dossier [`public`](public).
-    - Celui-ci sera copié tel quel dans le dossier de sortie. Cela signifie que `./public/css/*` persistera dans `./_site/css/*` après la construction du livrable.
-- Compléter le [README](README.md) et la [documentation](content/fr/blog/posts). 😀
-
-### Ajout de contenu
-
-_[Voir la documentation des fonctionnalités et du Markdown](https://codegouvfr.github.io/eleventy-dsfr/fr/blog/tags/contenu/)_
-
-### Déploiement
-
-- Voir un [exemple de worklow de déploiement sur GitHub Pages](https://github.com/codegouvfr/eleventy-dsfr/blob/gh-pages/.github/workflows/11ty-gh-pages.yml) sur la branche `gh-pages`.
-
-En cas d'erreur lors du build :
 ```bash
-Error: Get Pages site failed
-Error: HttpError: Not Found
+npm run build
 ```
-Essayer [cette configuration](https://stackoverflow.com/a/73967433).
-- _[OPTIONNEL]_ [Configurer la redirection](https://www.11ty.dev/docs/i18n/#distinct-urls-using-implied-default-language)
-  de toutes les URLs des pages dont la langue est celle par défaut.
 
-## Documentation
+Build-Output liegt in `_site/`.
 
-La suite de la documentation (composants, fonctionnalités) est disponible dans [`content/fr/blog/posts`](content/fr/blog/posts) ou directement sur le [site de démonstration](https://codegouvfr.github.io/eleventy-dsfr/fr/blog).
+## NPM Scripts
 
-## Démonstration et réutilisations
+- `npm start`: lokaler Dev-Server
+- `npm run build`: Produktionsbuild (inkl. `postbuild`)
+- `npm run debug`: Eleventy Debug-Ausgabe
+- `npm run debugstart`: Dev-Server mit Debug-Ausgabe
+- `npm run benchmark`: Eleventy Benchmark-Ausgabe
 
-Pour une démonstration, voir la [GitHub Pages](https://codegouvfr.github.io/eleventy-dsfr/fr/) correspondante.
+## Wichtige Verzeichnisse
 
-- [Site de la mission logiciels libres de la DINUM](https://code.gouv.fr) (code source : https://github.com/codegouvfr/codegouvfr-website).
-- [Site du cadre de cohérence technique du MI](https://dnum-mi.github.io/cct-mi/) (code source : https://github.com/dnum-mi/cct-mi)
-- [Site de documentation pour cartes.gouv.fr](https://ignf.github.io/cartes.gouv.fr-documentation/) (code source : https://github.com/IGNF/cartes.gouv.fr-documentation)
-- [Partie blog du site de DiaLog](https://dialog.beta.gouv.fr/blog/fr/) (code source : https://github.com/MTES-MCT/dialog/tree/main/blog)
-- [Site de la start-up Médiation Logement](https://mediationlogement.beta.gouv.fr/) (code source : https://github.com/betagouv/mediation-logement)
-- [Portail du BARRI du CISIRH](https://cisirh.github.io/portail-barri/fr/) (code source : https://github.com/CISIRH/portail-barri)
-- [Site du service Fonds de cartes](https://fab-geocommuns.github.io/carte-facile-site/) (code source : https://github.com/fab-geocommuns/carte-facile-site)
-- [Site de la MiNumEco](https://ecoresponsable.numerique.gouv.fr/) (code source : https://github.com/DISIC/MiNumEco)
+- `content/`: Seiten und Blog-Inhalte pro Sprache
+- `_data/`: globale Daten, Metadaten, i18n-Strings
+- `_includes/`: Layouts, Templates und Komponenten
+- `public/`: statische Assets (CSS, JS, Bilder, Icons)
+- `_site/`: generierter Output
 
-## Contribution
+## Mehrsprachigkeit
 
-Les contributions ponctuelles peuvent être acceptées, mais le dépôt n'est plus activement maintenu.
+### Sprachinhalte
 
-## Licence
+- DE: `content/de/`
+- EN: `content/en/`
+- FR: `content/fr/`
 
-Le dépôt est publié sous licence MIT pour le code et sous licence
-Etalab 2.0 pour les autres contenus.
+### Uebersetzungen fuer UI-Texte
 
-Il est maintenu par la [mission logiciels
-libres](https://code.gouv.fr/) de la DINUM.
+- `_data/i18n/de/index.js`
+- `_data/i18n/en/index.js`
+- `_data/i18n/fr/index.js`
 
-### Crédits images
+### Sprachwechsel bei Blogposts
 
-- [1F3DB.svg](public/icons/1F3DB.svg) par [Martin
-  Wehl](https://openmoji.org/library/#author=Martin%20Wehl) sous
-  licence [CC BY-SA
-  4.0](https://creativecommons.org/licenses/by-sa/4.0>).
+Fuer korrekte Zuordnung derselben Artikel in unterschiedlichen Sprachen wird `translationKey` im Frontmatter verwendet.
+
+Beispiel:
+
+```yaml
+translationKey: agent-workflow-in-practice
+```
+
+Wenn ein Artikel keine Uebersetzung hat, ist der Sprachlink im Header auf der Zielsprache deaktiviert.
+
+## Deployment (Netlify)
+
+Die Netlify-Konfiguration ist in `netlify.toml` hinterlegt:
+
+- Build Command: `npm run build`
+- Publish Directory: `_site`
+- Node Version: `20`
+
+Wichtig: Im Netlify UI darf Publish Directory nicht auf `public` stehen, sonst wird nur die Asset-Struktur statt der generierten Website ausgeliefert.
+
+## Content-Pflege
+
+### Neue Seite anlegen
+
+1. Datei im passenden Sprachordner unter `content/{lang}/...` erstellen.
+2. Frontmatter setzen (`title`, `layout`, optional `eleventyNavigation`).
+3. Bei Navigationsseiten `eleventyNavigation` sauber pflegen.
+
+### Neuen Blogpost anlegen
+
+1. Datei in `content/{lang}/blog/posts/` anlegen.
+2. Frontmatter mit `title`, `description`, `date`, `tags` setzen.
+3. Bei mehrsprachigen Pendants den gleichen `translationKey` verwenden.
+
+## Troubleshooting
+
+### Sprachwechsel zeigt falsche oder deaktivierte Blog-Links
+
+- Pruefen, ob die betroffenen Posts denselben `translationKey` nutzen.
+- Pruefen, ob alle Sprachvarianten im passenden Ordner existieren.
+
+### Pagefind meldet alte/unerwartete URLs
+
+In seltenen Faellen liegen alte Dateien noch in `_site/`.
+
+```bash
+rm -rf _site
+npm run build
+```
+
+## Lizenz
+
+- Code: MIT
+- Inhalte/Assets: siehe Dateien unter `LICENSES/`
