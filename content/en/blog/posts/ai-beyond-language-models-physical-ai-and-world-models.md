@@ -2,7 +2,7 @@
 title: "AI Beyond Language Models: World Models, Embodied Systems, and Physical AI"
 description: A practical way to categorize modern AI systems beyond LLMs, from perception and simulation to action in the physical world.
 date: 2026-05-14
-draft: true
+draft: false
 translationKey: ai-beyond-language-models-physical-ai-and-world-models
 tags:
   - ai-models

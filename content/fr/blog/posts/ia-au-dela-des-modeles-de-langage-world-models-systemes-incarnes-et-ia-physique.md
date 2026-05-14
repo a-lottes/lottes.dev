@@ -2,7 +2,7 @@
 title: "IA au-dela des modeles de langage: World Models, systemes incarnes et IA physique"
 description: Une categorisation pratique des systemes IA modernes au-dela des LLMs, de la perception et la simulation jusqu'a l'action dans le monde physique.
 date: 2026-05-14
-draft: true
+draft: false
 translationKey: ai-beyond-language-models-physical-ai-and-world-models
 tags:
   - modeles-ia

@@ -2,7 +2,7 @@
 title: "KI jenseits von Sprachmodellen: World Models, Embodied Systems und Physical AI"
 description: Eine praxisnahe Kategorisierung moderner KI-Systeme jenseits von LLMs, von Wahrnehmung und Simulation bis zu Handlungen in der physischen Welt.
 date: 2026-05-14
-draft: true
+draft: false
 translationKey: ai-beyond-language-models-physical-ai-and-world-models
 tags:
   - ki-modelle
