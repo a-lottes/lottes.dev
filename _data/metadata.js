@@ -17,7 +17,7 @@ module.exports = {
     peertube_url: "",
     github_url: "https://github.com/a-lottes",
     sourcehut_url: "",
-    repository_url: "https://github.com/codegouvfr/eleventy-dsfr",
+    repository_url: "https://github.com/a-lottes/lottes.dev",
     language: "de",
     description: "A New Era of Human-Machine Collaboration",
     author: {

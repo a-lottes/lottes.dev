@@ -1,12 +1,13 @@
 # lottes.dev
 
-Statische, mehrsprachige Website (DE/EN/FR) auf Basis von [Eleventy](https://www.11ty.dev/) und [DSFR](https://www.systeme-de-design.gouv.fr/).
+Statische, mehrsprachige Website (DE/EN/FR) auf Basis von [Eleventy](https://www.11ty.dev/) mit eigenem, schlankem Design.
 
 ## Tech Stack
 
 - Eleventy 2
 - Nunjucks + Markdown
-- DSFR (Design System)
+- Eigenes CSS (Design-Tokens, Light/Dark), keine CSS-Frameworks
+- Inter + Source Serif 4 (selbst gehostet via Fontsource)
 - Pagefind (Suche)
 - Eleventy Navigation + Pagination
 - RSS/JSON Feed + ICS Kalender
@@ -62,6 +63,21 @@ Build-Output liegt in `_site/`.
 - `_includes/`: Layouts, Templates und Komponenten
 - `public/`: statische Assets (CSS, JS, Bilder, Icons)
 - `_site/`: generierter Output
+
+## Design
+
+Das CSS liegt in `public/css/` und wird von `_includes/layouts/base.njk` inline gebundelt:
+
+- `tokens.css`: Design-Tokens (Farben, Fonts, Abstände) inkl. Light/Dark
+- `fonts.css`: `@font-face` für die selbst gehosteten Schriften
+- `base.css`: Reset und Grundelemente
+- `layout.css`: Layout-Primitives (`.container`, `.grid`, `.cluster`, `.hero`)
+- `prose.css`: Artikeltypografie (`.prose`)
+- `components.css`: Header, Nav, Cards, Footer usw.
+
+JavaScript in `public/js/` (vanilla, ohne Dependencies): `theme.js` (Light/Dark/System-Toggle),
+`nav.js` (Menüs und Sprachwechsler), `network.js` (animiertes Netzwerk im Hero der Startseiten,
+aktiviert über `heroCanvas: true` im Frontmatter).
 
 ## Mehrsprachigkeit
 

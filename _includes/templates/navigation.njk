@@ -1,24 +1,26 @@
-<nav class="fr-nav" id="navigation-494" role="navigation" aria-label="{{ "main_menu" | i18n }}">
+{# Included twice (desktop bar + mobile panel); navScope keeps ids unique. #}
+{% from "components/icon.njk" import icon %}
+{% set scope = navScope or "main" %}
+<nav class="site-nav" role="navigation" aria-label="{{ "main_menu" | i18n }}">
   {% set navigationLinks = collections.all | filterCollectionLang | eleventyNavigation %}
-  <ul class="fr-nav__list">
+  <ul class="site-nav__list">
     {% for link in navigationLinks %}
       {% set linkUrl = link.url or link.externalUrl %}
-      <li class="fr-nav__item">
+      <li>
         {% if not link.children | length %}
-          <a class="fr-nav__link" href="{{ linkUrl }}"{% if linkUrl == page.url %} aria-current="page"{% endif %}>
+          <a class="site-nav__link" href="{{ linkUrl }}"{% if linkUrl == page.url %} aria-current="page"{% endif %}>
             {{ link.title }}
           </a>
         {% else %}
-          <button class="fr-nav__btn" aria-expanded="false" aria-controls="menu-{{ loop.index }}">
-            {{ link.title }}
-          </button>
-          <div class="fr-collapse fr-menu" id="menu-{{ loop.index }}">
-            <ul class="fr-menu__list">
+          <div class="disclosure">
+            <button class="disclosure__button" aria-expanded="false" aria-controls="{{ scope }}-menu-{{ loop.index }}">
+              {{ link.title }}{{ icon("chevron-down", 16) }}
+            </button>
+            <ul class="disclosure__panel" id="{{ scope }}-menu-{{ loop.index }}" hidden>
               {% for sublink in link.children %}
+                {% set sublinkUrl = sublink.url or sublink.externalUrl %}
                 <li>
-                  {% set sublinkUrl = sublink.url or sublink.externalUrl %}
-                  <a class="fr-nav__link"
-                     href="{{ sublinkUrl }}" {% if sublink.externalUrl %} target="_blank" rel="noopener"{% endif %}{% if sublinkUrl == page.url %} aria-current="page"{% endif %}>
+                  <a href="{{ sublinkUrl }}"{% if sublink.externalUrl %} target="_blank" rel="noopener"{% endif %}{% if sublinkUrl == page.url %} aria-current="page"{% endif %}>
                     {{ sublink.title }}
                   </a>
                 </li>

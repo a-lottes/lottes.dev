@@ -1,60 +1,33 @@
-{% set pageCount = pagination.hrefs | length %}
+{% from "components/icon.njk" import icon %}
 {% set currentPageNumber = pagination.pageNumber + 1 %}
-<nav role="navigation" class="fr-pagination" aria-label="Pagination">
-  <ul class="fr-pagination__list">
+<nav role="navigation" aria-label="Pagination" data-pagefind-ignore>
+  <ul class="pagination">
     <li>
-      <a class="fr-pagination__link fr-pagination__link--first" aria-disabled="true" role="link"
-         href="{{ pagination.href.first }}">
-        {{ "first_page" | i18n }}
-      </a>
-    </li>
-    <li>
-      <a class="fr-pagination__link fr-pagination__link--prev fr-pagination__link--lg-label" aria-disabled="true"
-         role="link"{% if pagination.href.previous %} href="{{ pagination.href.previous }}"{% endif %}>
-        {{ "previous_page" | i18n }}
-      </a>
-    </li>
-    <li>
-      <a class="fr-pagination__link"{% if currentPageNumber == 1 %} aria-current="page"
-         {% endif %}href="{{ pagination.href.first }}" title="Page 1"> 1 </a>
-    </li>
-    {% if pageCount > 1 %}
-      {% if pageCount > 2 %}
-        <li>
-          <a class="fr-pagination__link"{% if currentPageNumber == 2 %} aria-current="page"
-             {% endif %}href="{{ pagination.href.first | paginatedUrl(2) }}" title="Page 2"> 2 </a>
-        </li>
-      {% endif %}
-      {% if currentPageNumber > 2 and currentPageNumber < pageCount %}
-        <li>
-          <a class="fr-pagination__link fr-displayed-lg"> … </a>
-        </li>
-        <li>
-          <a class="fr-pagination__link" aria-current="page"
-             href="{{ pagination.href.first | paginatedUrl(currentPageNumber) }}" title="Page {{ currentPageNumber }}">
-            {{ currentPageNumber }}
-          </a>
-        </li>
-      {% endif %}
-      <li>
-        <a class="fr-pagination__link fr-displayed-lg"> … </a>
-      </li>
-      <li>
-        <a class="fr-pagination__link"{% if currentPageNumber == pageCount %} aria-current="page"
-           {% endif %}href="{{ pagination.href.first | paginatedUrl(pageCount) }}" title="Page {{ pageCount }}">
-          {{ pageCount }}
+      {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}" title="{{ "previous_page" | i18n }}">
+          {{ icon("arrow-left", 16) }}<span class="visually-hidden">{{ "previous_page" | i18n }}</span>
         </a>
-      </li>
-    {% endif %}
-    <li>
-      <a class="fr-pagination__link fr-pagination__link--next fr-pagination__link--lg-label"{% if pagination.href.next %} href="{{ pagination.href.next }}"{% endif %}>
-        {{ "next_page" | i18n }}
-      </a>
+      {% else %}
+        <span aria-disabled="true">{{ icon("arrow-left", 16) }}</span>
+      {% endif %}
     </li>
+    {% for href in pagination.hrefs %}
+      <li>
+        {% if loop.index == currentPageNumber %}
+          <span aria-current="page">{{ loop.index }}</span>
+        {% else %}
+          <a href="{{ href }}" title="Page {{ loop.index }}">{{ loop.index }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
     <li>
-      <a class="fr-pagination__link fr-pagination__link--last" href="{{ pagination.href.last }}">
-        {{ "last_page" | i18n }}
-      </a>
+      {% if pagination.href.next %}
+        <a href="{{ pagination.href.next }}" title="{{ "next_page" | i18n }}">
+          {{ icon("arrow-right", 16) }}<span class="visually-hidden">{{ "next_page" | i18n }}</span>
+        </a>
+      {% else %}
+        <span aria-disabled="true">{{ icon("arrow-right", 16) }}</span>
+      {% endif %}
     </li>
   </ul>
 </nav>

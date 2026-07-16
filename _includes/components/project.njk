@@ -1,0 +1,50 @@
+{# Renders one entry from _data/projects.js in the current page language. #}
+{% from "components/icon.njk" import icon %}
+{% set copy = project[page.lang] %}
+<article class="project">
+  <header class="project__head">
+    <h2 class="project__name">
+      <a href="{{ project.repo }}" rel="noopener external">{{ project.name }}</a>
+    </h2>
+    <p class="project__tagline">{{ copy.tagline }}</p>
+    <ul class="cluster project__meta">
+      <li><span class="tag">{{ project.license }}</span></li>
+      {% for topic in project.topics %}
+        <li><span class="tag">{{ topic }}</span></li>
+      {% endfor %}
+    </ul>
+  </header>
+
+  <div class="project__body">
+    <p>{{ copy.description }}</p>
+    <p>{{ copy.detail }}</p>
+
+    {% if project.phases %}
+      <ol class="phases">
+        {% for phase in project.phases %}
+          <li class="phase">
+            <span class="phase__initial" aria-hidden="true">{{ phase | first }}</span>
+            <span class="phase__body">
+              <strong>{{ phase }}</strong>
+              <span>{{ copy.phaseDescriptions[loop.index0] }}</span>
+            </span>
+          </li>
+        {% endfor %}
+      </ol>
+    {% endif %}
+
+    {% if project.install %}
+      <div class="project__install">
+        <p class="project__install-label">{{ "install" | i18n }}</p>
+        <pre><code>{% for line in project.install %}{{ line }}{{ "\n" if not loop.last }}{% endfor %}</code></pre>
+      </div>
+    {% endif %}
+  </div>
+
+  <footer class="cluster project__actions">
+    <a class="button" href="{{ project.repo }}" rel="noopener external">
+      {{ icon("github", 18) }}
+      {{ "view_on_github" | i18n }}
+    </a>
+  </footer>
+</article>

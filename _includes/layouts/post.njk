@@ -1,38 +1,35 @@
 ---
 layout: layouts/base.njk
 ---
-<div class="fr-container fr-py-6w">
+<div class="container container--narrow">
   {% if showBreadcrumb %}
     {% include "components/breadcrumb.njk" %}
   {% endif %}
-  <div class="fr-grid-row fr-grid-row--center" data-pagefind-body>
-    <div class="fr-col-12 fr-col-md-8">
+
+  <article class="section" data-pagefind-body>
+    <header class="post-header">
       {% include "components/taggroup.njk" %}
-      <div class="fr-grid-row">
-        <div class="fr-col-12 fr-col-md-9">
-          <hgroup>
-            <h1>{{ title }}</h1>
-            <p class="fr-text--xs">
-              {{ "published_on" | i18n }}
-              <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-            </p>
-          </hgroup>
-        </div>
-        <div class="fr-col-12 fr-col-md-3">
-          {% include "templates/share.njk" %}
-        </div>
-      </div>
+      <h1>{{ title }}</h1>
+      <p class="post-header__meta">
+        {{ "published_on" | i18n }}
+        <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+      </p>
+      {% include "templates/share.njk" %}
+    </header>
 
-      {% if image %}
-        {% imageContent image.path, image.alt %}
-      {% endif %}
+    {% if image %}
+      {% imageContent image.path, image.alt %}
+    {% endif %}
 
+    <div class="prose">
       {{ content | safe }}
     </div>
-  </div>
+  </article>
 
   {% if collections.posts %}
     {% set currentPosts = collections.posts %}
     {% include "previousnextlinks.njk" %}
   {% endif %}
+
+  <p class="section--tight">{% include "components/back_to_top.njk" %}</p>
 </div>

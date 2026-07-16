@@ -1,5 +1,7 @@
-<ul class="fr-tags-group" data-pagefind-ignore>
-  {% for tag in tags | filterTagList %}
-    <li><p class="fr-tag">{{ tag }}</p></li>
+{# Cards show at most three tags; the full list lives on the post itself. #}
+{% set tagList = tags | filterTagList %}
+<ul class="cluster taggroup" data-pagefind-ignore>
+  {% for tag in tagList.slice(0, 3) %}
+    <li><span class="tag">{{ tag }}</span></li>
   {% endfor %}
 </ul>

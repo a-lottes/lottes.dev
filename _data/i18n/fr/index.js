@@ -38,6 +38,7 @@ module.exports = {
     rss_feed: "Flux RSS",
     search: "Recherche",
     search_placeholder: "Rechercher",
+    skip_to_content: "Aller au contenu",
     see_breadcrumb: "Voir le fil d’Ariane",
     see_more: "En savoir plus",
     select_lang: "Sélectionner une langue",
@@ -52,4 +53,8 @@ module.exports = {
     use_system_params: "Utilise les paramètres système.",
     you_are_here: "Vous êtes ici",
     license_statement: "Sauf mention contraire, tous les contenus de ce site sont sous",
+    open_source: "Open Source",
+    install: "Installation",
+    view_on_github: "Voir sur GitHub",
+    projects_count: "projets",
 };

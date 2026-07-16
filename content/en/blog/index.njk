@@ -1,6 +1,7 @@
 ---js
 {
   title: "Blog",
+  wide: true,
   pagination: {
     data: "collections.posts",
     size: 6,
@@ -17,8 +18,8 @@
   }
 }
 ---
-<h2 class="fr-h4">{{ "filter_by_tag" | i18n }}</h2>
-<div class="fr-mt-6v fr-mb-6w">
+<h2>{{ "filter_by_tag" | i18n }}</h2>
+<div class="section--tight">
   {% set tags = collections.posts | filterCollectionLang | getAllTags %}
   {% include "components/taggroup.njk" %}
 </div>

@@ -1,11 +1,12 @@
 (() => {
     const RESULTS_PER_PAGE = 10;
 
+    // The header search form submits this query parameter natively.
+    const SEARCH_PARAM = "term";
+
     const SEARCH_TERM_SELECTOR = "#search-term";
     const RESULT_COUNT_SELECTOR = "#result-count";
     const SEARCH_RESULTS_SELECTOR = "#search-results";
-
-    const FULL_WIDTH_COL_CLASS = "fr-col-12";
 
     const searchTermText = document.querySelector(SEARCH_TERM_SELECTOR);
     const resultCounter = document.querySelector(RESULT_COUNT_SELECTOR);
@@ -21,26 +22,18 @@
         return search.results;
     }
 
-    const getCardHtml = (title, excerpt, url) => {
+    const getHitHtml = (title, excerpt, url) => {
         return `
-<div class="fr-card fr-enlarge-link fr-card--horizontal">
-    <div class="fr-card__body">
-        <div class="fr-card__content">
-            <h3 class="fr-card__title">
-                <a href="${url}">${title}</a>
-            </h3>
-            <p class="fr-card__desc">${excerpt}</p>
-        </div>
-    </div>
-</div>`;
+<h2 class="search-hit__title"><a href="${url}">${title}</a></h2>
+<p>${excerpt}</p>`;
     }
 
     const populateSearchResults = async (paginatedResults) => {
         paginatedResults.forEach(result => {
-            const cardCol = document.createElement("div");
-            cardCol.className = FULL_WIDTH_COL_CLASS;
-            cardCol.innerHTML = getCardHtml(result.meta.title, result.excerpt, result.url)
-            searchResultList.appendChild(cardCol);
+            const hit = document.createElement("article");
+            hit.className = "search-hit";
+            hit.innerHTML = getHitHtml(result.meta.title, result.excerpt, result.url)
+            searchResultList.appendChild(hit);
         });
     }
 

@@ -1,0 +1,169 @@
+/* Layout primitives replacing the DSFR container/grid utilities. */
+
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: var(--space-4);
+}
+
+.container--narrow {
+    max-width: calc(var(--measure) + 2 * var(--space-4));
+}
+
+.section {
+    padding-block: var(--space-6);
+}
+
+.section--tight {
+    padding-block: var(--space-5);
+}
+
+/* Section heads: one shape for every block on the homepage */
+.section-head {
+    margin-bottom: var(--space-5);
+}
+
+.section-head h2 {
+    margin-bottom: 0;
+}
+
+.section-head__desc {
+    max-width: 44rem;
+    margin: var(--space-2) 0 0;
+    color: var(--text-muted);
+}
+
+.section-head--row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-3);
+}
+
+.section-head__link {
+    font-size: 0.875rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.section-head__link:hover {
+    text-decoration: underline;
+}
+
+.section--alt {
+    background-color: var(--bg-alt);
+    border-block: 1px solid var(--border);
+}
+
+.stack > * + * {
+    margin-top: var(--space-4);
+}
+
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
+    gap: var(--space-4);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Cards fill their track so every row lines up on the same baseline */
+.grid > li {
+    display: flex;
+}
+
+.grid > li > .card {
+    flex: 1;
+}
+
+/* Hero: positioning context for the signature canvas */
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding-block: clamp(var(--space-6), 6vw, var(--space-7));
+}
+
+.hero__canvas {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Without a free column the constellation can only ever sit under the copy,
+   so hold it well back there. */
+@media (max-width: 56em) {
+    .hero__canvas {
+        opacity: 0.45;
+    }
+}
+
+.hero--has-target {
+    cursor: pointer;
+}
+
+/* Tooltip for the post nodes; positioned by network.js */
+.hero__tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    max-width: min(22rem, 60vw);
+    padding: var(--space-2) var(--space-3);
+    background-color: var(--bg-raised);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    pointer-events: none;
+    will-change: transform;
+}
+
+.hero__tooltip[hidden] {
+    display: none;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 34rem;
+}
+
+.hero__eyebrow {
+    display: block;
+    margin-bottom: var(--space-3);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.hero__actions {
+    margin-top: var(--space-5);
+    margin-bottom: 0;
+}
+
+.lead {
+    font-family: var(--font-serif);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}

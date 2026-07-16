@@ -23,14 +23,9 @@ module.exports = function (eleventyConfig) {
     // For example, `./public/css/` ends up in `_site/css/`
     eleventyConfig.addPassthroughCopy({
         "./public/": "/",
-        "./node_modules/@gouvfr/dsfr/dist/favicon": "/favicon",
-        "./node_modules/@gouvfr/dsfr/dist/fonts": "/css/fonts",
-        "./node_modules/@gouvfr/dsfr/dist/icons": "/css/icons",
-        "./node_modules/@gouvfr/dsfr/dist/dsfr.min.css": "/css/dsfr.min.css",
-        "./node_modules/@gouvfr/dsfr/dist/utility/utility.min.css": "/css/utility/utility.min.css",
-        "./node_modules/@gouvfr/dsfr/dist/dsfr.module.min.js": "/js/dsfr.module.min.js",
-        "./node_modules/@gouvfr/dsfr/dist/dsfr.nomodule.min.js": "/js/dsfr.nomodule.min.js",
-        "./node_modules/@gouvfr/dsfr/dist/artwork": "/artwork"
+        "./node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2": "/fonts/inter-latin-wght-normal.woff2",
+        "./node_modules/@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-normal.woff2": "/fonts/source-serif-4-latin-wght-normal.woff2",
+        "./node_modules/@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-italic.woff2": "/fonts/source-serif-4-latin-wght-italic.woff2"
     });
 
     // Run Eleventy when these files change:
@@ -177,12 +172,6 @@ module.exports = function (eleventyConfig) {
             level: [1, 2, 3, 4],
             slugify: eleventyConfig.getFilter("slugify")
         });
-    });
-
-    eleventyConfig.amendLibrary("md", mdLib => {
-        mdLib.renderer.rules.table_open = function(tokens, idx) {
-            return '<table class="fr-table">';
-        };
     });
 
     eleventyConfig.amendLibrary("md", mdLib => {

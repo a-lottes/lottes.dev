@@ -1,29 +1,31 @@
 ---
 layout: layouts/base.njk
 ---
-<div class="fr-mb-6w">
-  <div class="fr-py-6w fr-background-alt--blue-cumulus">
-    <div class="fr-container">
-      <div class="fr-grid-row">
-        <div class="fr-col-10">
-          {% if showBreadcrumb %}
-            {% include "components/breadcrumb.njk" %}
-          {% endif %}
-          <h1 class="fr-mt-6v">{{ title }}</h1>
-          {% if description %}
-            <p class="fr-text--lead">
-              {{ description }}
-            </p>
-          {% endif %}
-        </div>
+{% if banner %}
+  <img class="page-banner" src="{{ banner }}" alt="" width="1983" height="793" fetchpriority="high">
+{% endif %}
+<div class="section--alt">
+  <div class="container">
+    {% if showBreadcrumb %}
+      {% include "components/breadcrumb.njk" %}
+    {% endif %}
+    <div class="section--tight page-head{{ " page-head--portrait" if portrait }}">
+      {% if portrait %}
+        <img class="page-head__portrait" src="{{ portrait }}" alt="{{ portraitAlt or title }}"
+             width="800" height="800" loading="eager">
+      {% endif %}
+      <div class="page-head__text">
+        <h1>{{ title }}</h1>
+        {% if description %}
+          <p class="lead">{{ description }}</p>
+        {% endif %}
       </div>
     </div>
   </div>
-  <div class="fr-container fr-mt-6w" data-pagefind-body>
-    <div class="fr-grid-row">
-      <div class="fr-col-12">
-        {{ content | safe }}
-      </div>
-    </div>
+</div>
+{# `wide` opts out of the measured prose column for card grids (blog, tags). #}
+<div class="container section" data-pagefind-body>
+  <div class="{{ "" if wide else "prose" }}">
+    {{ content | safe }}
   </div>
 </div>

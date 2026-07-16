@@ -1,0 +1,12 @@
+{#- Feeds the hero constellation: every post in the page language with its
+    tags, so network.js can wire posts that share a topic. Decorative only —
+    the same posts are listed in the page below. -#}
+{%- set heroPosts = [] -%}
+{%- for post in collections.posts | filterCollectionLang -%}
+  {%- set heroPosts = (heroPosts.push({
+    title: post.data.title,
+    url: post.url,
+    tags: post.data.tags | filterTagList
+  }), heroPosts) -%}
+{%- endfor -%}
+<script type="application/json" id="hero-posts">{{ heroPosts | dump | safe }}</script>

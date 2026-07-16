@@ -1,0 +1,20 @@
+---
+title: Open Source
+description: Ce que je construis se fait au grand jour. Voici mes projets open source — ce qu'ils font, pourquoi ils existent et comment les utiliser.
+layout: layouts/page.njk
+wide: true
+eleventyNavigation:
+  key: Open Source
+  order: 1.5
+---
+
+<div class="stack projects">
+  {% for project in projects %}
+    {% include "components/project.njk" %}
+  {% endfor %}
+</div>
+
+<p class="projects__outro">
+  Le tout sous licence ouverte sur <a href="https://github.com/a-lottes" rel="noopener external">GitHub</a>.
+  Questions, idées ou bugs? Les issues et pull requests sont les bienvenues.
+</p>

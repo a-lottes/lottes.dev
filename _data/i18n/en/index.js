@@ -38,6 +38,7 @@ module.exports = {
     rss_feed: "RSS Feed",
     search: "Search",
     search_placeholder: "Search",
+    skip_to_content: "Skip to content",
     see_breadcrumb: "See Breadcrumb",
     see_more: "See More",
     select_lang: "Select Language",
@@ -52,4 +53,8 @@ module.exports = {
     use_system_params: "Use System Parameters.",
     you_are_here: "You are here",
     license_statement: "Unless stated otherwise, all content on this website is available under the",
+    open_source: "Open Source",
+    install: "Install",
+    view_on_github: "View on GitHub",
+    projects_count: "projects",
 };

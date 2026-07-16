@@ -1,12 +1,8 @@
 {% if not callout %}{% set callout = params %}{% endif %}
-<div class="fr-callout">
-  <h3 class="fr-callout__title">{{ callout.title }}</h3>
-  <p class="fr-callout__text">
-    {{ callout.description }}
-  </p>
+<div class="callout">
+  <h3 class="callout__title">{{ callout.title }}</h3>
+  <p>{{ callout.description }}</p>
   {% if callout.link %}
-    <a class="fr-btn" href="{{ callout.link.url }}">
-      {{ callout.link.title }}
-    </a>
+    <a class="button" href="{{ callout.link.url }}">{{ callout.link.title }}</a>
   {% endif %}
 </div>

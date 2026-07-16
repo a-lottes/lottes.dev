@@ -1,6 +1,9 @@
 ---
 title: About me
 layout: layouts/page.njk
+banner: /img/about-banner.png
+portrait: /img/andreas-lottes.png
+portraitAlt: Andreas Lottes
 eleventyNavigation:
   key: About me
   parent: About
@@ -8,6 +11,8 @@ eleventyNavigation:
 ---
 
 Hello, I am Andreas.
+
+I build AI and agentic software — as a Senior Manager at [adesso](https://www.adesso.de/) and in my own open source projects. I have been engineering software professionally since 2001, and I started coding in 1996. I am based in Saarbrücken, Germany.
 
 I am a family man and the father of two children. Parenthood has shaped how I think about leadership, collaboration, and responsibility: work with clarity, communicate with respect, and focus on long-term impact.
 
@@ -31,6 +36,13 @@ On this website, I share hands-on experiences from real projects in:
 - Human-Machine Collaboration (HMC) with clear roles between people and systems.
 
 What interests me most is how to move from AI experimentation to robust working models that are reliable, understandable, and useful in everyday operations.
+
+## What I build
+
+Much of it happens in the open on [GitHub](https://github.com/a-lottes):
+
+- **[aSPARK](https://github.com/a-lottes/aSPARK)** — a gated agile delivery process for Claude Code: an AI product team (PO, Designer, EM, Reviewer, QA, Release) where every feature has to pass a quality gate before it moves on.
+- **[lottes.dev](https://github.com/a-lottes/lottes.dev)** — this website.
 
 ## What matters to me
 

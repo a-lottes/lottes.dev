@@ -43,6 +43,7 @@ module.exports = {
     see_more: "Mehr erfahren",
     select_lang: "Sprache auswahlen",
     share: "Teilen",
+    skip_to_content: "Zum Inhalt springen",
     share_by_email: "Per E-Mail teilen",
     share_link_on: "Link teilen auf",
     sitemap: "Sitemap",
@@ -52,4 +53,8 @@ module.exports = {
     tags: "Kategorien",
     use_system_params: "Systemeinstellungen verwenden.",
     you_are_here: "Sie sind hier",
+    open_source: "Open Source",
+    install: "Installation",
+    view_on_github: "Auf GitHub ansehen",
+    projects_count: "Projekte",
 };

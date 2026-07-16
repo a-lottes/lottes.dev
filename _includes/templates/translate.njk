@@ -1,40 +1,40 @@
-<nav role="navigation" class="fr-translate fr-nav">
-  {% set currentUrl = page.url if (page and page.url) else '/' %}
-  <div class="fr-nav__item">
-    <button class="fr-translate__btn fr-btn fr-btn--tertiary" aria-controls="translate-516" aria-expanded="false"
-            title="{{ "select_lang" | i18n }}">
-      {{ page.lang | upper }}
-    </button>
-    <div class="fr-collapse fr-translate__menu fr-menu" id="translate-516">
-      <ul class="fr-menu__list">
+{# Language switcher. The URL resolution below is carried over unchanged from
+   the DSFR version: it maps blog listings, tag and paginated pages onto their
+   localized counterparts and follows translationKey for individual posts. #}
+{% from "components/icon.njk" import icon %}
+{% set scope = translateScope or "header" %}
+{% set currentUrl = page.url if (page and page.url) else '/' %}
+<div class="disclosure">
+  <button class="disclosure__button" aria-expanded="false" aria-controls="{{ scope }}-translate"
+          title="{{ "select_lang" | i18n }}">
+    {{ page.lang | upper }}{{ icon("chevron-down", 16) }}
+  </button>
+  <ul class="disclosure__panel" id="{{ scope }}-translate" hidden>
+    <li>
+      <a href="{{ currentUrl }}" lang="{{ page.lang }}" hreflang="{{ page.lang }}" aria-current="true">
+        {{ page.lang | upper }} - {{ "lang_name" | i18n({}, page.lang) }}
+      </a>
+    </li>
+    {% for lang in availableLang %}
+      {% if not (lang == page.lang) %}
         <li>
-          <a class="fr-translate__language fr-nav__link" href="{{ currentUrl }}" lang="{{ page.lang }}"
-             hreflang="{{ page.lang }}" aria-current="true">
-            {{ page.lang | upper }} - {{ "lang_name" | i18n({}, page.lang) }}
+          {% set url = currentUrl | locale_url(lang) %}
+          {% set isBlogPage = currentUrl.indexOf('/blog/') != -1 %}
+          {% if isBlogPage and (currentUrl.indexOf('/blog/tags/') != -1 or currentUrl.indexOf('/blog/page/') != -1 or currentUrl.endsWith('/blog/')) %}
+            {% set url = currentUrl.replace('/' + page.lang + '/', '/' + lang + '/') %}
+          {% endif %}
+          {% if isBlogPage and collections and collections.posts %}
+            {% set translatedPostUrl = collections.posts | findPostTranslationUrl(currentUrl, lang) %}
+            {% if translatedPostUrl and translatedPostUrl != currentUrl %}
+              {% set url = translatedPostUrl %}
+            {% endif %}
+          {% endif %}
+          <a {% if not (currentUrl == url) %}href="{{ url }}"{% else %}aria-disabled="true"{% endif %}
+             lang="{{ lang }}" hreflang="{{ lang }}">
+            {{ lang | upper }} - {{ "lang_name" | i18n({}, lang) }}
           </a>
         </li>
-        {% for lang in availableLang %}
-          {% if not (lang == page.lang) %}
-            <li>
-              {% set url = currentUrl | locale_url(lang) %}
-              {% set isBlogPage = currentUrl.indexOf('/blog/') != -1 %}
-              {% if isBlogPage and (currentUrl.indexOf('/blog/tags/') != -1 or currentUrl.indexOf('/blog/page/') != -1 or currentUrl.endsWith('/blog/')) %}
-                {% set url = currentUrl.replace('/' + page.lang + '/', '/' + lang + '/') %}
-              {% endif %}
-              {% if isBlogPage and collections and collections.posts %}
-                {% set translatedPostUrl = collections.posts | findPostTranslationUrl(currentUrl, lang) %}
-                {% if translatedPostUrl and translatedPostUrl != currentUrl %}
-                  {% set url = translatedPostUrl %}
-                {% endif %}
-              {% endif %}
-              <a class="fr-translate__language fr-nav__link" {% if not (currentUrl == url) %}href="{{ url }}"
-                 {% else %}aria-disabled="{{ currentUrl == url }}" {% endif %}lang="{{ lang }}" hreflang="{{ lang }}">
-                {{ lang | upper }} - {{ "lang_name" | i18n({}, lang) }}
-              </a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</nav>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

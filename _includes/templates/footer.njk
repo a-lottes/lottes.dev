@@ -1,45 +1,62 @@
-<footer class="fr-footer" role="contentinfo" id="footer">
-  <div class="fr-container">
-    <div class="fr-footer__body">
-      <div class="fr-footer__brand fr-enlarge-link">
-        <a href="{{ "/" | locale_url }}" title="{{ "home" | i18n }} - {{ metadata.service }}">
-          <p class="fr-logo">Andreas<br/>Lottes</p>
+{% from "components/icon.njk" import icon %}
+<footer class="site-footer" role="contentinfo" id="footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a class="brand" href="{{ "/" | locale_url }}" title="{{ "home" | i18n }} - {{ metadata.service }}">
+          <img class="brand__logo" src="/img/logo-lottes-bw.png" alt="lottes.dev" width="1265" height="312">
+          <span class="brand__motto">Agentic AI
+Gen AI
+hmc</span>
         </a>
-      </div>
-      <div class="fr-footer__content">
-        <p class="fr-footer__content-desc">{{ data.footer_content_description | safe }}</p>
-      </div>
-    </div>
-    <div class="fr-footer__bottom">
-      <ul class="fr-footer__bottom-list">
-        <li class="fr-footer__bottom-item">
-          <a class="fr-footer__bottom-link" href="/sitemap/">{{ "sitemap" | i18n }}</a>
-        </li>
-        <li class="fr-footer__bottom-item">
-          <a class="fr-footer__bottom-link" href="{{ "accessibility_url" | i18n }}">
-            {{ "accessibility" | i18n }} : {{ "not_compliant" | i18n }}
-          </a>
-        </li>
-        <li class="fr-footer__bottom-item">
-          <a class="fr-footer__bottom-link" href="{{ "legal_url" | i18n }}">{{ "legal" | i18n }}</a>
-        </li>
-        {# <li class="fr-footer__bottom-item">
-          <a class="fr-footer__bottom-link" href="#">Gestion des cookies</a>
-        </li> FIXME Uncomment when DSFR cookie component #}
-        <li class="fr-footer__bottom-item">
-          <button class="fr-footer__bottom-link fr-fi-theme-fill fr-link--icon-left" aria-controls="fr-theme-modal"
-                  data-fr-opened="false">
-            {{ "display_params" | i18n }}
-          </button>
-        </li>
-      </ul>
-      <div class="fr-footer__bottom-copy">
-        <p>
-          {{ "license_statement" | i18n }} <a
-              href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank"
-              rel="noopener">licence etalab-2.0</a>
+        <p class="site-footer__title">
+          <strong>{{ metadata.title }}</strong>
+          <span>{{ metadata.description }}</span>
         </p>
       </div>
+      <p class="site-footer__desc">{{ data.footer_content_description | safe }}</p>
+      <div class="cluster">
+        {% if metadata.github_url %}
+          <a class="icon-button" href="{{ metadata.github_url }}" target="_blank" rel="noopener me"
+             title="GitHub - {{ "new_window" | i18n }}">
+            <span class="visually-hidden">GitHub</span>{{ icon("github") }}
+          </a>
+        {% endif %}
+        {% if metadata.linkedin_url %}
+          <a class="icon-button" href="{{ metadata.linkedin_url }}" target="_blank" rel="noopener me"
+             title="LinkedIn - {{ "new_window" | i18n }}">
+            <span class="visually-hidden">LinkedIn</span>{{ icon("linkedin") }}
+          </a>
+        {% endif %}
+        {% if metadata.twitter_url %}
+          <a class="icon-button" href="{{ metadata.twitter_url }}" target="_blank" rel="noopener me"
+             title="X - {{ "new_window" | i18n }}">
+            <span class="visually-hidden">X</span>{{ icon("x") }}
+          </a>
+        {% endif %}
+        {% if metadata.mastodon_url %}
+          <a class="icon-button" href="{{ metadata.mastodon_url }}" target="_blank" rel="noopener me"
+             title="Mastodon - {{ "new_window" | i18n }}">
+            <span class="visually-hidden">Mastodon</span>{{ icon("link") }}
+          </a>
+        {% endif %}
+        <a class="icon-button" href="/feed/feed.xml" title="{{ "rss_feed" | i18n }}">
+          <span class="visually-hidden">{{ "rss_feed" | i18n }}</span>{{ icon("rss") }}
+        </a>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <ul class="site-footer__links">
+        <li><a href="/sitemap/">{{ "sitemap" | i18n }}</a></li>
+        <li>
+          <a href="{{ "accessibility_url" | i18n }}">
+            {{ "accessibility" | i18n }}: {{ "not_compliant" | i18n }}
+          </a>
+        </li>
+        <li><a href="{{ "legal_url" | i18n }}">{{ "legal" | i18n }}</a></li>
+        <li><a href="{{ "personal_data_url" | i18n }}">{{ "personal_data" | i18n }}</a></li>
+      </ul>
+      <p class="site-footer__copy">© {{ page.date | getYear }} {{ metadata.author.name }}</p>
     </div>
   </div>
 </footer>

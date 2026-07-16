@@ -1,82 +1,68 @@
 ---
 title: Practical Insights on Agents, AI Applications, and HMC
 layout: layouts/home.njk
+heroCanvas: true
 eleventyNavigation:
   key: Home
   order: 1
 numberOfLatestPostsToShow: 3
 ---
-<div class="fr-py-6w fr-background-alt--blue-cumulus">
-  <div class="fr-container">
-    <div class="fr-grid-row fr-grid-row--center">
-      <div class="fr-col-10 fr-col-md-6">
-        <h1>{{ title }}</h1>
-        <p class="fr-text--lead">
-          This blog shares personal field experience with agents, AI applications, and HMC.
-          You will find practical lessons, tested workflows, and best practices for teams that want to
-          adopt AI in a responsible and effective way.
-        </p>
-      </div>
-      <div class="fr-hidden fr-unhidden-md fr-col-md-4">
-        <img src="/icons/1F3DB.svg" alt="" width="256">
-      </div>
+<section class="hero">
+  <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
+  {% include "hero-posts.njk" %}
+  <div class="hero__tooltip" id="hero-tooltip" hidden></div>
+  <div class="container">
+    <div class="hero__content">
+      <span class="hero__eyebrow">Agentic AI · Gen AI · HMC</span>
+      <h1>{{ title }}</h1>
+      <p class="lead">
+        Practical lessons, tested workflows, and best practices for teams that want to
+        adopt AI in a responsible and effective way.
+      </p>
+      <p class="cluster hero__actions">
+        <a class="button" href="/{{ lang }}/blog/">Read the blog</a>
+        <a class="button button--ghost" href="/{{ lang }}/about/">About me</a>
+      </p>
     </div>
   </div>
-</div>
-<div class="fr-container fr-my-6w">
-  <div class="fr-grid-row fr-grid-row--gutters">
-    <div class="fr-col-12 fr-col-md-4">
-      <div class="fr-card fr-enlarge-link">
-        <div class="fr-card__body">
-          <h2 class="fr-card__title"><a href="/{{ lang }}/blog/">Agents in Production</a></h2>
-          <p class="fr-card__desc">Real-world notes on planning, prompting, tool usage, and quality controls in agentic workflows.</p>
-        </div>
-      </div>
-    </div>
-    <div class="fr-col-12 fr-col-md-4">
-      <div class="fr-card fr-enlarge-link">
-        <div class="fr-card__body">
-          <h2 class="fr-card__title"><a href="/{{ lang }}/blog/">Building AI Applications</a></h2>
-          <p class="fr-card__desc">From concept to operations: architecture, guardrails, data quality, and observable runtime processes.</p>
-        </div>
-      </div>
-    </div>
-    <div class="fr-col-12 fr-col-md-4">
-      <div class="fr-card fr-enlarge-link">
-        <div class="fr-card__body">
-          <h2 class="fr-card__title"><a href="/{{ lang }}/blog/">HMC and Best Practices</a></h2>
-          <p class="fr-card__desc">Human-machine collaboration with clear roles, practical governance, and repeatable outcomes.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="fr-container fr-my-6w">
-  <h2>What You Will Find Here</h2>
-  <p>
-    The focus is actionable knowledge over hype: concise guides, deep dives, honest retrospectives,
-    and templates you can apply directly in real projects.
-  </p>
+</section>
 
+<div class="container section">
+  <div class="section-head">
+    <h2>What You Will Find Here</h2>
+    <p class="section-head__desc">
+      The focus is actionable knowledge over hype: concise guides, deep dives, honest retrospectives,
+      and templates you can apply directly in real projects.
+    </p>
+  </div>
+  <ul class="grid">
+    <li class="card">
+      <h3 class="card__title"><a href="/{{ lang }}/blog/">Agents in Production</a></h3>
+      <p class="card__desc">Real-world notes on planning, prompting, tool usage, and quality controls in agentic workflows.</p>
+    </li>
+    <li class="card">
+      <h3 class="card__title"><a href="/{{ lang }}/blog/">Building AI Applications</a></h3>
+      <p class="card__desc">From concept to operations: architecture, guardrails, data quality, and observable runtime processes.</p>
+    </li>
+    <li class="card">
+      <h3 class="card__title"><a href="/{{ lang }}/blog/">HMC and Best Practices</a></h3>
+      <p class="card__desc">Human-machine collaboration with clear roles, practical governance, and repeatable outcomes.</p>
+    </li>
+  </ul>
+</div>
+
+<div class="container section">
   {% set postsCount = collections.posts | filterCollectionLang | length %}
   {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-  <h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h2>
+  {% set morePosts = postsCount - numberOfLatestPostsToShow %}
+  <div class="section-head section-head--row">
+    <h2>Latest Posts</h2>
+    {% if morePosts > 0 %}
+      <a class="section-head__link" href="/{{ lang }}/blog/">All {{ postsCount }} posts →</a>
+    {% endif %}
+  </div>
 
   {% set postslist = collections.posts | filterCollectionLang | head(-1 * numberOfLatestPostsToShow) | reverse %}
   {% set postslistCounter = postsCount %}
   {% include "postslist.njk" %}
-
-  {% set morePosts = postsCount - numberOfLatestPostsToShow %}
-  {% if morePosts > 0 %}
-    <p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/{{ lang }}/blog/">the archive</a>.</p>
-  {% endif %}
-
-  {# List every content page in the project #}
-  {#
-  <ul>
-    {%- for entry in collections.all %}
-    <li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-    {%- endfor %}
-  </ul>
-  #}
 </div>
