@@ -41,6 +41,7 @@
       <time class="postlist-date" datetime="{{ card.date | htmlDateString }}">
         {{ card.date | readableDate }}
       </time>
+      {% if card.readingTime %}<span class="meta-sep">{{ card.readingTime }} {{ "min_read" | i18n }}</span>{% endif %}
     </p>
   {% elif card.detail %}
     <p class="card__meta">{{ card.detail }}</p>

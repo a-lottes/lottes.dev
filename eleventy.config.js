@@ -119,6 +119,41 @@ module.exports = function (eleventyConfig) {
         return Math.min.apply(null, numbers);
     });
 
+    // Drop the first `n` elements of an array (complements the built-in `first`).
+    eleventyConfig.addFilter("after", (array, n = 1) => {
+        return Array.isArray(array) ? array.slice(n) : array;
+    });
+
+    // Estimated reading time in whole minutes (~200 words/min).
+    eleventyConfig.addFilter("readingTime", (content) => {
+        if (!content) {
+            return 1;
+        }
+        const text = String(content).replace(/<[^>]*>/g, " ");
+        const words = (text.match(/[^\s]+/g) || []).length;
+        return Math.max(1, Math.round(words / 200));
+    });
+
+    // Build a table of contents from the h2/h3 anchors in rendered content.
+    eleventyConfig.addFilter("toc", (content) => {
+        if (!content) {
+            return [];
+        }
+        const html = String(content)
+            // Drop the ariaHidden "#" permalink anchors before reading heading text.
+            .replace(/<a[^>]*class="header-anchor"[^>]*>[\s\S]*?<\/a>/gi, "");
+        const re = /<h([23])[^>]*\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h[23]>/gi;
+        const items = [];
+        let match;
+        while ((match = re.exec(html)) !== null) {
+            const text = match[3].replace(/<[^>]*>/g, "").trim();
+            if (text) {
+                items.push({ level: Number(match[1]), id: match[2], text });
+            }
+        }
+        return items;
+    });
+
     // Return all the tags used in a collection
     eleventyConfig.addFilter("getAllTags", collection => {
         let tagSet = new Set();

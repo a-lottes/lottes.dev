@@ -1,0 +1,20 @@
+{#- The newest post, promoted at the top of the blog index (page 1 only).
+    Expects `featuredPost` in context. -#}
+{% set fp = featuredPost %}
+{% set fpImg = fp.data.image.path | resolvePath(fp) if fp.data.image else null %}
+<article class="featured {{ "featured--no-media" if not fpImg }}" data-pagefind-ignore>
+  {% if fpImg %}
+    <div class="featured__media">{% imageSync fpImg, fp.data.image.alt %}</div>
+  {% endif %}
+  <div class="featured__body">
+    <span class="featured__eyebrow">{{ "latest" | i18n }}</span>
+    <h2 class="featured__title"><a href="{{ fp.url }}">{{ fp.data.title }}</a></h2>
+    {% if fp.data.description %}
+      <p class="featured__desc">{{ fp.data.description | safe }}</p>
+    {% endif %}
+    <p class="featured__meta">
+      <time datetime="{{ fp.date | htmlDateString }}">{{ fp.date | readableDate }}</time>
+      <span class="meta-sep">{{ fp.templateContent | readingTime }} {{ "min_read" | i18n }}</span>
+    </p>
+  </div>
+</article>

@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 ---
-<div class="container container--narrow">
+<div class="container container--reading">
   {% if showBreadcrumb %}
     {% include "components/breadcrumb.njk" %}
   {% endif %}
@@ -13,6 +13,7 @@ layout: layouts/base.njk
       <p class="post-header__meta">
         {{ "published_on" | i18n }}
         <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+        <span class="meta-sep">{{ content | readingTime }} {{ "min_read" | i18n }}</span>
       </p>
       {% include "templates/share.njk" %}
     </header>
@@ -22,6 +23,19 @@ layout: layouts/base.njk
     {% endif %}
 
     <div class="prose">
+      {% set tocItems = content | toc %}
+      {% if tocItems.length >= 3 %}
+        <details class="toc" open>
+          <summary>{{ "contents" | i18n }}</summary>
+          <ul class="toc__list">
+            {% for item in tocItems %}
+              <li class="{{ "toc__sub" if item.level == 3 }}">
+                <a href="#{{ item.id }}">{{ item.text }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </details>
+      {% endif %}
       {{ content | safe }}
     </div>
   </article>

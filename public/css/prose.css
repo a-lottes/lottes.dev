@@ -1,10 +1,27 @@
 /* Article typography. Serif body text, measured column. */
 
+/* The column runs to --measure-wide, but running text is re-capped to --measure
+   and centred, so prose keeps its comfortable line length while code blocks,
+   tables and figures are free to break out to the full width. */
 .prose {
-    max-width: var(--measure);
+    max-width: var(--measure-wide);
     font-family: var(--font-serif);
     font-size: 1.0625rem;
     line-height: 1.75;
+}
+
+.prose > * {
+    max-width: var(--measure);
+    margin-inline: auto;
+}
+
+.prose > pre,
+.prose > .codeblock,
+.prose > figure,
+.prose > table,
+.prose > .highlight,
+.prose > .callout {
+    max-width: 100%;
 }
 
 .prose > * + * {

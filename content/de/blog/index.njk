@@ -18,11 +18,18 @@
   }
 }
 ---
-<h2>{{ "filter_by_tag" | i18n }}</h2>
-<div class="section--tight">
+<details class="tagfilter">
+  <summary>{{ "filter_by_tag" | i18n }}</summary>
   {% set tags = collections.posts | filterCollectionLang | getAllTags %}
   {% include "components/taggroup.njk" %}
-</div>
-{% set postslist = pagination.items %}
+</details>
+
+{% if not pagination.pageNumber %}
+  {% set featuredPost = pagination.items | first %}
+  {% include "featured-post.njk" %}
+  {% set postslist = pagination.items | after(1) %}
+{% else %}
+  {% set postslist = pagination.items %}
+{% endif %}
 {% include "postslist.njk" %}
 {% include "templates/pagination.njk" %}
