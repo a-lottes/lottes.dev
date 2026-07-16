@@ -11,6 +11,12 @@
     max-width: calc(var(--measure) + 2 * var(--space-4));
 }
 
+/* Reading column for articles: text stays at --measure (capped in prose.css),
+   code blocks and tables are free to use the extra width. */
+.container--reading {
+    max-width: calc(var(--measure-wide) + 2 * var(--space-4));
+}
+
 .section {
     padding-block: var(--space-6);
 }

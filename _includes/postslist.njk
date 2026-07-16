@@ -8,6 +8,7 @@
       description: post.data.description | safe,
       tags: post.data.tags,
       date: post.date,
+      readingTime: post.templateContent | readingTime,
       badges: post.data.badges,
       image: {
         path: post.data.image.path | resolvePath(post),

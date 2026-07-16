@@ -112,8 +112,11 @@ pre[class*="language-"] {
     margin-bottom: 1.5em !important;
 }
 
+/* Fenced blocks without a language get no Prism theme, so style them to match
+   the highlighted ones instead of rendering as bare monospace text. */
 pre:not([class*="language-"]) {
     margin: 0.5em 0;
+    padding: 1em;
     line-height: 1.375;
     tab-size: var(--syntax-tab-size);
     hyphens: none;
@@ -122,6 +125,10 @@ pre:not([class*="language-"]) {
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
+    overflow-x: auto;
+    background-color: var(--code-bg);
+    color: #f8f8f2;
+    border-radius: var(--radius);
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
