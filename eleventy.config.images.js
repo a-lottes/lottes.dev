@@ -11,13 +11,20 @@ const getOptions = widths => {
 };
 
 const getImageAttributes = (cls, alt, sizes) => {
-    return {
-        class: `fr-responsive-img fr-ratio-auto ${cls}`,
+    // No class of our own: every call site wraps the image in a styled container
+    // (`.card__img`, `.featured__media`, `.post-media__img`) that sizes it.
+    const attributes = {
         alt,
         sizes,
         loading: "lazy",
         decoding: "async",
     };
+
+    if (cls) {
+        attributes.class = cls;
+    }
+
+    return attributes;
 };
 
 const relativeToInputPath = (inputPath, relativeFilePath) => {
@@ -46,11 +53,11 @@ module.exports = eleventyConfig => {
         let metadata = await eleventyImage(file, options);
 
         return `
-<figure class="fr-content-media" role="group" aria-label="${alt}">
-    <div class="fr-content-media__img">
+<figure class="post-media" role="group" aria-label="${alt}">
+    <div class="post-media__img">
         ${eleventyImage.generateHTML(metadata, getImageAttributes(cls, alt, sizes))}
     </div>
-    <figcaption class="fr-content-media__caption">${alt}</figcaption>
+    <figcaption class="post-media__caption">${alt}</figcaption>
 </figure>\n`;
     });
 

@@ -463,6 +463,27 @@ a.tag[aria-current] {
     margin-bottom: var(--space-4);
 }
 
+/* Lead image of a post. Sits outside `.prose`, so it carries its own typography
+   for the caption instead of inheriting the prose figcaption rules. */
+.post-media {
+    max-width: var(--measure);
+    margin: 0 auto var(--space-6);
+}
+
+.post-media__img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    background-color: var(--bg-alt);
+}
+
+.post-media__caption {
+    margin-top: var(--space-2);
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
 /* ---------- Share ---------- */
 
 .share {
