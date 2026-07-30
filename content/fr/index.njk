@@ -29,6 +29,7 @@ numberOfLatestPostsToShow: 3
 
 <div class="container section">
   <div class="section-head">
+    <span class="section-head__label">Thematiques</span>
     <h2>Ce que vous trouverez ici</h2>
     <p class="section-head__desc">
       L'objectif est de privilegier le concret plutot que le buzz: guides courts, analyses detaillees,
@@ -37,14 +38,17 @@ numberOfLatestPostsToShow: 3
   </div>
   <ul class="grid">
     <li class="card">
+      <span class="card__num">01</span>
       <h3 class="card__title"><a href="/{{ lang }}/blog/">Agents en pratique</a></h3>
       <p class="card__desc">Retours concrets sur la planification, le prompting, l'usage des outils et les controles qualite.</p>
     </li>
     <li class="card">
+      <span class="card__num">02</span>
       <h3 class="card__title"><a href="/{{ lang }}/blog/">Construire des applications IA</a></h3>
       <p class="card__desc">De l'idee a l'exploitation: architecture, guardrails, qualite des donnees et observabilite.</p>
     </li>
     <li class="card">
+      <span class="card__num">03</span>
       <h3 class="card__title"><a href="/{{ lang }}/blog/">HMC et bonnes pratiques</a></h3>
       <p class="card__desc">Collaboration humain-machine avec des roles clairs, une gouvernance utile et des resultats repetables.</p>
     </li>
@@ -56,7 +60,10 @@ numberOfLatestPostsToShow: 3
   {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
   {% set morePosts = postsCount - numberOfLatestPostsToShow %}
   <div class="section-head section-head--row">
-    <h2>Derniers articles</h2>
+    <div>
+      <span class="section-head__label section-head__label--alt">Du blog</span>
+      <h2>Derniers articles</h2>
+    </div>
     {% if morePosts > 0 %}
       <a class="section-head__link" href="/{{ lang }}/blog/">Les {{ postsCount }} articles →</a>
     {% endif %}

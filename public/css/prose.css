@@ -28,13 +28,24 @@
     margin-top: var(--space-4);
 }
 
+/* Page headings run large (base.css); inside an article that would shout, so
+   the scale is re-capped here and the anchor offset clears the sticky header. */
 .prose h2,
 .prose h3,
 .prose h4 {
     font-family: var(--font-sans);
     margin-top: var(--space-7);
     margin-bottom: var(--space-3);
-    scroll-margin-top: var(--space-5);
+    scroll-margin-top: calc(var(--header-height) + var(--space-4));
+}
+
+.prose h2 {
+    font-size: clamp(1.375rem, 1.2rem + 0.7vw, 1.625rem);
+    letter-spacing: -0.02em;
+}
+
+.prose h3 {
+    font-size: 1.125rem;
 }
 
 .prose h2 + *,

@@ -4,22 +4,23 @@
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
-    padding: var(--space-2) var(--space-4);
+    padding: var(--space-3) var(--space-5);
     border: 1px solid var(--accent);
     border-radius: var(--radius);
     background-color: var(--accent);
     color: var(--accent-contrast);
     font-size: 0.9375rem;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.15s ease, border-color 0.15s ease;
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
 }
 
 .button:hover {
     background-color: var(--accent-hover);
     border-color: var(--accent-hover);
     color: var(--accent-contrast);
+    transform: translateY(-1px);
 }
 
 .button--ghost {
@@ -59,15 +60,28 @@
 
 /* ---------- Header ---------- */
 
+/* Sticky and translucent, like the aSPARK navbar. The solid fallback colour
+   comes first so browsers without backdrop-filter still get an opaque bar. */
 .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
     background-color: var(--bg);
     border-bottom: 1px solid var(--border);
+}
+
+@supports (backdrop-filter: blur(1px)) {
+    .site-header {
+        background-color: color-mix(in srgb, var(--bg) 80%, transparent);
+        backdrop-filter: blur(14px);
+    }
 }
 
 .site-header__inner {
     display: flex;
     align-items: center;
     gap: var(--space-4);
+    min-height: var(--header-height);
     padding-block: var(--space-3);
 }
 
@@ -322,24 +336,36 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
-    padding: var(--space-4);
+    gap: var(--space-3);
+    padding: var(--space-5);
     background-color: var(--bg-raised);
     border: 1px solid var(--border);
-    border-radius: var(--radius);
-    transition: border-color 0.15s ease, transform 0.15s ease;
+    border-radius: var(--radius-lg);
+    transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .card:hover {
-    border-color: var(--border-strong);
-    transform: translateY(-2px);
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-raised);
+    transform: translateY(-3px);
+}
+
+/* Mono index, as on aSPARK's problem cards: gives a set of otherwise identical
+   text cards a reading order and something for the eye to land on. */
+.card__num {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--accent);
 }
 
 .card__title {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     font-weight: 600;
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
 }
 
 /* Whole card is clickable; the link keeps the accessible name */
@@ -367,7 +393,7 @@
 
 .card__meta {
     margin-top: auto;
-    padding-top: var(--space-2);
+    padding-top: var(--space-3);
     font-size: 0.75rem;
     color: var(--text-muted);
 }
@@ -375,8 +401,8 @@
 .card__img {
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: var(--space-2);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-1);
 }
 
 /* Tags sit above the overlay link so they stay clickable */
@@ -424,8 +450,11 @@ a.tag[aria-current] {
     margin-bottom: var(--space-6);
 }
 
+/* Post titles run long and sit in the narrow reading column, so they are capped
+   below the page h1 scale — otherwise a title like this wraps to five lines. */
 .post-header h1 {
     margin-top: var(--space-4);
+    font-size: clamp(1.875rem, 1.5rem + 1.5vw, 2.5rem);
 }
 
 .post-header__meta {
@@ -620,9 +649,9 @@ a.tag[aria-current] {
 
 /* ---------- Footer ---------- */
 
+/* No margin-top: the preceding .section already contributes --section-gap */
 .site-footer {
-    margin-top: var(--space-7);
-    padding-block: var(--space-6);
+    padding-block: var(--space-7);
     background-color: var(--bg-alt);
     border-top: 1px solid var(--border);
     font-size: 0.875rem;
@@ -1107,18 +1136,19 @@ a.tag[aria-current] {
 .featured {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
-    gap: var(--space-5);
+    gap: var(--space-6);
     align-items: center;
-    margin-bottom: var(--space-6);
-    padding: var(--space-5);
+    margin-bottom: var(--space-7);
+    padding: var(--space-6);
     background-color: var(--bg-raised);
     border: 1px solid var(--border);
-    border-radius: var(--radius);
-    transition: border-color 0.15s ease;
+    border-radius: var(--radius-lg);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .featured:hover {
-    border-color: var(--border-strong);
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-raised);
 }
 
 .featured__media {
@@ -1140,20 +1170,32 @@ a.tag[aria-current] {
 }
 
 .featured__eyebrow {
-    display: block;
-    margin-bottom: var(--space-2);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
     font-family: var(--font-sans);
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--accent-2);
+}
+
+.featured__eyebrow::before {
+    content: "";
+    flex: 0 0 auto;
+    width: 1.375rem;
+    height: 2px;
+    border-radius: 2px;
+    background-color: currentColor;
 }
 
 .featured__title {
-    margin: 0 0 var(--space-3);
-    font-size: 1.5rem;
-    line-height: 1.25;
+    margin: 0 0 var(--space-4);
+    font-size: clamp(1.5rem, 1.3rem + 0.9vw, 1.9375rem);
+    line-height: 1.18;
+    letter-spacing: -0.026em;
 }
 
 .featured__title a {
@@ -1166,9 +1208,10 @@ a.tag[aria-current] {
 }
 
 .featured__desc {
-    margin: 0 0 var(--space-3);
+    margin: 0 0 var(--space-4);
+    font-size: 1.0625rem;
     color: var(--text-muted);
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 .featured__meta {

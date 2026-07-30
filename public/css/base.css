@@ -6,6 +6,8 @@
 
 html {
     -webkit-text-size-adjust: 100%;
+    /* Clears the sticky header when jumping to an anchor */
+    scroll-padding-top: calc(var(--header-height) + var(--space-4));
 }
 
 body {
@@ -25,6 +27,8 @@ main {
     flex: 1 0 auto;
 }
 
+/* Page-level headings carry real weight; article headings are toned back down
+   in prose.css so long-form reading stays calm. */
 h1,
 h2,
 h3,
@@ -32,24 +36,27 @@ h4,
 h5,
 h6 {
     margin: 0 0 var(--space-4);
-    font-weight: 600;
-    line-height: 1.25;
-    letter-spacing: -0.015em;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
     text-wrap: balance;
 }
 
 h1 {
-    font-size: clamp(1.875rem, 1.5rem + 1.5vw, 2.625rem);
-    line-height: 1.15;
-    letter-spacing: -0.025em;
+    font-size: clamp(2.25rem, 1.55rem + 2.8vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.033em;
 }
 
 h2 {
-    font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+    font-size: clamp(1.5rem, 1.25rem + 1.1vw, 2.125rem);
+    letter-spacing: -0.026em;
 }
 
 h3 {
-    font-size: 1.0625rem;
+    font-size: 1.1875rem;
+    font-weight: 600;
 }
 
 p {

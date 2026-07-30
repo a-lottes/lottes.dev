@@ -1,6 +1,11 @@
 /* Design tokens. Dark values are declared twice on purpose: once behind an
    explicit data-theme, once behind the media query, so visitors on system
-   preference are themed without any JavaScript running. */
+   preference are themed without any JavaScript running.
+
+   The accent duo (teal primary, orange secondary) is shared with the aSPARK
+   subdomain so the two sites read as one family. Both are re-mixed per theme:
+   aSPARK is dark-only and can use its bright teal everywhere, a blog with a
+   light mode cannot — the light values are darkened to clear 4.5:1 on --bg. */
 
 :root {
     color-scheme: light dark;
@@ -17,66 +22,84 @@
     --space-6: 2rem;
     --space-7: 3rem;
     --space-8: 5rem;
+    --space-9: 7rem;
 
-    --radius: 6px;
+    /* Section rhythm: the single knob that decides how much air the page has */
+    --section-gap: clamp(var(--space-7), 7vw, var(--space-9));
+
+    --radius-sm: 6px;
+    --radius: 10px;
+    --radius-lg: 18px;
+
     --measure: 42rem;
     --measure-wide: 52rem;
     --container: 68rem;
 
+    --header-height: 4.25rem;
+
     --syntax-tab-size: 2;
 
     --bg: #fdfdfc;
-    --bg-alt: #f4f4f2;
+    --bg-alt: #f3f4f3;
     --bg-raised: #ffffff;
     --text: #1a1a18;
     --text-muted: #5f5f5a;
-    --accent: #4f46e5;
-    --accent-hover: #3730a3;
+    --accent: #0e7c72;
+    --accent-hover: #0a5d55;
     --accent-contrast: #ffffff;
-    --border: #e2e2dd;
-    --border-strong: #c9c9c2;
+    --accent-2: #b4441f;
+    --border: #e3e4e1;
+    --border-strong: #c7c9c5;
+    --border-accent: #a8ceca;
     --code-bg: #272822;
     --shadow: 0 1px 2px rgb(0 0 0 / 6%), 0 4px 12px rgb(0 0 0 / 4%);
+    --shadow-raised: 0 2px 4px rgb(0 0 0 / 6%), 0 12px 28px rgb(0 0 0 / 8%);
 
     /* Signature canvas: read by network.js */
-    --network-node: #4f46e5;
+    --network-node: #0e7c72;
     --network-line: #8b8b83;
 }
 
 :root[data-theme="dark"] {
-    --bg: #131316;
-    --bg-alt: #1a1a1f;
-    --bg-raised: #1e1e24;
+    --bg: #0b0b10;
+    --bg-alt: #12121a;
+    --bg-raised: #16161f;
     --text: #eceaf0;
-    --text-muted: #a1a1ad;
-    --accent: #a5a1fb;
-    --accent-hover: #c4c1fd;
-    --accent-contrast: #16161a;
-    --border: #2e2e36;
-    --border-strong: #45454f;
+    --text-muted: #a0a0b4;
+    --accent: #5cd6ca;
+    --accent-hover: #8ae5db;
+    --accent-contrast: #04121a;
+    --accent-2: #f07a56;
+    --border: #26262f;
+    --border-strong: #3b3b47;
+    --border-accent: #2f6f68;
     --code-bg: #272822;
     --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 4px 12px rgb(0 0 0 / 25%);
+    --shadow-raised: 0 2px 4px rgb(0 0 0 / 45%), 0 14px 32px rgb(0 0 0 / 40%);
 
-    --network-node: #a5a1fb;
-    --network-line: #6e6e7e;
+    --network-node: #5cd6ca;
+    --network-line: #5e6470;
 }
 
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-        --bg: #131316;
-        --bg-alt: #1a1a1f;
-        --bg-raised: #1e1e24;
+        --bg: #0b0b10;
+        --bg-alt: #12121a;
+        --bg-raised: #16161f;
         --text: #eceaf0;
-        --text-muted: #a1a1ad;
-        --accent: #a5a1fb;
-        --accent-hover: #c4c1fd;
-        --accent-contrast: #16161a;
-        --border: #2e2e36;
-        --border-strong: #45454f;
+        --text-muted: #a0a0b4;
+        --accent: #5cd6ca;
+        --accent-hover: #8ae5db;
+        --accent-contrast: #04121a;
+        --accent-2: #f07a56;
+        --border: #26262f;
+        --border-strong: #3b3b47;
+        --border-accent: #2f6f68;
         --code-bg: #272822;
         --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 4px 12px rgb(0 0 0 / 25%);
+        --shadow-raised: 0 2px 4px rgb(0 0 0 / 45%), 0 14px 32px rgb(0 0 0 / 40%);
 
-        --network-node: #a5a1fb;
-        --network-line: #6e6e7e;
+        --network-node: #5cd6ca;
+        --network-line: #5e6470;
     }
 }
