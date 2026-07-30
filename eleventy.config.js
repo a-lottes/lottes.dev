@@ -4,9 +4,8 @@ const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItContainer = require("markdown-it-container");
 
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const {rssPlugin} = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const {EleventyHtmlBasePlugin} = require("@11ty/eleventy");
 const {EleventyI18nPlugin} = require("@11ty/eleventy");
@@ -40,12 +39,15 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(require("./eleventy.config.pagination.js"));
 
     // Official plugins
-    eleventyConfig.addPlugin(pluginRss);
+    eleventyConfig.addPlugin(rssPlugin);
     eleventyConfig.addPlugin(pluginSyntaxHighlight, {
         preAttributes: {tabindex: 0}
     });
     eleventyConfig.addPlugin(pluginNavigation);
-    eleventyConfig.addPlugin(pluginBundle);
+    // eleventy-plugin-bundle ships with Eleventy 3 itself, with no default
+    // bundle types (see base.njk for the "css" and "js" shortcodes this creates).
+    eleventyConfig.addBundle("css");
+    eleventyConfig.addBundle("js");
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
     eleventyConfig.addPlugin(EleventyI18nPlugin, {
         defaultLanguage: "de",
