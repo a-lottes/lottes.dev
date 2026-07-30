@@ -55,4 +55,54 @@ module.exports = [
             ],
         },
     },
+    {
+        key: "aspark-graph",
+        name: "aSPARK-graph",
+        repo: "https://github.com/a-lottes/aSPARK-graph",
+        license: "MIT",
+        year: 2026,
+        topics: ["knowledge-graph", "code-graph", "mcp", "tree-sitter", "python", "aspark"],
+        install: [
+            "pip install aspark-graph",
+            "claude mcp add aspark-graph -- uvx aspark-graph serve",
+        ],
+        de: {
+            tagline: "Ein lokaler Wissensgraph, der Code und Delivery-Artefakte verbindet",
+            description: "aspark-graph liest ein Repository — den Quellcode und den aSPARK-Delivery-Pfad unter .spark/ mit Specs, Plänen, Reviews und QA-Berichten — und baut daraus einen einzigen abfragbaren Graphen, bereitgestellt über CLI und MCP-Server. Damit lassen sich zwei Fragen ohne Grepping beantworten: Welcher Code implementiert diese User Story? Und welche Stories liegen im Blast Radius einer Änderung?",
+            detail: "Der Graph ist deterministisch — tree-sitter plus deklarierte Artefakt-Verknüpfungen, kein LLM, kein Netzwerk. Zwei Builds eines unveränderten Repositories erzeugen byte-identische Ergebnisse. Und er ist bewusst wegwerfbar: ein jederzeit neu baubares Read Model, niemals die Quelle der Wahrheit.",
+        },
+        en: {
+            tagline: "A local knowledge graph joining code to delivery artifacts",
+            description: "aspark-graph reads one repository — its source code and its aSPARK delivery trail under .spark/ with specs, plans, reviews, and QA reports — and builds a single queryable graph, served over a CLI and an MCP server. It answers two questions without grepping: which code implements this user story, and which stories sit in the blast radius of a change?",
+            detail: "The graph is deterministic — tree-sitter plus declared artifact links, no LLM and no network — so two builds of an unchanged repo produce byte-identical results. And it is deliberately disposable: a rebuildable read model, never a source of truth.",
+        },
+        fr: {
+            tagline: "Un graphe de connaissances local reliant le code aux artefacts de livraison",
+            description: "aspark-graph lit un dépôt — son code source et sa piste de livraison aSPARK sous .spark/ avec specs, plans, revues et rapports QA — et en construit un graphe unique interrogeable, exposé via une CLI et un serveur MCP. Il répond à deux questions sans grep: quel code implémente cette user story, et quelles stories se trouvent dans le rayon d'impact d'une modification?",
+            detail: "Le graphe est déterministe — tree-sitter et liens d'artefacts déclarés, sans LLM ni réseau: deux builds d'un dépôt inchangé produisent des résultats identiques au byte près. Et il est volontairement jetable: un read model reconstructible à tout moment, jamais une source de vérité.",
+        },
+    },
+    {
+        key: "aspark-policy",
+        name: "aSPARK-policy",
+        repo: "https://github.com/a-lottes/aSPARK-policy",
+        license: "MIT",
+        year: 2026,
+        topics: ["policy-as-code", "engineering-standards", "governance", "compliance", "json-schema", "aspark"],
+        de: {
+            tagline: "Engineering-Standards als ausführbare Policy-Packs",
+            description: "aSPARK-policy macht aus Architekturrichtlinien, Secure-Coding-Standards, Namenskonventionen und Review-Checklisten eine maschinenlesbare Policy-Schicht. Markdown-Dateien erklären die Standards, eine policy.yaml aktiviert sie, und jeder aSPARK-Agent liest dieselbe Policy — ohne duplizierte Prompts, ohne angepasste Agenten.",
+            detail: "Eine Policy wird nicht installiert, sondern eingebunden: Die Organisation pflegt ihre Standards im eigenen Repository, jedes Projekt hängt es als Git-Submodul unter .spark/policy ein. Stand heute: ein dokumentiertes Format, ein getestetes JSON Schema, ein installierbares Python-Paket und acht Katalog-Packs. Die Durchsetzung über CLI und Facilitator-Anbindung steht noch aus — das Projekt ist in früher Entwicklung.",
+        },
+        en: {
+            tagline: "Engineering standards as executable policy packs",
+            description: "aSPARK-policy turns architecture guidelines, secure coding standards, naming conventions, and review checklists into a machine-readable policy layer. Markdown files explain the standards, a policy.yaml activates them, and every aSPARK agent consumes the same policy — no duplicated prompts, no custom agent modifications.",
+            detail: "A policy is not a package you install, it is a repository you mount: your organization keeps its standards in its own repo, and each project pulls it in as a Git submodule at .spark/policy. Where it stands today: a documented format, a tested JSON Schema, an installable Python package, and eight catalog packs. Enforcement via CLI and the Facilitator binding is still ahead — the project is in early development.",
+        },
+        fr: {
+            tagline: "Des standards d'ingénierie en policy packs exécutables",
+            description: "aSPARK-policy transforme les guides d'architecture, les standards de codage sécurisé, les conventions de nommage et les checklists de revue en une couche de politique lisible par machine. Des fichiers Markdown expliquent les standards, un fichier policy.yaml les active, et chaque agent aSPARK consomme la même politique — sans prompts dupliqués ni agents modifiés.",
+            detail: "Une politique ne s'installe pas, elle se monte: l'organisation conserve ses standards dans son propre dépôt, et chaque projet l'intègre en sous-module Git sous .spark/policy. État actuel: un format documenté, un JSON Schema testé, un paquet Python installable et huit packs de catalogue. L'application via CLI et l'intégration du Facilitator restent à venir — le projet est en début de développement.",
+        },
+    },
 ];
