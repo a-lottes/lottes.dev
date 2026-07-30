@@ -1,6 +1,17 @@
 # lottes.dev
 
-Statische, mehrsprachige Website (DE/EN/FR) auf Basis von [Eleventy](https://www.11ty.dev/) mit eigenem, schlankem Design.
+Quellcode von [www.lottes.dev](https://www.lottes.dev/) — einem statischen, dreisprachigen
+(DE/EN/FR) Blog über Agentic AI, KI-Applikationen und Human-Machine Collaboration.
+Gebaut mit [Eleventy](https://www.11ty.dev/), eigenem CSS und ohne Frontend-Framework.
+
+Der Code ist MIT-lizenziert. Wer einen mehrsprachigen Eleventy-Blog aufsetzen will,
+kann sich hier bedienen — vor allem beim i18n-Setup, das in den meisten Eleventy-Startern fehlt.
+
+> **Status:** Dies ist meine persönliche Website, kein gepflegtes Theme-Paket.
+> Es gibt keine Support-Zusage und keine Rückwärtskompatibilität zwischen Commits.
+> Aktuell läuft das Projekt auf Eleventy 2 — eine Migration auf Eleventy 3 steht noch aus.
+> Fork und Weiterverwendung sind ausdrücklich erwünscht, Issues und PRs beantworte ich,
+> wenn ich Zeit habe.
 
 ## Tech Stack
 
@@ -12,11 +23,15 @@ Statische, mehrsprachige Website (DE/EN/FR) auf Basis von [Eleventy](https://www
 - Eleventy Navigation + Pagination
 - RSS/JSON Feed + ICS Kalender
 
-## Projektziele
+## Was hier drin steckt
 
-- Mehrsprachige Inhalte in Deutsch, Englisch und Franzoesisch
-- Saubere Navigation mit Sprachwechsel im Header
-- Blog inklusive Tags, Pagination und Feed
+- Dreisprachige Inhalte (DE/EN/FR) mit Sprachwechsel im Header, der auch auf
+  Blog-Listings, Tag-Seiten und paginierten Seiten das richtige Pendant findet
+- Blog inklusive Tags, Pagination und Feed (RSS + JSON)
+- Volltextsuche über Pagefind, ohne externen Dienst
+- Design-Token-System mit Light/Dark und `prefers-color-scheme`-Fallback
+- Eigene Markdown-Container für Callouts, Alerts, Karten und Zitate
+- ICS-Kalender-Ausgabe
 - Deployment auf Netlify
 
 ## Schnellstart
@@ -87,7 +102,7 @@ aktiviert über `heroCanvas: true` im Frontmatter).
 - EN: `content/en/`
 - FR: `content/fr/`
 
-### Uebersetzungen fuer UI-Texte
+### Übersetzungen für UI-Texte
 
 - `_data/i18n/de/index.js`
 - `_data/i18n/en/index.js`
@@ -95,7 +110,7 @@ aktiviert über `heroCanvas: true` im Frontmatter).
 
 ### Sprachwechsel bei Blogposts
 
-Fuer korrekte Zuordnung derselben Artikel in unterschiedlichen Sprachen wird `translationKey` im Frontmatter verwendet.
+Für korrekte Zuordnung derselben Artikel in unterschiedlichen Sprachen wird `translationKey` im Frontmatter verwendet.
 
 Beispiel:
 
@@ -103,7 +118,7 @@ Beispiel:
 translationKey: agent-workflow-in-practice
 ```
 
-Wenn ein Artikel keine Uebersetzung hat, ist der Sprachlink im Header auf der Zielsprache deaktiviert.
+Wenn ein Artikel keine Übersetzung hat, ist der Sprachlink im Header auf der Zielsprache deaktiviert.
 
 ## Deployment (Netlify)
 
@@ -133,19 +148,40 @@ Wichtig: Im Netlify UI darf Publish Directory nicht auf `public` stehen, sonst w
 
 ### Sprachwechsel zeigt falsche oder deaktivierte Blog-Links
 
-- Pruefen, ob die betroffenen Posts denselben `translationKey` nutzen.
-- Pruefen, ob alle Sprachvarianten im passenden Ordner existieren.
+- Prüfen, ob die betroffenen Posts denselben `translationKey` nutzen.
+- Prüfen, ob alle Sprachvarianten im passenden Ordner existieren.
 
 ### Pagefind meldet alte/unerwartete URLs
 
-In seltenen Faellen liegen alte Dateien noch in `_site/`.
+In seltenen Fällen liegen alte Dateien noch in `_site/`.
 
 ```bash
 rm -rf _site
 npm run build
 ```
 
+## Herkunft
+
+Dieses Projekt ist kein Neubau von Null, sondern das Ergebnis einer Fork-Kette:
+
+1. [**eleventy-base-blog**](https://github.com/11ty/eleventy-base-blog) von Zach Leatherman —
+   die Grundstruktur eines Eleventy-Blogs (Tags, Pagination, Feeds).
+2. [**eleventy-dsfr**](https://github.com/codegouvfr/eleventy-dsfr) von DINUM/Etalab —
+   das mehrsprachige Setup, die Navigations- und Übersetzungslogik sowie die
+   Plugin-Auswahl (i18n, Kalender) stammen von hier.
+3. **lottes.dev** — das französische Staats-Designsystem (DSFR) wurde vollständig
+   entfernt und durch ein eigenes Design-Token-System, eigene Layout-Primitives und
+   eigene Komponenten ersetzt. Die CSS- und Komponentenschicht ist damit neu,
+   das mehrsprachige Fundament nicht.
+
+Ein paar Kommentare im Code verweisen noch auf das DSFR-Original — sie dokumentieren,
+was die jeweilige Datei ersetzt.
+
 ## Lizenz
 
-- Code: MIT
-- Inhalte/Assets: siehe Dateien unter `LICENSES/`
+- Code: MIT — siehe [`LICENSE.md`](LICENSE.md). Das Copyright liegt anteilig bei
+  DINUM/Etalab (Original-Template) und bei mir.
+- Weitere Lizenztexte der übernommenen Bestandteile: `LICENSES/`
+- **Nicht mitlizenziert:** Blogartikel unter `content/`, Logos und Bilder in
+  `public/img/`. Wenn du das Projekt als Basis nutzt, ersetze diese durch eigene
+  Inhalte und tausche die Werte in `_data/metadata.js` aus.

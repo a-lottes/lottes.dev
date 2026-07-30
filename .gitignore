@@ -4,3 +4,4 @@ graphify-out/
 .claude/
 .DS_Store
 **/.DS_Store
+.idea/
