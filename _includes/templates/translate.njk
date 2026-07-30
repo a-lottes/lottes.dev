@@ -1,6 +1,9 @@
-{# Language switcher. The URL resolution below is carried over unchanged from
-   the DSFR version: it maps blog listings, tag and paginated pages onto their
-   localized counterparts and follows translationKey for individual posts. #}
+{# Language switcher. Individual posts follow translationKey to their exact
+   translated counterpart. Blog listing, tag and paginated pages have no such
+   correspondence (tag slugs and post counts differ per language, so neither
+   a prefix swap nor Eleventy's pagination-group-based `locale_url` can find
+   the "same" page across languages without risking a 404 or, worse, a
+   silently wrong match) — those link to the plain blog index instead. #}
 {% from "components/icon.njk" import icon %}
 {% set scope = translateScope or "header" %}
 {% set currentUrl = page.url if (page and page.url) else '/' %}
@@ -20,8 +23,9 @@
         <li>
           {% set url = currentUrl | locale_url(lang) %}
           {% set isBlogPage = currentUrl.indexOf('/blog/') != -1 %}
-          {% if isBlogPage and (currentUrl.indexOf('/blog/tags/') != -1 or currentUrl.indexOf('/blog/page/') != -1 or currentUrl.endsWith('/blog/')) %}
-            {% set url = currentUrl.replace('/' + page.lang + '/', '/' + lang + '/') %}
+          {% set isBlogListingPage = isBlogPage and (currentUrl.indexOf('/blog/tags/') != -1 or currentUrl.indexOf('/blog/' + pagePrefix) != -1 or currentUrl.endsWith('/blog/')) %}
+          {% if isBlogListingPage %}
+            {% set url = '/' + lang + '/blog/' %}
           {% endif %}
           {% if isBlogPage and collections and collections.posts %}
             {% set translatedPostUrl = collections.posts | findPostTranslationUrl(currentUrl, lang) %}
