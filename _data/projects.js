@@ -105,4 +105,31 @@ module.exports = [
             detail: "Une politique ne s'installe pas, elle se monte: l'organisation conserve ses standards dans son propre dépôt, et chaque projet l'intègre en sous-module Git sous .spark/policy. État actuel: un format documenté, un JSON Schema testé, un paquet Python installable et huit packs de catalogue. L'application via CLI et l'intégration du Facilitator restent à venir — le projet est en début de développement.",
         },
     },
+    {
+        key: "eleventy-rosetta",
+        name: "eleventy-rosetta",
+        repo: "https://github.com/a-lottes/eleventy-rosetta",
+        license: "MIT",
+        year: 2026,
+        topics: ["eleventy", "11ty", "i18n", "multilingual", "nunjucks", "static-site"],
+        install: [
+            "npx eleventy-rosetta init",
+            "npm install && npm start",
+        ],
+        de: {
+            tagline: "Ein mehrsprachiges Blog-Theme für Eleventy",
+            description: "Die meisten Eleventy-Starter behandeln Mehrsprachigkeit als Nachschlagetabelle für Button-Beschriftungen — das ist der einfache Teil. Schwierig wird es, wenn jemand die Sprache auf einer beliebigen Seite wechselt: auf einer Tag-Seite, auf Seite 4 des Blogs, in der Datenschutzerklärung. eleventy-rosetta beantwortet diese Frage überall, mit übersetzten Routen (/de/impressum/, /en/legal/ und /fr/mentions-legales/ sind dieselbe Seite), übersetzten Tags und einem Sprachwechsler, der sich lieber deaktiviert als auf einen 404 zu verlinken.",
+            detail: "Deutsch, Englisch und Französisch ab Werk, eigenes CSS ohne Framework und zur Laufzeit keine externen Dienste: Die Volltextsuche über Pagefind entsteht beim Deploy, Bilder in AVIF und WebP beim Build. Das Paket hat zwei Hälften — das Plugin bleibt über npm aktualisierbar, eleventy-rosetta init legt Layouts, CSS, Demo-Inhalte und Konfiguration einmalig ins Projekt und hält sich danach heraus. Eine weitere Sprache braucht keine Registry, sondern ein neues Verzeichnis unter _data/i18n/. Entstanden ist das Theme aus dem Code dieser Website.",
+        },
+        en: {
+            tagline: "A multilingual blog theme for Eleventy",
+            description: "Most Eleventy starters treat multilingual as a lookup table for button labels — that is the easy part. The hard part is what happens when a reader switches language on an arbitrary page: a tag page, page 4 of the blog, your privacy notice. eleventy-rosetta answers that everywhere, with translated routes (/de/impressum/, /en/legal/, and /fr/mentions-legales/ are the same page), translated tags, and a language switcher that disables itself rather than linking a 404.",
+            detail: "German, English, and French out of the box, custom CSS with no framework, and no external services at runtime: full-text search via Pagefind is built at deploy time, responsive images in AVIF and WebP at build time. The package comes in two halves — the plugin stays upgradable through npm, while eleventy-rosetta init copies layouts, CSS, demo content, and config into your project once and then gets out of the way. Adding a language means adding a directory under _data/i18n/, not editing a registry. The theme grew out of the code behind this site.",
+        },
+        fr: {
+            tagline: "Un thème de blog multilingue pour Eleventy",
+            description: "La plupart des starters Eleventy réduisent le multilingue à une table de correspondance pour les libellés de boutons — c'est la partie facile. Le difficile, c'est ce qui se passe quand un lecteur change de langue sur une page quelconque: une page de tag, la page 4 du blog, la politique de confidentialité. eleventy-rosetta y répond partout, avec des routes traduites (/de/impressum/, /en/legal/ et /fr/mentions-legales/ sont la même page), des tags traduits et un sélecteur de langue qui se désactive plutôt que de mener à un 404.",
+            detail: "Allemand, anglais et français d'origine, du CSS maison sans framework et aucun service externe à l'exécution: la recherche plein texte via Pagefind est générée au déploiement, les images responsives en AVIF et WebP au build. Le paquet a deux moitiés — le plugin reste actualisable via npm, tandis que eleventy-rosetta init copie une fois pour toutes layouts, CSS, contenus de démonstration et configuration dans le projet, puis s'efface. Ajouter une langue, c'est ajouter un répertoire sous _data/i18n/, pas modifier un registre. Le thème est né du code de ce site.",
+        },
+    },
 ];
