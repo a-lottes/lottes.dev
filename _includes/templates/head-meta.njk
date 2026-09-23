@@ -6,6 +6,9 @@
 {%- set siteUrl = metadata.url | replace(r/\/$/, "") %}
 {%- set pageDescription = description or ("site_description" | i18n) %}
 {%- set isBlogPage = page.url.indexOf('/blog/') != -1 %}
+{%- if robots %}
+  <meta name="robots" content="{{ robots }}">
+{%- endif %}
   <link rel="canonical" href="{{ siteUrl }}{{ page.url }}">
 {%- for lang in availableLang %}
   {%- set altUrl = false %}
