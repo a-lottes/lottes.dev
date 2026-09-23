@@ -4,3 +4,29 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# ── Language switch on "/" ─────────────────────────────────────────────
+# Negotiated server-side from Accept-Language, so visitors and crawlers get a
+# real redirect instead of the meta-refresh page. The first matching rule wins.
+# force = true is needed because _site/index.html exists; that page stays as
+# the fallback if these rules ever go away. Same pattern as aspark.lottes.dev.
+
+[[redirects]]
+  from = "/"
+  to = "/de/"
+  status = 302
+  force = true
+  conditions = {Language = ["de"]}
+
+[[redirects]]
+  from = "/"
+  to = "/fr/"
+  status = 302
+  force = true
+  conditions = {Language = ["fr"]}
+
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = true

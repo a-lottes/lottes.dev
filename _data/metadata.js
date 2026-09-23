@@ -1,6 +1,6 @@
 module.exports = {
     title: "Agentic and Generative AI",
-    url: "https://www.lottes.dev/",
+    url: "https://lottes.dev/",
     newsletter: [
         {
             url: "",
@@ -10,7 +10,7 @@ module.exports = {
     ],
     facebook_url: "",
     mastodon_url: "",
-    twitter_url: "https://twitter.com/a_Lottes",
+    twitter_url: "https://x.com/a_Lottes",
     instagram_url: "",
     linkedin_url: "https://www.linkedin.com/in/andreas-lottes/",
     youtube_url: "",
@@ -23,7 +23,7 @@ module.exports = {
     author: {
         name: "Andreas Lottes",
         email: "andreas@lottes.dev",
-        url: "https://www.lottes.dev/"
+        url: "https://lottes.dev/"
     },
     service: "Tech Blog"
 }

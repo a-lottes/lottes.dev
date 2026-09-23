@@ -10,7 +10,7 @@ showBreadcrumb: true
 
 Andreas Lottes  
 Rehbachstr. 95  
-66125 Saarbrucken  
+66125 Saarbrücken  
 Allemagne
 
 E-mail : <andreas@lottes.dev>
@@ -19,7 +19,7 @@ E-mail : <andreas@lottes.dev>
 
 Andreas Lottes  
 Rehbachstr. 95  
-66125 Saarbrucken  
+66125 Saarbrücken  
 Allemagne
 
 ## TVA
@@ -28,7 +28,7 @@ Ce site ne dispose pas de numéro de TVA intracommunautaire.
 
 ## Champ d'application
 
-Ces mentions légales s'appliquent au site accessible sous le domaine `www.lottes.dev` ainsi qu'à ses versions linguistiques.
+Ces mentions légales s'appliquent aux sites accessibles sous les domaines `lottes.dev` et `aspark.lottes.dev` ainsi qu'à leurs versions linguistiques.
 
 ## Accessibilité
 
@@ -36,4 +36,4 @@ Ces mentions légales s'appliquent au site accessible sous le domaine `www.lotte
 
 ## Données personnelles
 
-[Voir les informations concernant les cookies utilisés sur ce site](/fr/donnees-personnelles/).
+[Voir la politique de confidentialité](/fr/donnees-personnelles/).

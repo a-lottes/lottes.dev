@@ -1,0 +1,42 @@
+{#- Canonical, language alternates and share cards. Alternates follow the same
+    rules as the language switcher (translate.njk): posts pair by translationKey,
+    the blog index maps to the other blog index, and anything without a real
+    counterpart (tag pages, pagination, untranslated posts) gets no alternate
+    rather than a guessed one that might 404. -#}
+{%- set siteUrl = metadata.url | replace(r/\/$/, "") %}
+{%- set pageDescription = description or ("site_description" | i18n) %}
+{%- set isBlogPage = page.url.indexOf('/blog/') != -1 %}
+  <link rel="canonical" href="{{ siteUrl }}{{ page.url }}">
+{%- for lang in availableLang %}
+  {%- set altUrl = false %}
+  {%- if lang == page.lang %}
+    {%- set altUrl = page.url %}
+  {%- elif page.url == '/' + page.lang + '/blog/' %}
+    {%- set altUrl = '/' + lang + '/blog/' %}
+  {%- elif isBlogPage %}
+    {%- set translated = collections.posts | findPostTranslationUrl(page.url, lang) %}
+    {%- if translated != page.url %}{% set altUrl = translated %}{% endif %}
+  {%- else %}
+    {%- set localized = page.url | locale_url(lang) %}
+    {%- if localized != page.url %}{% set altUrl = localized %}{% endif %}
+  {%- endif %}
+  {%- if altUrl %}
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ siteUrl }}{{ altUrl }}">
+  {%- endif %}
+{%- endfor %}
+{%- if page.url == '/' + page.lang + '/' %}
+  <link rel="alternate" hreflang="x-default" href="{{ siteUrl }}/">
+{%- endif %}
+  <meta property="og:type" content="{{ 'article' if (isBlogPage and date and page.url != '/' + page.lang + '/blog/') else 'website' }}">
+  <meta property="og:site_name" content="lottes.dev">
+  <meta property="og:title" content="{{ title or metadata.title }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:url" content="{{ siteUrl }}{{ page.url }}">
+  <meta property="og:locale" content="{{ {de: 'de_DE', en: 'en_US', fr: 'fr_FR'}[page.lang] }}">
+  <meta property="og:image" content="{{ siteUrl }}/img/og-{{ page.lang }}.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Andreas Lottes — Agentic AI · Gen AI · HMC">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@a_Lottes">
+  <meta name="twitter:image" content="{{ siteUrl }}/img/og-{{ page.lang }}.png">

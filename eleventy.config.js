@@ -77,9 +77,10 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addFilter("readableDate", function readableDate(dateObj, format, zone) {
         // Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-        return DateTime.fromJSDate(dateObj, {zone: zone || "utc"})
-            .setLocale(this.page.lang)
-            .toFormat(format || "dd LLLL yyyy");
+        // Without an explicit format, use the locale's own long date:
+        // "19. September 2026", "September 19, 2026", "19 septembre 2026".
+        const date = DateTime.fromJSDate(dateObj, {zone: zone || "utc"}).setLocale(this.page.lang);
+        return format ? date.toFormat(format) : date.toLocaleString(DateTime.DATE_FULL);
     });
 
     eleventyConfig.addFilter("htmlDateString", (dateObj) => {

@@ -1,25 +1,25 @@
 ---
 title: Impressum
 layout: layouts/page.njk
-description: Rechtliche Angaben fur diese Website.
+description: Rechtliche Angaben für diese Website.
 slugOverride: impressum
 showBreadcrumb: true
 ---
 
-## Angaben gemaess § 5 TMG
+## Angaben gemäß § 5 DDG
 
 Andreas Lottes  
 Rehbachstr. 95  
-66125 Saarbrucken  
+66125 Saarbrücken  
 Deutschland
 
 E-Mail: <andreas@lottes.dev>
 
-## Verantwortlich fur den Inhalt nach § 18 Abs. 2 MStV
+## Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
 
 Andreas Lottes  
 Rehbachstr. 95  
-66125 Saarbrucken  
+66125 Saarbrücken  
 Deutschland
 
 ## Hinweis zur USt-IdNr.
@@ -28,12 +28,12 @@ Es besteht keine Umsatzsteuer-Identifikationsnummer.
 
 ## Geltungsbereich
 
-Dieses Impressum gilt fur die Website unter der Domain `www.lottes.dev` sowie fur die zugehorigen Sprachversionen.
+Dieses Impressum gilt für die Websites unter den Domains `lottes.dev` und `aspark.lottes.dev` sowie für ihre Sprachversionen.
 
 ## Barrierefreiheit
 
-[Zur Erklarung zur Barrierefreiheit](/de/barrierefreiheit/).
+[Zur Erklärung zur Barrierefreiheit](/de/accessibility/).
 
 ## Verarbeitung personenbezogener Daten
 
-[Zu den Informationen uber Cookies auf dieser Website](/de/datenschutz/).
+[Zur Datenschutzerklärung](/de/personal-data/).

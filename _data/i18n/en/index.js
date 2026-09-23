@@ -60,4 +60,5 @@ module.exports = {
     install: "Install",
     view_on_github: "View on GitHub",
     projects_count: "projects",
+    site_description: "Hands-on experience with AI agents, AI applications and human–machine collaboration – by Andreas Lottes, creator of aSPARK.",
 };

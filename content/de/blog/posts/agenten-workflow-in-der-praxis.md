@@ -1,6 +1,6 @@
 ---
 title: Agenten-Workflow in der Praxis
-description: Ein praxiserprobter Ablauf fur Planung, Ausfuhrung und Review mit KI-Agenten.
+description: Ein praxiserprobter Ablauf für Planung, Ausführung und Review mit KI-Agenten.
 date: 2026-03-01
 draft: false
 translationKey: agent-workflow-in-practice
@@ -11,7 +11,7 @@ tags:
 ---
 ## Abstract
 
-Der Beitrag argumentiert, dass die Qualitaet agentischer Entwicklung weniger von einzelnen Prompts als von der Gestaltung des Gesamtprozesses abhaengt. Auf Basis projektbezogener Beobachtungen wird ein reproduzierbarer Workflow beschrieben, der Zielklarheit, schrittweise Ausfuehrung und formale Quality Gates kombiniert.
+Der Beitrag argumentiert, dass die Qualität agentischer Entwicklung weniger von einzelnen Prompts als von der Gestaltung des Gesamtprozesses abhängt. Auf Basis projektbezogener Beobachtungen wird ein reproduzierbarer Workflow beschrieben, der Zielklarheit, schrittweise Ausführung und formale Quality Gates kombiniert.
 
 ## Erkenntnisinteresse und methodischer Rahmen
 
@@ -19,53 +19,53 @@ Leitfrage: Unter welchen Bedingungen sind Agenten-Workflows in Entwicklungsproje
 
 Der Beitrag basiert auf qualitativer Prozessbeobachtung in iterativen Entwicklungszyklen. Im Mittelpunkt stehen nicht modellinterne Parameter, sondern beobachtbare Prozessvariablen:
 
-- Anzahl und Qualitaet von Iterationen,
+- Anzahl und Qualität von Iterationen,
 - Rework-Anteil nach Erstvorschlag,
 - Defect Escape nach Review,
-- Nachvollziehbarkeit der Aenderungen im Team.
+- Nachvollziehbarkeit der Änderungen im Team.
 
-## Referenzprozess fuer Agentenarbeit
+## Referenzprozess für Agentenarbeit
 
-Ein belastbarer Standardablauf umfasst aus meiner Sicht fuenf Schritte:
+Ein belastbarer Standardablauf umfasst aus meiner Sicht fünf Schritte:
 
-1. Scope-Praezisierung: Zielbild und Ausschlusskriterien definieren.
+1. Scope-Präzisierung: Zielbild und Ausschlusskriterien definieren.
 2. Kontextselektion: nur aufgabenrelevante Informationen bereitstellen.
 3. Sequenzierung: Analyse, Umsetzung, Validierung und Dokumentation trennen.
-4. Quality Gates: Build, Tests, Lint und manuelle Plausibilitaetspruefung erzwingen.
-5. Ergebnisprotokoll: Aenderungen, Begruendungen und Restrisiken festhalten.
+4. Quality Gates: Build, Tests, Lint und manuelle Plausibilitätsprüfung erzwingen.
+5. Ergebnisprotokoll: Änderungen, Begründungen und Restrisiken festhalten.
 
-Dieser Ablauf minimiert Varianz zwischen Iterationen und erhoeht die Vergleichbarkeit von Ergebnissen.
+Dieser Ablauf minimiert Varianz zwischen Iterationen und erhöht die Vergleichbarkeit von Ergebnissen.
 
 ## Empirische Beobachtungen aus der Praxis
 
 ### Was konsistent funktioniert
 
-- Kleine, testbare Inkremente statt grosser Einmal-Prompts.
-- Explizite Abbruchkriterien fuer Nachfragen statt Spekulation.
+- Kleine, testbare Inkremente statt großer Einmal-Prompts.
+- Explizite Abbruchkriterien für Nachfragen statt Spekulation.
 - Einheitlicher Review-Frame entlang Korrektheit, Sicherheit, Wartbarkeit und UX.
 
 ### Typische Fehlermuster
 
-- Vorzeitige Implementierung ohne belastbares Problemverstaendnis.
+- Vorzeitige Implementierung ohne belastbares Problemverständnis.
 - Unscharfe Erfolgskriterien.
-- Fehlende Verifikation bei daten- oder sicherheitskritischen Aenderungen.
+- Fehlende Verifikation bei daten- oder sicherheitskritischen Änderungen.
 
 ## Mini-Fallstudie
 
-Ausgangssituation: Eine bestehende Seite sollte in drei Sprachen inhaltlich erweitert werden, ohne Layout-Brueche zu erzeugen.
+Ausgangssituation: Eine bestehende Seite sollte in drei Sprachen inhaltlich erweitert werden, ohne Layout-Brüche zu erzeugen.
 
 Intervention:
 
 - klare Zielseiten,
 - sprachspezifische Content-Ziele,
-- explizites Verbot struktureller Layout-Aenderungen,
+- explizites Verbot struktureller Layout-Änderungen,
 - verpflichtende Build-Validierung.
 
 Beobachtung: Der Agent arbeitete mit geringer Streuung in relevanten Dateien; Folgeaufwand durch Korrekturschleifen sank sichtbar.
 
 ## Prompt-Design als Prozessartefakt
 
-Ein robustes Prompt-Schema hat sich als wiederverwendbares Artefakt bewaehrt:
+Ein robustes Prompt-Schema hat sich als wiederverwendbares Artefakt bewährt:
 
 1. Zieldefinition,
 2. Restriktionen,
@@ -81,17 +81,17 @@ Nicht delegierbar bleiben aus Governance-Sicht insbesondere:
 
 - strategische Produktentscheidungen,
 - rechtlich sensible Formulierungen,
-- finale Freigaben fuer produktive Rollouts.
+- finale Freigaben für produktive Rollouts.
 
-Agenten sind Ausfuehrungsinstrumente, keine Verantwortungsinstanzen.
+Agenten sind Ausführungsinstrumente, keine Verantwortungsinstanzen.
 
-## Implikationen fuer Team-Skalierung
+## Implikationen für Team-Skalierung
 
-Skalierbarkeit entsteht erst, wenn individuelle Arbeitsweisen in Team-Routinen ueberfuehrt werden. Bewaehrt hat sich eine kurze Iterations-Retro mit vier Fragen:
+Skalierbarkeit entsteht erst, wenn individuelle Arbeitsweisen in Team-Routinen überführt werden. Bewährt hat sich eine kurze Iterations-Retro mit vier Fragen:
 
 1. Welche Instruktion war unklar?
 2. Welcher Kontext fehlte?
-3. Welche Pruefung haette frueher detektiert?
+3. Welche Prüfung hätte früher detektiert?
 4. Welche Regel wird standardisiert?
 
 ## Limitationen
@@ -100,4 +100,4 @@ Die Aussagen beruhen auf praxisnaher, aber nicht randomisierter Beobachtung in e
 
 ## Fazit
 
-Ein leistungsfaehiger Agenten-Workflow ist primar ein Prozessdesign-Problem. Transparente Sequenzierung, explizite Gates und reproduzierbare Review-Routinen sind der zentrale Hebel, um Qualitaet dauerhaft zu stabilisieren.
+Ein leistungsfähiger Agenten-Workflow ist primär ein Prozessdesign-Problem. Transparente Sequenzierung, explizite Gates und reproduzierbare Review-Routinen sind der zentrale Hebel, um Qualität dauerhaft zu stabilisieren.
