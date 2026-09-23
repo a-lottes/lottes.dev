@@ -10,24 +10,24 @@ tags:
   - retrieval
   - optimierung
 ---
-Als wir begonnen haben, lange Texte ueber eine LLM-Pipeline zu erzeugen, sah das Hauptproblem zuerst nach Modellqualitaet aus. In der Praxis war es vor allem Systems Engineering: Request-Groesse, Latenzvarianz, Proxy-Timeouts und unbegrenzter Output.
+Als wir begonnen haben, lange Texte über eine LLM-Pipeline zu erzeugen, sah das Hauptproblem zuerst nach Modellqualität aus. In der Praxis war es vor allem Systems Engineering: Request-Größe, Latenzvarianz, Proxy-Timeouts und unbegrenzter Output.
 
 Dieser Bericht fasst zusammen, was unter produktionsnahen Bedingungen funktioniert hat, wenn die Ziele waren:
 
-- Lange Texte zuverlaessig erzeugen,
+- Lange Texte zuverlässig erzeugen,
 - Tokenverbrauch vorhersagbar halten,
 - Timeout-Risiko senken,
-- Qualitaet ueber mehrere Abschnitte erhalten.
+- Qualität über mehrere Abschnitte erhalten.
 
 ## 1) Warum Single-Shot-Prompting scheiterte
 
-Der naive Ansatz war ein grosser Request mit vollem Quelltext plus viel Kontext. Das fuehrte zu drei Problemen:
+Der naive Ansatz war ein großer Request mit vollem Quelltext plus viel Kontext. Das führte zu drei Problemen:
 
 - Hohe Input-Token-Kosten bei jedem Lauf,
-- Hohe Latenzvarianz je nach Promptlaenge und Modelllast,
-- Gateway-504s, obwohl das Modell spaeter noch eine Antwort lieferte.
+- Hohe Latenzvarianz je nach Promptlänge und Modelllast,
+- Gateway-504s, obwohl das Modell später noch eine Antwort lieferte.
 
-Zentrale Erkenntnis: Eine erfolgreiche Modellantwort ist wertlos, wenn eine vorgelagerte Komponente vorher in den Timeout laeuft. Zuverlaessigkeit muss auf Pipeline-Ebene entworfen werden, nicht nur auf Modell-Ebene.
+Zentrale Erkenntnis: Eine erfolgreiche Modellantwort ist wertlos, wenn eine vorgelagerte Komponente vorher in den Timeout läuft. Zuverlässigkeit muss auf Pipeline-Ebene entworfen werden, nicht nur auf Modell-Ebene.
 
 ## 2) Architektur, die lange Texte stabil gemacht hat
 
@@ -39,8 +39,8 @@ Statt alles verwandte Material mitzuschicken, haben wir:
 
 - Quelltexte in absatzbasierte Segmente gechunkt,
 - Embeddings einmal erzeugt und gecacht,
-- Pro Request nur die relevantesten Chunks gewaehlt,
-- Harte Limits gesetzt: Gesamtzahl Chunks, Chunks pro Datei, Snippetlaenge und Retrieval-Zeichenbudget.
+- Pro Request nur die relevantesten Chunks gewählt,
+- Harte Limits gesetzt: Gesamtzahl Chunks, Chunks pro Datei, Snippetlänge und Retrieval-Zeichenbudget.
 
 Das reduzierte wiederholte Tokenverschwendung und machte Requests vorhersagbarer.
 
@@ -48,77 +48,77 @@ Das reduzierte wiederholte Tokenverschwendung und machte Requests vorhersagbarer
 
 Vor jedem Modellaufruf berechnen wir ein dynamisches Budget aus:
 
-- Aktueller Inhaltslaenge,
-- Promptlaenge,
+- Aktueller Inhaltslänge,
+- Promptlänge,
 - Erwartetem Overhead des Systemprompts.
 
-Wenn der Input das Budget ueberschreiten wuerde:
+Wenn der Input das Budget überschreiten würde:
 
 - Zuerst Retrieval-Kontext reduzieren,
-- Dann Hauptinhalt mit kontrollierter Middle-Trim-Strategie kuerzen,
+- Dann Hauptinhalt mit kontrollierter Middle-Trim-Strategie kürzen,
 - Kopf und Ende behalten, damit Einleitung und Schlusskontext erhalten bleiben.
 
-Das liefert bessere Qualitaet als harte Abschneidung nur von einer Seite.
+Das liefert bessere Qualität als harte Abschneidung nur von einer Seite.
 
-### Stufe C: Segmentierte Generierung fuer grosse Texte
+### Stufe C: Segmentierte Generierung für große Texte
 
-Bei grossen Dokumenten verzichten wir auf Single-Pass-Generierung.
+Bei großen Dokumenten verzichten wir auf Single-Pass-Generierung.
 
 Ablauf:
 
-- Text in ueberlappende Segmente aufteilen,
-- Jedes Segment separat mit kleinerem Max-Output ueberarbeiten,
-- In Originalreihenfolge zusammenfuehren,
-- Einen finalen Konsistenz-Pass ueber den Gesamttext laufen lassen.
+- Text in überlappende Segmente aufteilen,
+- Jedes Segment separat mit kleinerem Max-Output überarbeiten,
+- In Originalreihenfolge zusammenführen,
+- Einen finalen Konsistenz-Pass über den Gesamttext laufen lassen.
 
-So wird aus einem fragilen Grossaufruf eine Reihe robusterer Kleinaufrufe.
+So wird aus einem fragilen Großaufruf eine Reihe robusterer Kleinaufrufe.
 
 ### Stufe D: Konsistenz-Pass
 
-Nach dem Zusammenfuehren laeuft ein kurzer globaler Pass mit Fokus auf:
+Nach dem Zusammenführen läuft ein kurzer globaler Pass mit Fokus auf:
 
 - Terminologiekonsistenz,
-- Tonalitaetsabgleich,
+- Tonalitätsabgleich,
 - Stilharmonisierung.
 
 Wichtig ist hier regelbasiertes Prompting: kein neuer Inhalt, kein strukturelles Umschreiben, keine Meta-Kommentare.
 
-## 3) Token- und Latenz-Kontrollen mit groesster Wirkung
+## 3) Token- und Latenz-Kontrollen mit größter Wirkung
 
-Diese Kontrollen hatten den groessten Effekt:
+Diese Kontrollen hatten den größten Effekt:
 
-- Max-Output-Tokens pro Aufruf, angepasst an die Input-Groesse,
-- Reduziertes Retrieval-Budget bei groesseren Dokumenten,
-- Weniger Retrieval-Chunks bei sehr grossen Inputs,
+- Max-Output-Tokens pro Aufruf, angepasst an die Input-Größe,
+- Reduziertes Retrieval-Budget bei größeren Dokumenten,
+- Weniger Retrieval-Chunks bei sehr großen Inputs,
 - Segmentmodus oberhalb einer Inhalts-Schwelle,
-- Verkuerzter Retrieval-Kontext waehrend Segmentaufrufen,
-- Persistenter Embedding-Cache mit Content-Hash als Schluessel.
+- Verkürzter Retrieval-Kontext während Segmentaufrufen,
+- Persistenter Embedding-Cache mit Content-Hash als Schlüssel.
 
-Der Cache ist kritisch. Ohne ihn bezahlt ein Long-Form-Workflow Embedding-Kosten immer wieder und verliert den Grossteil des Effizienzgewinns.
+Der Cache ist kritisch. Ohne ihn bezahlt ein Long-Form-Workflow Embedding-Kosten immer wieder und verliert den Großteil des Effizienzgewinns.
 
 ## 4) Betriebskontrollen und Observability
 
-Wir haben strukturiertes Logging rund um jede Stufe eingefuehrt:
+Wir haben strukturiertes Logging rund um jede Stufe eingeführt:
 
 - Request-Metadaten: model, input_chars, context_chars, max_tokens, timeout,
-- Retrieval-Metadaten: Cache-Hits, neu eingebettete Dateien, ausgewaehlte Chunks, Laufzeit,
-- Segment-Metadaten: Segmentanzahl, Output-Groesse je Segment, Status des Konsistenz-Passes,
+- Retrieval-Metadaten: Cache-Hits, neu eingebettete Dateien, ausgewählte Chunks, Laufzeit,
+- Segment-Metadaten: Segmentanzahl, Output-Größe je Segment, Status des Konsistenz-Passes,
 - Outcome-Metadaten: Quellmodell, Fallback-Grund, Laufzeit pro Datei.
 
-Dadurch wurde Debugging von Bauchgefuehl zu messbarem Tuning.
+Dadurch wurde Debugging von Bauchgefühl zu messbarem Tuning.
 
-Wenn Aufrufe exakt an der Timeout-Grenze scheiterten, war klar: lokales oder clientseitiges Timeout-Verhalten, nicht mangelnde Modellqualitaet.
+Wenn Aufrufe exakt an der Timeout-Grenze scheiterten, war klar: lokales oder clientseitiges Timeout-Verhalten, nicht mangelnde Modellqualität.
 
 ## 5) Praktisches Implementierungsmuster
 
-Eine einfache Implementierungsstrategie fuer Entwickler:
+Eine einfache Implementierungsstrategie für Entwickler:
 
-- Limits aus Inhalts- und Promptlaenge vorab berechnen,
+- Limits aus Inhalts- und Promptlänge vorab berechnen,
 - Retrieval-Kontext innerhalb dieser Limits aufbauen,
-- Bei Ueberschreiten der Schwelle Segmentmodus aktivieren,
-- Fuer jeden Modellaufruf Max-Output-Tokens setzen,
-- Zusammenfuehren und optional Konsistenz-Pass ausfuehren,
-- Vorschlag plus Metadaten fuer Observability und Retries persistieren.
+- Bei Überschreiten der Schwelle Segmentmodus aktivieren,
+- Für jeden Modellaufruf Max-Output-Tokens setzen,
+- Zusammenführen und optional Konsistenz-Pass ausführen,
+- Vorschlag plus Metadaten für Observability und Retries persistieren.
 
 Pseudo-Flow:
 
@@ -137,28 +137,28 @@ store result with source and error metadata
 
 ## 6) Trade-offs und worauf man achten sollte
 
-Segmentmodus verbessert Zuverlaessigkeit und Kostenkontrolle, kann aber Merge-Artefakte erzeugen, wenn die Ueberlappung zu klein ist. Eine kurze Ueberlappung plus Konsistenz-Pass loest das meist.
+Segmentmodus verbessert Zuverlässigkeit und Kostenkontrolle, kann aber Merge-Artefakte erzeugen, wenn die Überlappung zu klein ist. Eine kurze Überlappung plus Konsistenz-Pass löst das meist.
 
-Zu aggressives Trimming senkt die Qualitaet. Immer erst Retrieval kuerzen, dann erst bei Bedarf den Hauptinhalt.
+Zu aggressives Trimming senkt die Qualität. Immer erst Retrieval kürzen, dann erst bei Bedarf den Hauptinhalt.
 
-Zu hoher Max-Output erhoeht das Timeout-Risiko, zu niedriger verursacht abgeschnittene Antworten. Besser dynamische Baender nach Input-Groesse statt eines festen Werts.
+Zu hoher Max-Output erhöht das Timeout-Risiko, zu niedriger verursacht abgeschnittene Antworten. Besser dynamische Bänder nach Input-Größe statt eines festen Werts.
 
-## 7) Empfohlene Defaults fuer den Start
+## 7) Empfohlene Defaults für den Start
 
 - Segment-Schwelle: etwa 26k Zeichen,
-- Segmentgroesse: etwa 5k Zeichen mit 300-350 Ueberlappung,
-- Retrieval-Budget: hoeher bei kleinen Dokumenten, niedriger bei grossen,
-- Max-Output-Tokens: niedriger bei kleinen Dokumenten, moderat bei grossen, aber gedeckelt,
-- Timeout: Modell-Timeout ueber der durchschnittlichen Antwortzeit, Gateway-Timeout ueber dem Modell-Timeout.
+- Segmentgröße: etwa 5k Zeichen mit 300-350 Überlappung,
+- Retrieval-Budget: höher bei kleinen Dokumenten, niedriger bei großen,
+- Max-Output-Tokens: niedriger bei kleinen Dokumenten, moderat bei großen, aber gedeckelt,
+- Timeout: Modell-Timeout über der durchschnittlichen Antwortzeit, Gateway-Timeout über dem Modell-Timeout.
 
 ## Zentrales Fazit
 
-Long-Form-LLM-Generierung mit niedrigen Token-Kosten ist primaer ein Pipeline-Design-Problem, kein Prompt-Trick. Das erfolgreiche Muster ist:
+Long-Form-LLM-Generierung mit niedrigen Token-Kosten ist primär ein Pipeline-Design-Problem, kein Prompt-Trick. Das erfolgreiche Muster ist:
 
 - Weniger, aber besseres Retrieval,
 - Aggressives Input-Budgeting,
-- Segmentierung grosser Arbeitspakete,
+- Segmentierung großer Arbeitspakete,
 - Output-Caps,
-- Vollstaendige Instrumentierung.
+- Vollständige Instrumentierung.
 
-Diese Kombination liefert niedrigere Kosten, weniger 504s und besser vorhersagbare Qualitaet fuer reale Engineering-Workflows.
+Diese Kombination liefert niedrigere Kosten, weniger 504s und besser vorhersagbare Qualität für reale Engineering-Workflows.

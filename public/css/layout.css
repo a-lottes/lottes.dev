@@ -226,6 +226,20 @@
     background-color: currentColor;
 }
 
+.hero__project {
+    margin-top: var(--space-5);
+    margin-bottom: 0;
+    padding-left: var(--space-4);
+    border-left: 2px solid var(--accent-2);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+.hero__project a {
+    font-weight: 600;
+}
+
 .hero__actions {
     margin-top: var(--space-6);
     margin-bottom: 0;

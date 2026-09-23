@@ -11,7 +11,7 @@ hmc</span>
         </a>
         <p class="site-footer__title">
           <strong>{{ metadata.title }}</strong>
-          <span>{{ metadata.description }}</span>
+          <span>{{ "site_description" | i18n }}</span>
         </p>
       </div>
       <p class="site-footer__desc">{{ data.footer_content_description | safe }}</p>
@@ -50,7 +50,7 @@ hmc</span>
         <li><a href="/sitemap/">{{ "sitemap" | i18n }}</a></li>
         <li>
           <a href="{{ "accessibility_url" | i18n }}">
-            {{ "accessibility" | i18n }}: {{ "not_compliant" | i18n }}
+            {{ "accessibility" | i18n }}
           </a>
         </li>
         <li><a href="{{ "legal_url" | i18n }}">{{ "legal" | i18n }}</a></li>

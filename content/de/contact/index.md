@@ -3,7 +3,7 @@ layout: layouts/page.njk
 title: Kontakt
 eleventyNavigation:
   key: Kontakt
-  parent: Uber mich
+  parent: about-me
   order: 2
 slugOverride: kontakt
 ---

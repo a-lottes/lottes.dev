@@ -1,6 +1,7 @@
 ---
 eleventyNavigation:
-  key: Uber mich
+  key: about-me
+  title: Über mich
   order: 3
 permalink: false
 ---

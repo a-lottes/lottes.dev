@@ -5,8 +5,8 @@ banner: /img/about-banner.png
 portrait: /img/andreas-lottes.png
 portraitAlt: Andreas Lottes
 eleventyNavigation:
-  key: Über mich
-  parent: Uber mich
+  key: Profil
+  parent: about-me
   order: 1
 ---
 

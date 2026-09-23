@@ -5,7 +5,8 @@
   <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <meta name="description" content="{{ description or metadata.description }}">
+  <meta name="description" content="{{ description or ("site_description" | i18n) }}">
+{% include "templates/head-meta.njk" %}
   <meta name="theme-color" content="#fdfdfc" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0b0b10" media="(prefers-color-scheme: dark)">
   <link rel="apple-touch-icon" href="/img/logo_lottes_alt.png">

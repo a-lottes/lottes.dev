@@ -10,7 +10,7 @@ showBreadcrumb: true
 
 Andreas Lottes  
 Rehbachstr. 95  
-66125 Saarbrucken  
+66125 Saarbrücken  
 Germany
 
 Email: <andreas@lottes.dev>
@@ -19,7 +19,7 @@ Email: <andreas@lottes.dev>
 
 Andreas Lottes  
 Rehbachstr. 95  
-66125 Saarbrucken  
+66125 Saarbrücken  
 Germany
 
 ## VAT ID
@@ -28,7 +28,7 @@ No VAT identification number is available.
 
 ## Scope
 
-This legal notice applies to the website under the domain `www.lottes.dev` and its language versions.
+This legal notice applies to the websites under the domains `lottes.dev` and `aspark.lottes.dev` and their language versions.
 
 ## Accessibility
 
@@ -36,4 +36,4 @@ This legal notice applies to the website under the domain `www.lottes.dev` and i
 
 ## Personal data
 
-[See information about cookies and personal data on this site](/en/personal-data/).
+[See the privacy policy](/en/personal-data/).

@@ -48,6 +48,6 @@ In particular, the following pages and sections were reviewed:
 If you encounter an accessibility barrier on this website or need content in a more accessible format, please contact me.
 
 - Email: <andreas@lottes.dev>
-- Contact page: [/de/kontakt/](/de/kontakt/)
+- Contact page: [/en/contact/](/en/contact/)
 
 I review feedback promptly and aim to provide a clear response and a practical solution.
