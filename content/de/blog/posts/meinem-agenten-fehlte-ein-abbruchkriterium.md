@@ -55,4 +55,4 @@ Zwei Dinge sind mir dabei wichtig. Die Stopp-Regeln befolgt der Agent, erzwungen
 
 Aber zum ersten Mal habe ich für lange, mechanische Arbeit ein Werkzeug, bei dem ich nicht danebensitzen muss, um zu merken, wann es aufhören sollte.
 
-Die Kampagnen-Doku liegt im [aSPARK-Repo](https://github.com/a-lottes/aSPARK/tree/main/campaigns), den SR-5-Moment gibt es auch als [60-Sekunden-Video](https://youtube.com/shorts/yD54Mq4JLJw).
+Die Kampagnen-Doku liegt im [aSPARK-Repo](https://github.com/a-lottes/aSPARK/tree/main/campaigns), den SR-5-Moment gibt es auch als [60-Sekunden-Video](https://youtube.com/shorts/yD54Mq4JLJw). Wann eine Kampagne passt und wann eine Story, habe ich auf der aSPARK-Seite aufgeschrieben: [Kampagne oder Story? Wo aSPARK die Grenze zieht](https://aspark.lottes.dev/de/blog/kampagne-oder-story/).

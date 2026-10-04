@@ -55,4 +55,4 @@ Deux points comptent pour moi. L'agent suit les règles d'arrêt, rien ne les im
 
 Mais pour la première fois, j'ai pour le travail long et mécanique un outil à côté duquel je n'ai pas besoin de rester assis pour voir quand il devrait s'arrêter.
 
-La documentation des campagnes se trouve dans le [dépôt aSPARK](https://github.com/a-lottes/aSPARK/tree/main/campaigns), et le moment SR-5 existe aussi en [vidéo de 60 secondes](https://youtube.com/shorts/yD54Mq4JLJw).
+La documentation des campagnes se trouve dans le [dépôt aSPARK](https://github.com/a-lottes/aSPARK/tree/main/campaigns), et le moment SR-5 existe aussi en [vidéo de 60 secondes](https://youtube.com/shorts/yD54Mq4JLJw). Quand choisir une campagne plutôt qu'une story, je l'explique sur le site d'aSPARK (en anglais) : [Campaign or story? Where aSPARK draws the line](https://aspark.lottes.dev/en/blog/campaign-or-story/).
