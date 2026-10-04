@@ -55,4 +55,4 @@ Two things matter to me here. The agent follows the stop rules; nothing enforces
 
 But for the first time I have a tool for long, mechanical work where I don't have to sit next to it to notice when it should stop.
 
-The campaign docs are in the [aSPARK repo](https://github.com/a-lottes/aSPARK/tree/main/campaigns), and the SR-5 moment is also a [60-second video](https://youtube.com/shorts/yD54Mq4JLJw).
+The campaign docs are in the [aSPARK repo](https://github.com/a-lottes/aSPARK/tree/main/campaigns), and the SR-5 moment is also a [60-second video](https://youtube.com/shorts/yD54Mq4JLJw). When a campaign fits and when a story does is on the aSPARK site: [Campaign or story? Where aSPARK draws the line](https://aspark.lottes.dev/en/blog/campaign-or-story/).
