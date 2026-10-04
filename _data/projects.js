@@ -106,6 +106,29 @@ module.exports = [
         },
     },
     {
+        key: "steamcore",
+        name: "BRASS-01 / SteamCore",
+        repo: "https://github.com/a-lottes/steamcore",
+        license: "MIT",
+        year: 2026,
+        topics: ["esp32", "retro-gaming", "game-engine", "embedded", "cpp", "aspark"],
+        de: {
+            tagline: "Eine Steampunk-Arcade-Konsole für ein alternatives 1983",
+            description: "BRASS-01 ist eine selbst gebaute Mini-Retro-Konsole auf einem ESP32-S3, mit eigener Game Engine (SteamCore) und eigenen Spielen. Die Grafik ist bewusst monochrom orange auf schwarz und läuft in einer niedrigen virtuellen Auflösung, die ganzzahlig auf das Display skaliert wird. Das Ziel ist keine Emulation alter Konsolen, sondern eine Plattform, die es 1983 in einer Steampunk-Zeitlinie hätte geben können. Das erste Spiel ist Galactic Invasion.",
+            detail: "Jedes Feature ist mit aSPARK entstanden: 13 Features, jedes mit Spec, Plan, Review, QA und Release unter .spark/ — der vollständige, öffentlich lesbare Delivery-Pfad eines echten Projekts. Weil die Konsole keine Browser-Oberfläche hat, läuft die QA über eine in der Constitution festgelegte Ersatzmethode: Host-Unit-Tests, Framebuffer-Dumps und serielle Mitschnitte.",
+        },
+        en: {
+            tagline: "A steampunk arcade console for an alternate 1983",
+            description: "BRASS-01 is a home-built mini retro console on an ESP32-S3, with its own game engine (SteamCore) and its own games. The graphics are deliberately monochrome orange on black and run at a low virtual resolution, scaled by whole numbers onto the display. The goal is not to emulate old consoles but a platform that could have existed in a steampunk 1983. The first game is Galactic Invasion.",
+            detail: "Every feature was built with aSPARK: 13 features, each with its spec, plan, review, QA and release under .spark/ — the complete, publicly readable delivery trail of a real project. Because the console has no browser surface, QA runs by a substitute method declared in the constitution: host unit tests, framebuffer dumps and serial transcripts.",
+        },
+        fr: {
+            tagline: "Une console d'arcade steampunk pour un 1983 alternatif",
+            description: "BRASS-01 est une mini-console rétro construite maison sur un ESP32-S3, avec son propre moteur de jeu (SteamCore) et ses propres jeux. Les graphismes sont volontairement monochromes, orange sur noir, et tournent dans une faible résolution virtuelle mise à l'échelle par un facteur entier sur l'écran. Le but n'est pas d'émuler d'anciennes consoles, mais une plateforme qui aurait pu exister en 1983 dans une chronologie steampunk. Le premier jeu est Galactic Invasion.",
+            detail: "Chaque fonctionnalité a été construite avec aSPARK : 13 fonctionnalités, chacune avec sa spec, son plan, sa revue, sa QA et sa release sous .spark/ — la piste de livraison complète et publique d'un vrai projet. Comme la console n'a pas d'interface navigateur, la QA suit une méthode de substitution déclarée dans la constitution : tests unitaires sur l'hôte, dumps du framebuffer et transcriptions série.",
+        },
+    },
+    {
         key: "eleventy-rosetta",
         name: "eleventy-rosetta",
         repo: "https://github.com/a-lottes/eleventy-rosetta",
