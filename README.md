@@ -100,13 +100,11 @@ aktiviert über `heroCanvas: true` im Frontmatter).
 
 - DE: `content/de/`
 - EN: `content/en/`
-- FR: `content/fr/`
 
 ### Übersetzungen für UI-Texte
 
 - `_data/i18n/de/index.js`
 - `_data/i18n/en/index.js`
-- `_data/i18n/fr/index.js`
 
 ### Sprachwechsel bei Blogposts
 
