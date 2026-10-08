@@ -11,42 +11,36 @@ eleventyNavigation:
 slugOverride: a-propos
 ---
 
-Bonjour, je m'appelle Andreas.
+Bonjour, je suis Andreas.
 
-Je construis des logiciels IA et agentiques — comme Senior Manager chez [adesso](https://www.adesso.de/) et dans mes propres projets open source. Je développe des logiciels à titre professionnel depuis 2001, et j'ai commencé à programmer en 1996. Je vis à Sarrebruck, en Allemagne.
+Je dirige des équipes qui mettent l'IA agentique en production dans de grandes entreprises, et je continue à construire moi-même. Chez [adesso](https://www.adesso.de/), j'ai dirigé des équipes de delivery de 5 à 35 personnes. Mes équipes réalisent des logiciels agentiques pour de grandes entreprises des technologies médicales, du contrôle et de la certification et d'autres secteurs, et nous menons des évaluations IA dans la vente, la distribution et l'après-vente automobiles. Je développe des logiciels professionnellement depuis 2001 et j'ai commencé à programmer en 1996. J'habite à Sarrebruck, en Allemagne.
 
-Je suis un homme de famille et père de deux enfants. La parentalité a fortement influencé ma manière de travailler: clarté, sens des responsabilités, communication respectueuse et vision de long terme.
+## Ce que j'apporte
 
-J'ai grandi dans les années 80, à une époque où les smartphones et les réseaux sociaux ne structuraient pas encore le quotidien. J'ai passé beaucoup de temps dehors, à explorer, apprendre et construire. Cette période m'a appris à rester curieux, concret et orienté solutions.
+- **Direction de la delivery :** constituer et piloter des équipes de 5 à 35 personnes, du premier pilote à la production.
+- **Responsabilité client :** des relations durables avec de grands comptes, où la confiance naît de la livraison, pas des slides.
+- **Profondeur technique :** je construis moi-même des outils agentiques, je sais donc où ils cassent et ce qu'ils coûtent.
+- **Connaissance du secteur automobile :** vente, distribution, après-vente et équipementiers.
 
-## Ma façon de travailler
+## Pourquoi je construis aSPARK
 
-Mon approche professionnelle repose sur la collaboration, la créativité et l'amélioration continue. Je crois que les équipes progressent quand les objectifs sont clairs et que chacun peut prendre ses responsabilités. Pour moi, le leadership agile est une pratique quotidienne:
+Dans les équipes mixtes humains-agents, la vitesse est rarement le problème. Le déterminisme et l'auditabilité le sont : qui a décidé quoi, quelle règle s'appliquait, et peut-on le reproduire ? Je suis convaincu qu'il faut pour cela une méthodologie ouverte plutôt qu'un outil fermé de plus. C'est pourquoi je développe **[aSPARK](https://aspark.lottes.dev/en/)** en open source : un processus de delivery à étapes de validation pour Claude Code, avec traçabilité, policy as code et un graphe de connaissances reliant stories, code, tests et releases.
 
-- objectifs explicites,
-- boucles d'apprentissage courtes,
-- ownership réel,
-- rétrospectives régulières.
+## Comment je dirige
 
-## Mon focus actuel: Agentic AI, GenAI et HMC
+Les équipes donnent le meilleur d'elles-mêmes quand chacun se sent en confiance, stimulé et soutenu. Pour moi, le leadership agile est une pratique quotidienne, pas un slogan :
 
-Sur ce site, je partage des retours d'expérience concrets autour de:
+- des objectifs clairs,
+- des cycles d'apprentissage courts,
+- une vraie responsabilisation,
+- une réflexion régulière.
 
-- workflows Agentic AI,
-- usage de l'IA générative dans les produits et l'ingénierie,
-- Human-Machine Collaboration (HMC) avec des rôles clairs entre humains et systèmes.
+## Ce sur quoi j'écris
 
-Ce qui m'intéresse le plus est la transformation d'expérimentations IA en pratiques robustes, compréhensibles et réellement utiles au quotidien.
+- Les agents en production : ce qui marche, ce qui échoue, et pourquoi.
+- Diriger la delivery IA : organisation des équipes, rôles et passage du pilote à la production.
+- Gouvernance et auditabilité pour les équipes où humains et agents livrent ensemble.
 
-## Ce que je construis
+## En dehors du travail
 
-L'essentiel se fait au grand jour sur [GitHub](https://github.com/a-lottes):
-
-- **[aSPARK](https://github.com/a-lottes/aSPARK)** — un processus de delivery agile pour Claude Code: une équipe produit IA (PO, Designer, EM, Reviewer, QA, Release) où chaque fonctionnalité doit franchir un quality gate avant de poursuivre.
-- **[lottes.dev](https://github.com/a-lottes/lottes.dev)** — ce site.
-
-## Ce qui compte pour moi
-
-J'ai été reconnu à plusieurs reprises pour la qualité de la relation client et la clarté de la communication. Dans de nombreux projets orientés UI/UX, mon exigence est restée la même: qualité du design, qualité de l'expérience utilisateur et qualité d'exécution.
-
-En dehors du travail, j'aime lire, marcher, cuisiner sainement et passer du temps avec ma famille. Apprendre, progresser et avoir un impact positif restent mon fil conducteur.
+Je suis père de deux enfants, ce qui a façonné ma vision du leadership et de la responsabilité. J'aime lire, randonner et cuisiner sainement.

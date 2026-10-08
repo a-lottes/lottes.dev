@@ -12,40 +12,34 @@ eleventyNavigation:
 
 Hello, I am Andreas.
 
-I build AI and agentic software — as a Senior Manager at [adesso](https://www.adesso.de/) and in my own open source projects. I have been engineering software professionally since 2001, and I started coding in 1996. I am based in Saarbrücken, Germany.
+I lead teams that bring agentic AI into production at large enterprises, and I still build myself. At [adesso](https://www.adesso.de/) I have led delivery teams of between 5 and 35 people. My teams implement agentic software for major companies in medical technology, testing and certification, and other industries, and we run AI assessments across automotive sales, retail, and aftersales. I have been engineering software professionally since 2001, and I started coding in 1996. I am based in Saarbrücken, Germany.
 
-I am a family man and the father of two children. Parenthood has shaped how I think about leadership, collaboration, and responsibility: work with clarity, communicate with respect, and focus on long-term impact.
+## What I bring
 
-I grew up in the 80s and spent much of my childhood outdoors, long before smartphones and social media became part of daily life. Those years taught me to stay curious, explore ideas directly, and solve problems pragmatically.
+- **Delivery leadership:** building and steering teams of 5 to 35 people, from the first pilot to production.
+- **Client responsibility:** long-term relationships with enterprise clients, where trust comes from delivering, not from slides.
+- **Hands-on depth:** I build agentic tooling myself, so I know where it breaks and what it costs.
+- **Automotive domain knowledge:** sales, retail, aftersales, and the supplier industry.
 
-## How I work
+## Why I built aSPARK
 
-My work mindset is built around collaboration, creativity, and continuous improvement. I believe teams do their best work when people feel trusted, challenged, and supported. For me, agile leadership is practical day-to-day work, not a slogan:
+In mixed teams of people and agents, speed is rarely the problem. Determinism and auditability are: who decided what, which rule applied, and can we reproduce it? I believe this needs an open methodology rather than one more closed tool. That is why I build **[aSPARK](https://aspark.lottes.dev/en/)** in the open: a gated delivery process for Claude Code with traceability, policy as code, and a knowledge graph that links stories, code, tests, and releases.
+
+## How I lead
+
+Teams do their best work when people feel trusted, challenged, and supported. For me, agile leadership is practical day-to-day work, not a slogan:
 
 - clear goals,
 - short learning cycles,
 - real ownership,
 - regular reflection.
 
-## Focus today: Agentic AI, GenAI, and HMC
+## What I write about
 
-On this website, I share hands-on experiences from real projects in:
+- Agents in production: what works, what fails, and why.
+- Leading AI delivery: team setup, roles, and getting from pilot to production.
+- Governance and auditability for teams where people and agents ship together.
 
-- Agentic AI workflows,
-- Generative AI in product and engineering delivery,
-- Human-Machine Collaboration (HMC) with clear roles between people and systems.
+## Outside work
 
-What interests me most is how to move from AI experimentation to robust working models that are reliable, understandable, and useful in everyday operations.
-
-## What I build
-
-Much of it happens in the open on [GitHub](https://github.com/a-lottes):
-
-- **[aSPARK](https://github.com/a-lottes/aSPARK)** — a gated agile delivery process for Claude Code: an AI product team (PO, Designer, EM, Reviewer, QA, Release) where every feature has to pass a quality gate before it moves on.
-- **[lottes.dev](https://github.com/a-lottes/lottes.dev)** — this website.
-
-## What matters to me
-
-Throughout my career, I have repeatedly been recognized for strong customer focus and clear communication. In many UI/UX-led projects, my benchmark has always been high: design quality, user experience quality, and implementation quality.
-
-Outside work, I enjoy reading, hiking, healthy cooking, and spending time with my family. Growth, learning, and creating positive impact are the themes that guide me.
+I am a father of two. Parenthood has shaped how I think about leadership and responsibility. I enjoy reading, hiking, and healthy cooking.
