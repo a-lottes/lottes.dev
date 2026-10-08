@@ -38,3 +38,81 @@
   from = "/en/blog/secondpost/"
   to = "/en/blog/"
   status = 301
+
+# ── Posts taken offline (drafts) ───────────────────────────────────────
+# Early posts withdrawn in Oct 2026; send old links to the blog index.
+
+[[redirects]]
+  from = "/de/blog/hmc-in-der-praxis-klare-rollen-klare-ergebnisse/"
+  to = "/de/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/en/blog/hmc-in-practice-clear-roles-clear-outcomes/"
+  to = "/en/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/fr/blog/hmc-en-pratique-roles-clairs-resultats-clairs/"
+  to = "/fr/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/de/blog/guardrails-fur-ki-applikationen/"
+  to = "/de/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/en/blog/guardrails-for-ai-applications/"
+  to = "/en/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/fr/blog/guardrails-pour-applications-ia/"
+  to = "/fr/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/de/blog/agenten-workflow-in-der-praxis/"
+  to = "/de/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/en/blog/agent-workflow-in-practice/"
+  to = "/en/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/fr/blog/workflow-agents-en-pratique/"
+  to = "/fr/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/de/blog/vom-prompt-chaos-zum-agent-flow-mein-groesster-hebel/"
+  to = "/de/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/en/blog/from-prompt-chaos-to-agent-flow-my-biggest-leverage/"
+  to = "/en/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/fr/blog/du-chaos-de-prompts-au-flux-agentique-mon-plus-grand-levier/"
+  to = "/fr/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/de/blog/qwen-3-6-vs-anthropic-leistung-und-preis/"
+  to = "/de/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/en/blog/qwen-3-6-vs-anthropic-performance-and-pricing/"
+  to = "/en/blog/"
+  status = 302
+
+[[redirects]]
+  from = "/fr/blog/qwen-3-6-vs-anthropic-performance-et-prix/"
+  to = "/fr/blog/"
+  status = 302

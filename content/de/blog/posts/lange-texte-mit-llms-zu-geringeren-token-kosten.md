@@ -1,5 +1,5 @@
 ---
-title: Long-Form-LLM-Generierung mit niedrigen Token-Kosten Ein Engineering-Report
+title: "Long-Form-LLM-Generierung mit niedrigen Token-Kosten: ein Engineering-Report"
 description: Engineering-Erkenntnisse aus produktionsnahen LLM-Pipelines mit begrenztem Retrieval, Segmentierung und starker Observability.
 date: 2026-04-02
 draft: false

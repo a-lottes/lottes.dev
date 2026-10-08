@@ -2,7 +2,7 @@
 title: Qwen 3.6 vs modeles Anthropic actuels performance, cout et implications
 description: Une comparaison pratique entre Qwen 3.6 et Claude 4.x sur la performance, le cout token et la strategie de selection de modele.
 date: 2026-04-24
-draft: false
+draft: true
 translationKey: qwen-3-6-vs-anthropic-performance-pricing
 tags:
   - llm

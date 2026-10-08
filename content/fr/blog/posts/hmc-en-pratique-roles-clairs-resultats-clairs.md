@@ -2,7 +2,7 @@
 title: HMC en pratique roles clairs, resultats clairs
 description: Rendre la collaboration humain-machine previsible, utile et auditable.
 date: 2026-01-10
-draft: false
+draft: true
 translationKey: hmc-clear-roles-clear-outcomes
 tags:
   - hmc

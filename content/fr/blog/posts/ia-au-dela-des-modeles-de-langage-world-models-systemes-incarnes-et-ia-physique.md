@@ -12,8 +12,6 @@ tags:
 ---
 ## Resume
 
-Reduire l'IA a "un chatbot" est devenu insuffisant.
-
 Le centre de gravite se deplace des systemes purement linguistiques vers des architectures integrees qui percoivent, simulent, decident et agissent. Cet article propose une taxonomie pratique de ce basculement, avec un focus sur les world models, l'IA incarnee et l'IA physique.
 
 ## Pourquoi C'est Important
@@ -172,7 +170,7 @@ Cela donne un gradient de maturite simple:
 4. Traiter benchmarks incarnes et safety cases comme des exigences produit.
 5. Miser sur des architectures hybrides plutot que sur le recit du one-model-to-rule-them-all.
 
-## Limites De Ce Draft
+## Limites
 
 Cette categorisation est pragmatique, pas canonique. Les frontieres vont continuer a bouger, notamment avec la convergence entre modeles de fondation multimodaux et world models.
 
@@ -184,7 +182,7 @@ La prochaine phase de l'IA ne se joue pas d'abord sur la qualite conversationnel
 
 Les modeles de langage restent centraux, mais ne sont plus qu'une couche d'une architecture plus large. La frontiere se deplace vers les world models, l'intelligence incarnee et l'IA physique.
 
-## Notes de lecture (for follow-up version)
+## Pour aller plus loin
 
 - Ha and Schmidhuber, World Models (2018): formulation precoce orientee RL de la dynamique d'environnement apprise.
 - OpenAI, Video generation models as world simulators (2024): passage a l'echelle des capacites de simulation visuelle et leurs limites.

@@ -1,5 +1,5 @@
 ---
-title: Generation de textes longs avec des LLMs a faible cout token Rapport d'ingenierie
+title: "Génération de textes longs avec des LLM à faible coût en tokens : rapport d'ingénierie"
 description: Enseignements d'ingenierie issus de pipelines LLM proches de la production avec retrieval borne, segmentation et forte observabilite.
 date: 2026-04-02
 draft: false
