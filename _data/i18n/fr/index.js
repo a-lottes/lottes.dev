@@ -60,5 +60,6 @@ module.exports = {
     install: "Installation",
     view_on_github: "Voir sur GitHub",
     projects_count: "projets",
-    site_description: "Retours d'expérience sur les agents IA, les applications d'IA et la collaboration humain-machine – par Andreas Lottes, créateur d'aSPARK.",
+    site_description: "Diriger les équipes qui mettent l'IA agentique en production : delivery, gouvernance et auditabilité – par Andreas Lottes, créateur d'aSPARK.",
+    footer_description: "Je suis Andreas Lottes. J'écris sur les agents en production, la direction de la delivery IA et la gouvernance des équipes humains-agents.",
 };
