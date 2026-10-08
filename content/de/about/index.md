@@ -12,40 +12,34 @@ eleventyNavigation:
 
 Hallo, ich bin Andreas.
 
-Ich baue KI- und agentische Software — als Senior Manager bei [adesso](https://www.adesso.de/) und in eigenen Open-Source-Projekten. Software entwickle ich seit 2001 beruflich, angefangen zu programmieren habe ich 1996. Zu Hause bin ich in Saarbrücken.
+Ich führe Teams, die agentische KI bei großen Unternehmen in Produktion bringen, und ich baue weiterhin selbst. Bei [adesso](https://www.adesso.de/) habe ich Delivery-Teams mit 5 bis 35 Menschen geführt. Meine Teams setzen agentische Software für große Unternehmen aus Medizintechnik, Prüfung und Zertifizierung und weiteren Branchen um, und wir führen KI-Assessments in Automotive-Vertrieb, Handel und Aftersales durch. Software entwickle ich seit 2001 beruflich, angefangen zu programmieren habe ich 1996. Zu Hause bin ich in Saarbrücken.
 
-Ich bin Familienmensch und Vater von zwei Kindern. Das prägt meinen Blick auf Führung, Zusammenarbeit und Verantwortung: mit Klarheit arbeiten, respektvoll kommunizieren und langfristig denken.
+## Was ich mitbringe
 
-Aufgewachsen bin ich in den 80ern, mit viel Zeit draußen und lange bevor Smartphones und Social Media den Alltag bestimmt haben. Das hat mich gelehrt, neugierig zu bleiben, Dinge selbst auszuprobieren und Probleme pragmatisch zu lösen.
+- **Delivery-Führung:** Teams mit 5 bis 35 Menschen aufbauen und steuern, vom ersten Piloten bis in die Produktion.
+- **Kundenverantwortung:** langfristige Beziehungen zu Enterprise-Kunden, in denen Vertrauen durch Liefern entsteht, nicht durch Folien.
+- **Technische Tiefe:** Ich baue agentische Werkzeuge selbst und weiß deshalb, wo sie brechen und was sie kosten.
+- **Automotive-Know-how:** Vertrieb, Handel, Aftersales und die Zulieferindustrie.
 
-## Wie ich arbeite
+## Warum ich aSPARK baue
 
-In meiner Arbeit setze ich auf Kollaboration, Kreativität und kontinuierliche Verbesserung. Ich glaube an Teams, die offen denken, schnell lernen und Verantwortung übernehmen. Agile Leadership ist für mich kein Buzzword, sondern gelebte Praxis:
+In gemischten Teams aus Menschen und Agenten ist Geschwindigkeit selten das Problem. Determinismus und Auditierbarkeit sind es: Wer hat was entschieden, welche Regel galt, und lässt es sich reproduzieren? Ich bin überzeugt, dass es dafür eine offene Methodik braucht und nicht noch ein geschlossenes Werkzeug. Deshalb entwickle ich **[aSPARK](https://aspark.lottes.dev/de/)** öffentlich: einen Delivery-Prozess mit Gates für Claude Code, mit Nachvollziehbarkeit, Policy-as-Code und einem Wissensgraphen, der Stories, Code, Tests und Releases verbindet.
+
+## Wie ich führe
+
+Teams leisten ihr Bestes, wenn Menschen Vertrauen spüren, gefordert und unterstützt werden. Agile Leadership ist für mich kein Buzzword, sondern gelebte Praxis:
 
 - klare Ziele,
 - kurze Lernzyklen,
 - echtes Ownership,
 - stetige Reflexion.
 
-## Fokus heute: Agentic AI, GenAI und HMC
+## Worüber ich schreibe
 
-Auf dieser Website teile ich meine aktuellen Erfahrungen aus der praktischen Arbeit mit:
+- Agenten in Produktion: was funktioniert, was scheitert und warum.
+- KI-Delivery führen: Teamaufbau, Rollen und der Weg vom Piloten in die Produktion.
+- Governance und Auditierbarkeit für Teams, in denen Menschen und Agenten gemeinsam liefern.
 
-- Agentic AI Workflows,
-- Generative AI in realen Produkt- und Entwicklungsprozessen,
-- Human-Machine-Collaboration (HMC) mit klaren Rollen zwischen Mensch und System.
+## Abseits der Arbeit
 
-Mich interessiert vor allem, wie aus KI-Experimenten robuste Arbeitsweisen entstehen, die im Alltag wirklich funktionieren: nachvollziehbar, sicher und mit messbarem Nutzen.
-
-## Was ich baue
-
-Vieles davon entsteht öffentlich auf [GitHub](https://github.com/a-lottes):
-
-- **[aSPARK](https://github.com/a-lottes/aSPARK)** — ein agiler Delivery-Prozess für Claude Code: ein KI-Produktteam aus Product Owner, Designer, Engineering Manager, Reviewer, QA und Release Manager, bei dem jedes Feature ein Quality Gate passieren muss.
-- **[lottes.dev](https://github.com/a-lottes/lottes.dev)** — diese Website.
-
-## Was mir wichtig ist
-
-Ich wurde in Projekten mehrfach für starke Kundenorientierung und klare Kommunikation ausgezeichnet. Als Lead in UI/UX-nahen Vorhaben war mein Anspruch immer hoch: gute Gestaltung, starke Nutzererfahrung und umsetzbare technische Qualität.
-
-In meiner Freizeit lese ich gern, bin gern in der Natur unterwegs und koche gesund. Lernen, wachsen und einen positiven Beitrag leisten — das ist mein roter Faden.
+Ich bin Vater von zwei Kindern. Das prägt meinen Blick auf Führung und Verantwortung. Ich lese gern, wandere und koche gesund.
