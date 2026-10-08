@@ -20,13 +20,6 @@
 
 [[redirects]]
   from = "/"
-  to = "/fr/"
-  status = 302
-  force = true
-  conditions = {Language = ["fr"]}
-
-[[redirects]]
-  from = "/"
   to = "/en/"
   status = 302
   force = true
@@ -53,11 +46,6 @@
   status = 302
 
 [[redirects]]
-  from = "/fr/blog/hmc-en-pratique-roles-clairs-resultats-clairs/"
-  to = "/fr/blog/"
-  status = 302
-
-[[redirects]]
   from = "/de/blog/guardrails-fur-ki-applikationen/"
   to = "/de/blog/"
   status = 302
@@ -65,11 +53,6 @@
 [[redirects]]
   from = "/en/blog/guardrails-for-ai-applications/"
   to = "/en/blog/"
-  status = 302
-
-[[redirects]]
-  from = "/fr/blog/guardrails-pour-applications-ia/"
-  to = "/fr/blog/"
   status = 302
 
 [[redirects]]
@@ -83,11 +66,6 @@
   status = 302
 
 [[redirects]]
-  from = "/fr/blog/workflow-agents-en-pratique/"
-  to = "/fr/blog/"
-  status = 302
-
-[[redirects]]
   from = "/de/blog/vom-prompt-chaos-zum-agent-flow-mein-groesster-hebel/"
   to = "/de/blog/"
   status = 302
@@ -95,11 +73,6 @@
 [[redirects]]
   from = "/en/blog/from-prompt-chaos-to-agent-flow-my-biggest-leverage/"
   to = "/en/blog/"
-  status = 302
-
-[[redirects]]
-  from = "/fr/blog/du-chaos-de-prompts-au-flux-agentique-mon-plus-grand-levier/"
-  to = "/fr/blog/"
   status = 302
 
 [[redirects]]
@@ -112,7 +85,10 @@
   to = "/en/blog/"
   status = 302
 
+# ── French removed (Oct 2026) ──────────────────────────────────────────
+# The French edition was dropped; old French links land on the English site.
+
 [[redirects]]
-  from = "/fr/blog/qwen-3-6-vs-anthropic-performance-et-prix/"
-  to = "/fr/blog/"
-  status = 302
+  from = "/fr/*"
+  to = "/en/"
+  status = 301

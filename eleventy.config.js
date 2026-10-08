@@ -57,8 +57,7 @@ module.exports = function (eleventyConfig) {
         translations,
         fallbackLocales: {
             "de": "en",
-            "en": "de",
-            "fr": "de"
+            "en": "de"
         }
     });
     eleventyConfig.addPlugin(pluginCalendar);
