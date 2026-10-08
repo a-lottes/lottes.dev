@@ -60,5 +60,6 @@ module.exports = {
     install: "Installation",
     view_on_github: "Auf GitHub ansehen",
     projects_count: "Projekte",
-    site_description: "Praxisnahe Erfahrungen mit KI-Agenten, KI-Applikationen und Mensch-Maschine-Kollaboration – von Andreas Lottes, Entwickler von aSPARK.",
+    site_description: "Führung von Teams, die agentische KI in Produktion bringen: Delivery, Governance und Auditierbarkeit – von Andreas Lottes, Entwickler von aSPARK.",
+    footer_description: "Ich bin Andreas Lottes und schreibe hier über Agenten in Produktion, über die Führung von KI-Delivery und über Governance für Teams aus Menschen und Agenten.",
 };
