@@ -30,3 +30,11 @@
   to = "/en/"
   status = 302
   force = true
+
+# ── Removed theme placeholder post ─────────────────────────────────────
+# The starter template's "secondpost" was indexed; send it to the blog index.
+
+[[redirects]]
+  from = "/en/blog/secondpost/"
+  to = "/en/blog/"
+  status = 301
