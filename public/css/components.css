@@ -431,6 +431,12 @@
     text-decoration: none;
 }
 
+.tag--status {
+    border-color: var(--accent-2);
+    background-color: transparent;
+    color: var(--accent-2);
+}
+
 a.tag:hover {
     border-color: var(--accent);
     color: var(--accent);

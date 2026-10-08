@@ -59,6 +59,8 @@ module.exports = {
     open_source: "Open Source",
     install: "Installation",
     view_on_github: "Auf GitHub ansehen",
+    visit_website: "Zur Website",
+    in_development: "In Entwicklung",
     projects_count: "Projekte",
     site_description: "Führung von Teams, die agentische KI in Produktion bringen: Delivery, Governance und Auditierbarkeit – von Andreas Lottes, Entwickler von aSPARK.",
     footer_description: "Ich bin Andreas Lottes und schreibe hier über Agenten in Produktion, über die Führung von KI-Delivery und über Governance für Teams aus Menschen und Agenten.",

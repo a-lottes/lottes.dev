@@ -106,6 +106,24 @@ module.exports = [
         },
     },
     {
+        key: "tokibot",
+        name: "Tokibot",
+        url: "https://tokibot.lottes.dev/",
+        status: "in-development",
+        year: 2026,
+        topics: ["e-paper", "hardware", "buildroot", "coding-agents", "claude-code"],
+        de: {
+            tagline: "Ein E-Paper-Begleiter für den Schreibtisch, der zeigt, was deine Coding-Agenten tun",
+            description: "Tokibot ist ein kleines E-Paper-Gerät, dessen Stimmung widerspiegelt, was deine Coding-Agenten gerade machen. Er verfolgt mehrere Sessions gleichzeitig, zeigt die, die dich am dringendsten braucht, und zählt, was arbeitet, wartet oder fertig ist. Bei Claude Code zeigt er zusätzlich das 5-Stunden- und 7-Tage-Budget.",
+            detail: "Er läuft auf einem eigenen, schlanken Buildroot-Image mit schreibgeschütztem Dateisystem. Nur Metadaten verlassen deinen Computer, Prompts, Code und Antworten bleiben lokal. Ein optionales Relay lässt auch Cloud-Agenten das Gerät über jedes WLAN erreichen. Tokibot ist noch in Entwicklung.",
+        },
+        en: {
+            tagline: "An e-paper desk companion that shows what your coding agents are doing",
+            description: "Tokibot is a small e-paper device whose mood reflects what your coding agents are doing. It tracks several sessions at once, shows the one that needs you most, and counts what is working, waiting, or done. With Claude Code it also shows your 5-hour and 7-day budget.",
+            detail: "It runs its own slim Buildroot image with a read-only root filesystem. Only metadata leaves your computer; prompts, code, and replies never do. An optional relay lets cloud agents reach the device over any Wi-Fi. Tokibot is still in development.",
+        },
+    },
+    {
         key: "steamcore",
         name: "BRASS-01 / SteamCore",
         repo: "https://github.com/a-lottes/steamcore",

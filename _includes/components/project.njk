@@ -1,14 +1,20 @@
 {# Renders one entry from _data/projects.js in the current page language. #}
 {% from "components/icon.njk" import icon %}
 {% set copy = project[page.lang] %}
+{% set href = project.url or project.repo %}
 <article class="project">
   <header class="project__head">
     <h2 class="project__name">
-      <a href="{{ project.repo }}" rel="noopener external">{{ project.name }}</a>
+      <a href="{{ href }}" rel="noopener external">{{ project.name }}</a>
     </h2>
     <p class="project__tagline">{{ copy.tagline }}</p>
     <ul class="cluster project__meta">
-      <li><span class="tag">{{ project.license }}</span></li>
+      {% if project.status == "in-development" %}
+        <li><span class="tag tag--status">{{ "in_development" | i18n }}</span></li>
+      {% endif %}
+      {% if project.license %}
+        <li><span class="tag">{{ project.license }}</span></li>
+      {% endif %}
       {% for topic in project.topics %}
         <li><span class="tag">{{ topic }}</span></li>
       {% endfor %}
@@ -42,9 +48,16 @@
   </div>
 
   <footer class="cluster project__actions">
-    <a class="button" href="{{ project.repo }}" rel="noopener external">
-      {{ icon("github", 18) }}
-      {{ "view_on_github" | i18n }}
-    </a>
+    {% if project.url %}
+      <a class="button" href="{{ project.url }}" rel="noopener external">
+        {{ "visit_website" | i18n }}
+      </a>
+    {% endif %}
+    {% if project.repo %}
+      <a class="button" href="{{ project.repo }}" rel="noopener external">
+        {{ icon("github", 18) }}
+        {{ "view_on_github" | i18n }}
+      </a>
+    {% endif %}
   </footer>
 </article>
