@@ -43,3 +43,7 @@ Teams do their best work when people feel trusted, challenged, and supported. Fo
 ## Outside work
 
 I am a father of two. Parenthood has shaped how I think about leadership and responsibility. I enjoy reading, hiking, and healthy cooking.
+
+## Let's talk
+
+I am always open to conversations about agentic AI in production, about leading AI delivery, and about governance for teams of people and agents. Write to me at [andreas@lottes.dev](mailto:andreas@lottes.dev) or connect on [LinkedIn](https://www.linkedin.com/in/andreas-lottes/).

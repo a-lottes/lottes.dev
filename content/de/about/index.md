@@ -43,3 +43,7 @@ Teams leisten ihr Bestes, wenn Menschen Vertrauen spüren, gefordert und unterst
 ## Abseits der Arbeit
 
 Ich bin Vater von zwei Kindern. Das prägt meinen Blick auf Führung und Verantwortung. Ich lese gern, wandere und koche gesund.
+
+## Lass uns sprechen
+
+Ich freue mich über Gespräche zu agentischer KI in Produktion, zur Führung von KI-Delivery und zu Governance für Teams aus Menschen und Agenten. Schreib mir an [andreas@lottes.dev](mailto:andreas@lottes.dev) oder vernetze dich auf [LinkedIn](https://www.linkedin.com/in/andreas-lottes/).

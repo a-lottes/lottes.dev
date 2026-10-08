@@ -32,6 +32,28 @@ numberOfLatestPostsToShow: 3
   </div>
 </section>
 
+<div class="container section section--stats">
+  <h2 class="visually-hidden">At a glance</h2>
+  <ul class="stats">
+    <li class="stats__item">
+      <span class="stats__value">25+</span>
+      <span class="stats__label">years of shipping software, coding since 1996</span>
+    </li>
+    <li class="stats__item">
+      <span class="stats__value">5–35</span>
+      <span class="stats__label">people in the delivery teams I have led</span>
+    </li>
+    <li class="stats__item">
+      <span class="stats__value">3 industries</span>
+      <span class="stats__label">medical technology, testing &amp; certification, automotive</span>
+    </li>
+    <li class="stats__item">
+      <span class="stats__value">5</span>
+      <span class="stats__label">open source products in the aSPARK family</span>
+    </li>
+  </ul>
+</div>
+
 <div class="container section">
   <div class="section-head">
     <span class="section-head__label">Topics</span>
@@ -59,6 +81,31 @@ numberOfLatestPostsToShow: 3
     </li>
   </ul>
 </div>
+
+<section class="section section--alt">
+  <div class="container feature">
+    <div>
+      <span class="section-head__label section-head__label--alt">Open source</span>
+      <h2>aSPARK: determinism for teams of people and agents</h2>
+      <p class="section-head__desc">Agents make teams faster. They also make it harder to say who decided what, which rule applied, and whether the result can be reproduced. aSPARK is my open answer to that.</p>
+      <ul class="feature__list">
+        <li><strong>Gates:</strong> every feature passes five phases, and only a person opens the next one</li>
+        <li><strong>Traceability:</strong> stories, code, tests, and releases linked in a local knowledge graph</li>
+        <li><strong>Policy as code:</strong> engineering standards that are checked, not just written down</li>
+      </ul>
+      <p class="cluster">
+        <a class="button" href="https://aspark.lottes.dev/en/">Explore aSPARK</a>
+        <a class="button button--ghost" href="https://github.com/a-lottes/aSPARK">View on GitHub</a>
+      </p>
+    </div>
+    <figure class="feature__media">
+      <video controls playsinline preload="none"
+        poster="https://aspark.lottes.dev/assets/video/aspark-demo-poster.jpg"
+        src="https://aspark.lottes.dev/assets/video/aspark-demo-voice.mp4"></video>
+      <figcaption class="feature__caption">100-second demo: one feature through the full aSPARK loop.</figcaption>
+    </figure>
+  </div>
+</section>
 
 <div class="container section">
   {% set postsCount = collections.posts | filterCollectionLang | length %}

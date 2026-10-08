@@ -32,6 +32,28 @@ numberOfLatestPostsToShow: 3
   </div>
 </section>
 
+<div class="container section section--stats">
+  <h2 class="visually-hidden">En bref</h2>
+  <ul class="stats">
+    <li class="stats__item">
+      <span class="stats__value">25+</span>
+      <span class="stats__label">ans de développement logiciel, je programme depuis 1996</span>
+    </li>
+    <li class="stats__item">
+      <span class="stats__value">5–35</span>
+      <span class="stats__label">personnes dans les équipes de delivery que j'ai dirigées</span>
+    </li>
+    <li class="stats__item">
+      <span class="stats__value">3 secteurs</span>
+      <span class="stats__label">technologies médicales, contrôle &amp; certification, automobile</span>
+    </li>
+    <li class="stats__item">
+      <span class="stats__value">5</span>
+      <span class="stats__label">produits open source dans la famille aSPARK</span>
+    </li>
+  </ul>
+</div>
+
 <div class="container section">
   <div class="section-head">
     <span class="section-head__label">Thematiques</span>
@@ -59,6 +81,31 @@ numberOfLatestPostsToShow: 3
     </li>
   </ul>
 </div>
+
+<section class="section section--alt">
+  <div class="container feature">
+    <div>
+      <span class="section-head__label section-head__label--alt">Open source</span>
+      <h2>aSPARK : du déterminisme pour les équipes humains-agents</h2>
+      <p class="section-head__desc">Les agents rendent les équipes plus rapides. Ils rendent aussi plus difficile de savoir qui a décidé quoi, quelle règle s'appliquait et si le résultat est reproductible. aSPARK est ma réponse ouverte à ce problème.</p>
+      <ul class="feature__list">
+        <li><strong>Étapes de validation:</strong> chaque fonctionnalité traverse cinq phases, et seule une personne ouvre la suivante</li>
+        <li><strong>Traçabilité:</strong> stories, code, tests et releases reliés dans un graphe de connaissances local</li>
+        <li><strong>Policy as code:</strong> des standards d'ingénierie vérifiés, pas seulement écrits</li>
+      </ul>
+      <p class="cluster">
+        <a class="button" href="https://aspark.lottes.dev/en/">Découvrir aSPARK</a>
+        <a class="button button--ghost" href="https://github.com/a-lottes/aSPARK">Voir sur GitHub</a>
+      </p>
+    </div>
+    <figure class="feature__media">
+      <video controls playsinline preload="none"
+        poster="https://aspark.lottes.dev/assets/video/aspark-demo-poster.jpg"
+        src="https://aspark.lottes.dev/assets/video/aspark-demo-voice.mp4"></video>
+      <figcaption class="feature__caption">Démo de 100 secondes : une fonctionnalité à travers toute la boucle aSPARK.</figcaption>
+    </figure>
+  </div>
+</section>
 
 <div class="container section">
   {% set postsCount = collections.posts | filterCollectionLang | length %}

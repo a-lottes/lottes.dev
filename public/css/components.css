@@ -1307,3 +1307,88 @@ a.tag[aria-current] {
     margin-inline: var(--space-2);
     color: var(--border-strong);
 }
+
+/* ---------- Proof strip (homepage, under the hero) ---------- */
+
+/* Four facts a visitor can take in at a glance. Numbers carry the weight, the
+   labels stay muted so the row reads as evidence, not as another headline. */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(13rem, 100%), 1fr));
+    gap: var(--space-5);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.stats__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding-left: var(--space-4);
+    border-left: 2px solid var(--border-accent);
+}
+
+.stats__value {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--text);
+}
+
+.stats__label {
+    font-size: 0.9375rem;
+    line-height: 1.45;
+    color: var(--text-muted);
+}
+
+/* ---------- Feature block (homepage aSPARK showcase) ---------- */
+
+.feature {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr));
+    gap: var(--space-7);
+    align-items: center;
+}
+
+.feature__list {
+    margin: var(--space-5) 0;
+    padding-left: 1.125rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.feature__list strong {
+    color: var(--text);
+}
+
+.feature__media {
+    margin: 0;
+}
+
+.feature__media video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-raised);
+    background-color: var(--bg-raised);
+}
+
+.feature__caption {
+    margin: var(--space-3) 0 0;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+/* The strip sits between hero and topics; it is evidence, not a chapter, so it
+   gets a slim gap of its own and hands the full gap back to the next section. */
+.section--stats {
+    padding-block: var(--space-6);
+}
+
+.section--stats + .section {
+    padding-top: var(--section-gap);
+}

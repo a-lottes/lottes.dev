@@ -44,3 +44,7 @@ Les équipes donnent le meilleur d'elles-mêmes quand chacun se sent en confianc
 ## En dehors du travail
 
 Je suis père de deux enfants, ce qui a façonné ma vision du leadership et de la responsabilité. J'aime lire, randonner et cuisiner sainement.
+
+## Échangeons
+
+Je suis toujours ouvert à une discussion sur l'IA agentique en production, la direction de la delivery IA et la gouvernance des équipes humains-agents. Écrivez-moi à [andreas@lottes.dev](mailto:andreas@lottes.dev) ou retrouvez-moi sur [LinkedIn](https://www.linkedin.com/in/andreas-lottes/).
