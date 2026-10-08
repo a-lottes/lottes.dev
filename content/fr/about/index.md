@@ -20,7 +20,7 @@ Je dirige des équipes qui mettent l'IA agentique en production dans de grandes 
 - **Direction de la delivery :** constituer et piloter des équipes de 5 à 35 personnes, du premier pilote à la production.
 - **Responsabilité client :** des relations durables avec de grands comptes, où la confiance naît de la livraison, pas des slides.
 - **Profondeur technique :** je construis moi-même des outils agentiques, je sais donc où ils cassent et ce qu'ils coûtent.
-- **Connaissance du secteur automobile :** vente, distribution, après-vente et équipementiers.
+- **Connaissance sectorielle :** automobile (vente, distribution, après-vente et équipementiers), industrie manufacturière et logistique.
 
 ## Pourquoi je construis aSPARK
 
@@ -44,3 +44,7 @@ Les équipes donnent le meilleur d'elles-mêmes quand chacun se sent en confianc
 ## En dehors du travail
 
 Je suis père de deux enfants, ce qui a façonné ma vision du leadership et de la responsabilité. J'aime lire, randonner et cuisiner sainement.
+
+## Échangeons
+
+Je suis toujours ouvert à une discussion sur l'IA agentique en production, la direction de la delivery IA et la gouvernance des équipes humains-agents. Écrivez-moi à [andreas@lottes.dev](mailto:andreas@lottes.dev) ou retrouvez-moi sur [LinkedIn](https://www.linkedin.com/in/andreas-lottes/).

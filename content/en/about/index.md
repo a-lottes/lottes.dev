@@ -19,7 +19,7 @@ I lead teams that bring agentic AI into production at large enterprises, and I s
 - **Delivery leadership:** building and steering teams of 5 to 35 people, from the first pilot to production.
 - **Client responsibility:** long-term relationships with enterprise clients, where trust comes from delivering, not from slides.
 - **Hands-on depth:** I build agentic tooling myself, so I know where it breaks and what it costs.
-- **Automotive domain knowledge:** sales, retail, aftersales, and the supplier industry.
+- **Industry knowledge:** automotive (sales, retail, aftersales, and the supplier industry), manufacturing, and logistics.
 
 ## Why I built aSPARK
 
@@ -43,3 +43,7 @@ Teams do their best work when people feel trusted, challenged, and supported. Fo
 ## Outside work
 
 I am a father of two. Parenthood has shaped how I think about leadership and responsibility. I enjoy reading, hiking, and healthy cooking.
+
+## Let's talk
+
+I am always open to conversations about agentic AI in production, about leading AI delivery, and about governance for teams of people and agents. Write to me at [andreas@lottes.dev](mailto:andreas@lottes.dev) or connect on [LinkedIn](https://www.linkedin.com/in/andreas-lottes/).
