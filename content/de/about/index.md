@@ -19,7 +19,7 @@ Ich führe Teams, die agentische KI bei großen Unternehmen in Produktion bringe
 - **Delivery-Führung:** Teams mit 5 bis 35 Menschen aufbauen und steuern, vom ersten Piloten bis in die Produktion.
 - **Kundenverantwortung:** langfristige Beziehungen zu Enterprise-Kunden, in denen Vertrauen durch Liefern entsteht, nicht durch Folien.
 - **Technische Tiefe:** Ich baue agentische Werkzeuge selbst und weiß deshalb, wo sie brechen und was sie kosten.
-- **Automotive-Know-how:** Vertrieb, Handel, Aftersales und die Zulieferindustrie.
+- **Branchenwissen:** Automotive (Vertrieb, Handel, Aftersales und Zulieferindustrie), Fertigungsindustrie und Logistik.
 
 ## Warum ich aSPARK baue
 
