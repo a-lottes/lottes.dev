@@ -2,7 +2,7 @@
 title: Workflow d'agents en pratique
 description: Une methode concrete pour planifier, executer et relire le travail avec des agents IA.
 date: 2026-03-01
-draft: false
+draft: true
 translationKey: agent-workflow-in-practice
 tags:
   - agents
