@@ -8,6 +8,13 @@ tags:
   - agentische-workflows
   - best-practices
 ---
+<video controls playsinline preload="none"
+  poster="/video/fde-role-explainer-poster.jpg"
+  src="/video/fde-role-explainer-en.mp4"
+  style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0 0.5rem"></video>
+
+*Die Zwei-Minuten-Fassung dieses Beitrags, auf Englisch. Auch auf [YouTube](https://youtu.be/5dGnj4lQGiQ).*
+
 Ich verantworte Delivery in Softwareprojekten für Industriekunden. In den letzten Monaten hat sich in fast jedem Gespräch dieselbe Frage nach vorne geschoben. Es geht nicht mehr darum, ob KI in der Softwareentwicklung ankommt, sondern was das für Kosten, Teams und die Zusammenarbeit mit Partnern bedeutet.
 
 Das sehe ich unabhängig davon, wie es der Branche gerade geht. Kunden aus der Zulieferindustrie stehen unter massivem Druck, andere Branchen laufen gut. Die Erwartung ist trotzdem überall dieselbe: Software Engineering soll günstiger werden. Das wird nicht immer laut gesagt, aber es steht in jeder Budgetrunde und jeder Ausschreibung.
