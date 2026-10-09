@@ -12,11 +12,11 @@ eleventyNavigation:
 
 Hello, I am Andreas.
 
-I lead teams that bring agentic AI into production at large enterprises, and I still build myself. At [adesso](https://www.adesso.de/) I have led delivery teams of between 5 and 35 people. My teams implement agentic software for major companies in medical technology, testing and certification, and other industries, and we run AI assessments across automotive sales, retail, and aftersales. I have been engineering software professionally since 2001, and I started coding in 1996. I am based in Saarbrücken, Germany.
+I lead teams that bring agentic AI into production at large enterprises, and I still build myself. At [adesso](https://www.adesso.de/) I have led delivery teams of up to 35 people. My teams implement agentic software for major companies in medical technology, testing and certification, and other industries, and we run AI assessments across automotive sales, retail, and aftersales. I have been engineering software professionally since 2001, and I started coding in 1996. I am based in Saarbrücken, Germany.
 
 ## What I bring
 
-- **Delivery leadership:** building and steering teams of 5 to 35 people, from the first pilot to production.
+- **Delivery leadership:** building and steering teams of up to 35 people, from the first pilot to production.
 - **Client responsibility:** long-term relationships with enterprise clients, where trust comes from delivering, not from slides.
 - **Hands-on depth:** I build agentic tooling myself, so I know where it breaks and what it costs.
 - **Industry knowledge:** automotive (sales, retail, aftersales, and the supplier industry), manufacturing, and logistics.
