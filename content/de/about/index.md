@@ -12,11 +12,11 @@ eleventyNavigation:
 
 Hallo, ich bin Andreas.
 
-Ich führe Teams, die agentische KI bei großen Unternehmen in Produktion bringen, und ich baue weiterhin selbst. Bei [adesso](https://www.adesso.de/) habe ich Delivery-Teams mit 5 bis 35 Menschen geführt. Meine Teams setzen agentische Software für große Unternehmen aus Medizintechnik, Prüfung und Zertifizierung und weiteren Branchen um, und wir führen KI-Assessments in Automotive-Vertrieb, Handel und Aftersales durch. Software entwickle ich seit 2001 beruflich, angefangen zu programmieren habe ich 1996. Zu Hause bin ich in Saarbrücken.
+Ich führe Teams, die agentische KI bei großen Unternehmen in Produktion bringen, und ich baue weiterhin selbst. Bei [adesso](https://www.adesso.de/) habe ich Delivery-Teams mit bis zu 35 Menschen geführt. Meine Teams setzen agentische Software für große Unternehmen aus Medizintechnik, Prüfung und Zertifizierung und weiteren Branchen um, und wir führen KI-Assessments in Automotive-Vertrieb, Handel und Aftersales durch. Software entwickle ich seit 2001 beruflich, angefangen zu programmieren habe ich 1996. Zu Hause bin ich in Saarbrücken.
 
 ## Was ich mitbringe
 
-- **Delivery-Führung:** Teams mit 5 bis 35 Menschen aufbauen und steuern, vom ersten Piloten bis in die Produktion.
+- **Delivery-Führung:** Teams mit bis zu 35 Menschen aufbauen und steuern, vom ersten Piloten bis in die Produktion.
 - **Kundenverantwortung:** langfristige Beziehungen zu Enterprise-Kunden, in denen Vertrauen durch Liefern entsteht, nicht durch Folien.
 - **Technische Tiefe:** Ich baue agentische Werkzeuge selbst und weiß deshalb, wo sie brechen und was sie kosten.
 - **Branchenwissen:** Automotive (Vertrieb, Handel, Aftersales und Zulieferindustrie), Fertigungsindustrie und Logistik.
