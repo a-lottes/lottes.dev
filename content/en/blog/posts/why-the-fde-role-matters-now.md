@@ -8,6 +8,13 @@ tags:
   - agentic-workflows
   - best-practices
 ---
+<video controls playsinline preload="none"
+  poster="/video/fde-role-explainer-poster.jpg"
+  src="/video/fde-role-explainer-en.mp4"
+  style="width:100%;height:auto;border-radius:12px;margin:1.5rem 0 0.5rem"></video>
+
+*The two-minute version of this article. Also on [YouTube](https://youtu.be/5dGnj4lQGiQ).*
+
 I'm responsible for delivery on software projects for industrial clients. Over the past few months, the same question has moved to the front of almost every conversation. It's no longer whether AI is arriving in software development, but what it means for cost, teams and how companies work with their partners.
 
 I see this regardless of how a given industry is doing. Clients in the supplier industry are under heavy pressure, other sectors are doing well. The expectation is the same everywhere: software engineering should get cheaper. It isn't always said out loud, but it's there in every budget round and every tender.
