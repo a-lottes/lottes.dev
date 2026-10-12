@@ -49,7 +49,7 @@ Genau das hatte mir gefehlt. Ein Agent, der weiß, dass Weitermachen hier eine E
 
 Eine Kampagne zu starten war umständlich. Man musste den Ordner des installierten Plugins unter `~/.claude/plugins/` finden, im Prompt nennen und die Vorlage zusammenkopieren, weil ein Agent außerhalb eines Skills `${CLAUDE_PLUGIN_ROOT}` nicht auflösen kann. Ohne Pfad hat er sich in einer QA-Session einfach selbst eine Struktur ausgedacht. Diesen Ablauf macht niemand freiwillig zweimal.
 
-Deshalb läuft gerade der zweite Loop: ein Befehl `/campaign <name> [kind]`. Er findet die Vorlage selbst, fragt nur ab, was die gewählte Art noch offen lässt, und schreibt einen Entwurf von `campaign.md`. Freigeben und starten bleibt bei mir. Die Spec ist freigegeben, der Rest des Loops läuft.
+Deshalb kam der zweite Loop: ein Befehl `/campaign <name> [kind]`. Er findet die Vorlage selbst, fragt nur ab, was die gewählte Art noch offen lässt, und schreibt einen Entwurf von `campaign.md`. Freigeben und starten bleibt bei mir. *Nachtrag, 12.10.2026: `/campaign` ist seit aSPARK v0.14.0 ausgeliefert.*
 
 Zwei Dinge sind mir dabei wichtig. Die Stopp-Regeln befolgt der Agent, erzwungen werden sie nicht, Core ist Markdown ohne Laufzeit. Hart durchsetzen könnte sie nur ein Hook außerhalb des Modells, wie ihn aspark-guard für die Gates hat; für Kampagnen gibt es den noch nicht. Und bisher lief das Ganze auf Test-Repos, nicht auf einem echten Projekt. Ob sich Kampagnen im Alltag lohnen, weiß ich erst, wenn ich die erste echte Migration damit gemacht habe.
 

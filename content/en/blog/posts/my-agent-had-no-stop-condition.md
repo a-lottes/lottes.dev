@@ -49,7 +49,7 @@ That was the thing I'd been missing. An agent that knows that carrying on is a d
 
 Starting a campaign was clumsy. You had to find the installed plugin folder under `~/.claude/plugins/`, name it in the prompt and stitch the template together, because an agent outside a skill can't resolve `${CLAUDE_PLUGIN_ROOT}`. Without the path, in one QA session the agent simply made up a structure of its own. Nobody does that twice voluntarily.
 
-So the second loop is running now: a command, `/campaign <name> [kind]`. It finds the template on its own, asks only what the chosen kind leaves open, and writes a draft `campaign.md`. Approving and starting stays with me. The spec is approved; the rest of the loop is underway.
+So the second loop came next: a command, `/campaign <name> [kind]`. It finds the template on its own, asks only what the chosen kind leaves open, and writes a draft `campaign.md`. Approving and starting stays with me. *Update, 12 Oct 2026: `/campaign` shipped in aSPARK v0.14.0.*
 
 Two things matter to me here. The agent follows the stop rules; nothing enforces them, because Core is Markdown with no runtime. Only a hook outside the model could enforce them, the way aspark-guard does for the gates, and for campaigns that hook doesn't exist yet. And so far this has run on test repos, not on a real project. Whether campaigns pay off day to day I'll know after the first real migration.
 
