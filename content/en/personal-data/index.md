@@ -1,7 +1,7 @@
 ---
 title: Privacy
 layout: layouts/page.njk
-description: What data is processed when you visit lottes.dev and aspark.lottes.dev – and what is not.
+description: What data is processed when you visit lottes.dev, aspark.lottes.dev and tokibot.lottes.dev – and what is not.
 slugOverride: personal-data
 showBreadcrumb: true
 ---
@@ -19,7 +19,7 @@ Rehbachstr. 95
 
 ## Hosting
 
-`lottes.dev` and `aspark.lottes.dev` are hosted by Netlify, Inc. (San Francisco, USA). When a page is requested, Netlify processes the technically necessary data – in particular IP address, time, requested address and browser identifier – to deliver the page and keep the service secure. The legal basis is Art. 6(1)(f) GDPR; my legitimate interest is a secure, working service. See [Netlify's privacy policy](https://www.netlify.com/privacy/).
+`lottes.dev`, `aspark.lottes.dev` and `tokibot.lottes.dev` are hosted by Netlify, Inc. (San Francisco, USA). When a page is requested, Netlify processes the technically necessary data – in particular IP address, time, requested address and browser identifier – to deliver the page and keep the service secure. The legal basis is Art. 6(1)(f) GDPR; my legitimate interest is a secure, working service. See [Netlify's privacy policy](https://www.netlify.com/privacy/).
 
 ## Fonts
 
@@ -28,6 +28,10 @@ All fonts are served by these websites themselves. No connection is made to Goog
 ## Animation library on aspark.lottes.dev
 
 The animations on `aspark.lottes.dev` use the GSAP library, loaded from cdnjs (Cloudflare, Inc., USA). Cloudflare receives your IP address and browser identifier in the process. The legal basis is Art. 6(1)(f) GDPR. If the library is blocked, the site keeps working without animations.
+
+## Tokibot highscores
+
+The Tokibot highscore lists on `tokibot.lottes.dev` are opt-in: only a gotchi whose owner ticked highscores in its settings takes part. It then sends a score card signed with its own key about once an hour: the gotchi's public key, the name you gave it, its level and XP, its best streak and, for each recent day, its food (token counts) and XP. No IP address is stored with it; Netlify processes the request as described under Hosting. The cards are stored with Netlify (Netlify Blobs) and shown publicly on the highscore page; days older than about 400 days are dropped. Untick highscores and the gotchi asks the site to delete its entry. The legal basis is Art. 6(1)(a) GDPR (your choice to take part). Prompts, code and replies are never sent.
 
 ## Storage in your browser
 
