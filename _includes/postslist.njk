@@ -10,7 +10,7 @@
       date: post.date,
       readingTime: post.templateContent | readingTime,
       badges: post.data.badges,
-      image: {
+      image: post.data.image and not postslistNoImage and {
         path: post.data.image.path | resolvePath(post),
         alt: post.data.image.alt
       }
