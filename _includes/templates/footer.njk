@@ -6,15 +6,15 @@
         <a class="brand" href="{{ "/" | locale_url }}" title="{{ "home" | i18n }} - {{ metadata.service }}">
           <img class="brand__logo" src="/img/logo-lottes-bw.png" alt="lottes.dev" width="1265" height="312">
           <span class="brand__motto">Agentic AI
-Gen AI
-hmc</span>
+Delivery
+Governance</span>
         </a>
         <p class="site-footer__title">
           <strong>{{ metadata.title }}</strong>
           <span>{{ "site_description" | i18n }}</span>
         </p>
       </div>
-      <p class="site-footer__desc">{{ data.footer_content_description | safe }}</p>
+      <p class="site-footer__desc">{{ "footer_description" | i18n }}</p>
       <div class="cluster">
         {% if metadata.github_url %}
           <a class="icon-button" href="{{ metadata.github_url }}" target="_blank" rel="noopener me"

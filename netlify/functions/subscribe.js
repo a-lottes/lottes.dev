@@ -7,15 +7,14 @@
 //
 // Required env vars:
 //   BREVO_API_KEY
-//   BREVO_LIST_ID_DE / BREVO_LIST_ID_EN / BREVO_LIST_ID_FR
-//   BREVO_DOI_TEMPLATE_ID_DE / BREVO_DOI_TEMPLATE_ID_EN / BREVO_DOI_TEMPLATE_ID_FR
+//   BREVO_LIST_ID_DE / BREVO_LIST_ID_EN
+//   BREVO_DOI_TEMPLATE_ID_DE / BREVO_DOI_TEMPLATE_ID_EN
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const CONFIRMATION_SLUG = {
     de: "/de/newsletter-bestaetigt/",
     en: "/en/newsletter-confirmed/",
-    fr: "/fr/newsletter-confirme/",
 };
 
 const langConfig = (lang) => ({

@@ -1,5 +1,5 @@
 module.exports = {
-    title: "Agentic and Generative AI",
+    title: "Andreas Lottes",
     url: "https://lottes.dev/",
     facebook_url: "",
     mastodon_url: "",
@@ -12,7 +12,7 @@ module.exports = {
     sourcehut_url: "",
     repository_url: "https://github.com/a-lottes/lottes.dev",
     language: "de",
-    description: "A New Era of Human-Machine Collaboration",
+    description: "Agentic AI delivery leadership",
     author: {
         name: "Andreas Lottes",
         email: "andreas@lottes.dev",

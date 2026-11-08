@@ -1,5 +1,5 @@
 ---
-title: Long-Form LLM Generation With Low Token Cost An Engineering Report
+title: "Long-Form LLM Generation at Low Token Cost: An Engineering Report"
 description: Engineering lessons from production-like long-form LLM pipelines with bounded retrieval, segmentation, and strong observability.
 date: 2026-04-02
 draft: false

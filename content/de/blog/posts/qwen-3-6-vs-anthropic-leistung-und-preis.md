@@ -2,7 +2,7 @@
 title: Qwen 3.6 vs aktuelle Anthropic-Modelle Leistung, Kosten und Ableitungen
 description: Ein praxisnaher Vergleich von Qwen 3.6 und Claude 4.x zu Leistungsniveau, Preisstruktur und Entscheidungen für produktive LLM-Workflows.
 date: 2026-04-24
-draft: false
+draft: true
 translationKey: qwen-3-6-vs-anthropic-performance-pricing
 tags:
   - llm

@@ -12,9 +12,7 @@ tags:
 ---
 ## Abstract
 
-If your mental model of AI is still "chatbot = AI," you are already behind.
-
-The center of gravity is shifting from language-only systems to integrated stacks that perceive, simulate, decide, and act. This draft offers a practical taxonomy for that shift, focused on world models, embodied AI, and physical AI.
+The center of gravity is shifting from language-only systems to integrated stacks that perceive, simulate, decide, and act. This post offers a practical taxonomy for that shift, focused on world models, embodied AI, and physical AI.
 
 ## Why This Matters
 
@@ -172,7 +170,7 @@ This gives a simple maturity gradient:
 4. Treat embodied benchmarks and safety cases as product requirements, not research add-ons.
 5. Expect hybrid architectures, not one-model-to-rule-them-all narratives.
 
-## Limitations of This Draft
+## Limitations
 
 This categorization is pragmatic, not canonical. Boundaries will continue to blur as multimodal foundation models and world models converge.
 
@@ -184,7 +182,7 @@ My takeaway: the next phase of AI is not mainly about better conversation. It is
 
 Language models remain foundational, but they are now one layer in a broader architecture. The frontier is increasingly defined by world models, embodied intelligence, and physical AI.
 
-## Reading Notes (for follow-up version)
+## Further Reading
 
 - Ha and Schmidhuber, World Models (2018): early RL-oriented formulation of learned environment dynamics.
 - OpenAI, Video generation models as world simulators (2024): scaling visual simulation capabilities and limitations.

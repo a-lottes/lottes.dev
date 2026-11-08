@@ -2,7 +2,7 @@
 title: Agenten-Workflow in der Praxis
 description: Ein praxiserprobter Ablauf für Planung, Ausführung und Review mit KI-Agenten.
 date: 2026-03-01
-draft: false
+draft: true
 translationKey: agent-workflow-in-practice
 tags:
   - agenten

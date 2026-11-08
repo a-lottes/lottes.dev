@@ -101,13 +101,11 @@ und am Ende jedes Blogartikels).
 
 - DE: `content/de/`
 - EN: `content/en/`
-- FR: `content/fr/`
 
 ### Übersetzungen für UI-Texte
 
 - `_data/i18n/de/index.js`
 - `_data/i18n/en/index.js`
-- `_data/i18n/fr/index.js`
 
 ### Sprachwechsel bei Blogposts
 
@@ -142,11 +140,11 @@ Erforderliche Netlify-Umgebungsvariablen (Site settings → Environment variable
 oder in Git):
 
 - `BREVO_API_KEY`
-- `BREVO_LIST_ID_DE`, `BREVO_LIST_ID_EN`, `BREVO_LIST_ID_FR`
-- `BREVO_DOI_TEMPLATE_ID_DE`, `BREVO_DOI_TEMPLATE_ID_EN`, `BREVO_DOI_TEMPLATE_ID_FR`
+- `BREVO_LIST_ID_DE`, `BREVO_LIST_ID_EN`
+- `BREVO_DOI_TEMPLATE_ID_DE`, `BREVO_DOI_TEMPLATE_ID_EN`
 
 Die Bestätigungsseiten nach dem Klick auf den Opt-in-Link liegen unter
-`content/{de,en,fr}/newsletter-*/` (von Google ausgeschlossen via `robots: noindex, nofollow`).
+`content/{de,en}/newsletter-*/` (von Google ausgeschlossen via `robots: noindex, nofollow`).
 
 ## Content-Pflege
 

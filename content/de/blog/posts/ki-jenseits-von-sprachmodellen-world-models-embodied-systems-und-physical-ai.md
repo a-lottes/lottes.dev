@@ -12,8 +12,6 @@ tags:
 ---
 ## Abstract
 
-Wer KI noch immer mit "Chatbot" gleichsetzt, greift zu kurz.
-
 Der Schwerpunkt verlagert sich von reinen Sprachsystemen hin zu integrierten Architekturen, die wahrnehmen, simulieren, entscheiden und handeln. Dieser Beitrag ordnet diese Entwicklung mit einer praktischen Taxonomie ein und fokussiert auf World Models, Embodied AI und Physical AI.
 
 ## Warum Das Wichtig Ist
@@ -172,7 +170,7 @@ Daraus ergibt sich ein einfacher Reifepfad:
 4. Embodied Benchmarks und Safety Cases als Produktanforderung behandeln.
 5. Von hybriden Architekturen ausgehen statt von One-Model-Erzählungen.
 
-## Grenzen Dieses Drafts
+## Grenzen
 
 Diese Kategorisierung ist bewusst pragmatisch, nicht kanonisch. Grenzen werden weiter verschwimmen, insbesondere wenn multimodale Foundation Models und World Models zusammenwachsen.
 
@@ -184,7 +182,7 @@ Die nächste KI-Phase dreht sich nicht primär um bessere Konversation, sondern 
 
 Sprachmodelle bleiben zentral, sind aber nur noch eine Schicht in einer größeren Architektur. Die technologische Front wird zunehmend durch World Models, verkörperte Intelligenz und Physical AI bestimmt.
 
-## Quellenhinweise (for follow-up version)
+## Weiterführende Quellen
 
 - Ha and Schmidhuber, World Models (2018): frühe RL-orientierte Formulierung gelernter Umgebungsdynamik.
 - OpenAI, Video generation models as world simulators (2024): Skalierung visueller Simulationsfähigkeiten und deren Grenzen.

@@ -1,7 +1,7 @@
 ---
 title: Datenschutz
 layout: layouts/page.njk
-description: Welche Daten beim Besuch von lottes.dev und aspark.lottes.dev verarbeitet werden – und welche nicht.
+description: Welche Daten beim Besuch von lottes.dev, aspark.lottes.dev und tokibot.lottes.dev verarbeitet werden – und welche nicht.
 slugOverride: datenschutz
 showBreadcrumb: true
 ---
@@ -19,7 +19,7 @@ Rehbachstr. 95
 
 ## Hosting
 
-`lottes.dev` und `aspark.lottes.dev` werden bei Netlify, Inc. (San Francisco, USA) gehostet. Beim Aufruf einer Seite verarbeitet Netlify die technisch notwendigen Daten – insbesondere IP-Adresse, Zeitpunkt, aufgerufene Adresse und Browser-Kennung –, um die Seite auszuliefern und den Betrieb abzusichern. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; mein berechtigtes Interesse ist ein sicherer und funktionierender Betrieb. Näheres in der [Datenschutzerklärung von Netlify](https://www.netlify.com/privacy/).
+`lottes.dev`, `aspark.lottes.dev` und `tokibot.lottes.dev` werden bei Netlify, Inc. (San Francisco, USA) gehostet. Beim Aufruf einer Seite verarbeitet Netlify die technisch notwendigen Daten – insbesondere IP-Adresse, Zeitpunkt, aufgerufene Adresse und Browser-Kennung –, um die Seite auszuliefern und den Betrieb abzusichern. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; mein berechtigtes Interesse ist ein sicherer und funktionierender Betrieb. Näheres in der [Datenschutzerklärung von Netlify](https://www.netlify.com/privacy/).
 
 ## Schriften
 
@@ -28,6 +28,10 @@ Alle Schriften werden von diesen Websites selbst ausgeliefert. Es werden keine V
 ## Animationsbibliothek auf aspark.lottes.dev
 
 Die Animationen auf `aspark.lottes.dev` verwenden die Bibliothek GSAP, die von cdnjs (Cloudflare, Inc., USA) geladen wird. Dabei erhält Cloudflare Ihre IP-Adresse und die Browser-Kennung. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Wird die Bibliothek blockiert, funktioniert die Seite ohne Animationen weiter.
+
+## Tokibot-Bestenlisten
+
+Die Bestenlisten auf `tokibot.lottes.dev` sind freiwillig: Es nimmt nur ein Gotchi teil, bei dem in den Einstellungen die Highscores eingeschaltet sind. Es sendet dann etwa einmal pro Stunde eine mit seinem eigenen Schlüssel signierte Karte: den öffentlichen Schlüssel des Gotchis, den Namen, den Sie ihm gegeben haben, Level und XP, die beste Serie und für jeden der letzten Tage das Futter (Token-Zahlen) und die XP. Eine IP-Adresse wird dabei nicht gespeichert; Netlify verarbeitet die Anfrage wie unter Hosting beschrieben. Die Karten werden bei Netlify (Netlify Blobs) gespeichert und auf der Bestenliste öffentlich angezeigt; Tage, die älter als etwa 400 Tage sind, werden verworfen. Schalten Sie die Highscores aus, bittet das Gotchi die Website, seinen Eintrag zu löschen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO (Ihre Entscheidung teilzunehmen). Prompts, Code und Antworten werden nie übertragen.
 
 ## Speicherung in Ihrem Browser
 

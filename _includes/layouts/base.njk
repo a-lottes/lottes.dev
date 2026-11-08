@@ -33,7 +33,7 @@
 
   <meta name="generator" content="{{ eleventy.generator }}">
 
-  <title>{{ title or metadata.title }}</title>
+  <title>{% if title and title != metadata.title %}{{ title }} · {{ metadata.title }}{% else %}{{ metadata.title }}{% endif %}</title>
 </head>
 <body id="top">
 {% getBundle "js", "top" %}
