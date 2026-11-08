@@ -33,6 +33,10 @@ Die Animationen auf `aspark.lottes.dev` verwenden die Bibliothek GSAP, die von c
 
 `lottes.dev` merkt sich die gewählte Darstellung (hell oder dunkel) im lokalen Speicher Ihres Browsers. `aspark.lottes.dev` merkt sich für die Dauer der Sitzung, dass das Intro bereits gezeigt wurde. Beide Angaben bleiben auf Ihrem Gerät und werden nicht übertragen.
 
+## Newsletter
+
+Wenn Sie sich für den Newsletter anmelden, verarbeite ich Ihre E-Mail-Adresse, um Ihnen Artikel zu Agentic AI, KI-Anwendungen und Human-Machine Collaboration zuzusenden. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Die Anmeldung erfolgt im Double-Opt-in-Verfahren: Sie erhalten nach der Anmeldung eine Bestätigungs-E-Mail und werden erst nach Klick auf den enthaltenen Link in die Versandliste aufgenommen. Für den Versand nutze ich den E-Mail-Dienstleister Brevo SA (Paris, Frankreich) als Auftragsverarbeiter. Sie können den Newsletter jederzeit über den Abmeldelink in jeder E-Mail oder per Nachricht an mich abbestellen. Näheres in der [Datenschutzerklärung von Brevo](https://www.brevo.com/legal/privacypolicy/).
+
 ## Kontakt per E-Mail
 
 Wenn Sie mir schreiben, verarbeite ich Ihre Angaben ausschließlich, um Ihre Anfrage zu beantworten (Art. 6 Abs. 1 lit. b bzw. f DSGVO), und lösche sie, sobald sie dafür nicht mehr gebraucht werden.
@@ -45,4 +49,4 @@ Links zu GitHub, LinkedIn, X oder YouTube sind einfache Verweise. Daten fließen
 
 Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel beim Unabhängigen Datenschutzzentrum Saarland.
 
-Stand: September 2026
+Stand: November 2026

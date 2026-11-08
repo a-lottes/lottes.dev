@@ -1,0 +1,27 @@
+{% set variant = variant or "footer" %}
+{% set fieldId = "newsletter-email-" + variant %}
+<div class="newsletter newsletter--{{ variant }}" data-pagefind-ignore>
+  <div class="newsletter__text">
+    <p class="newsletter__title">{{ "newsletter_title" | i18n }}</p>
+    <p class="newsletter__desc">{{ "newsletter_description" | i18n }}</p>
+  </div>
+  <form class="newsletter__form" action="/api/subscribe" method="post" novalidate
+        data-success="{{ "newsletter_success" | i18n }}"
+        data-error="{{ "newsletter_error" | i18n }}"
+        data-invalid-email="{{ "newsletter_invalid_email" | i18n }}">
+    {# Honeypot: hidden from people, visible to simple bots that fill every field. #}
+    <input type="text" name="company" class="newsletter__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <input type="hidden" name="lang" value="{{ page.lang }}">
+    <div class="newsletter__row">
+      <label class="visually-hidden" for="{{ fieldId }}">{{ "newsletter_email_label" | i18n }}</label>
+      <input class="newsletter__input" type="email" name="email" id="{{ fieldId }}"
+             placeholder="{{ "newsletter_email_label" | i18n }}" autocomplete="email" required>
+      <button class="button" type="submit">{{ "subscribe" | i18n }}</button>
+    </div>
+    <label class="newsletter__consent">
+      <input type="checkbox" name="consent" required>
+      <span>{{ "newsletter_consent_text" | i18n }} <a href="{{ "personal_data_url" | i18n }}">{{ "personal_data" | i18n }}</a>.</span>
+    </label>
+    <p class="newsletter__status" role="status" aria-live="polite" hidden></p>
+  </form>
+</div>

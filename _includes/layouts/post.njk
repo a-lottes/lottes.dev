@@ -40,6 +40,9 @@ layout: layouts/base.njk
     </div>
   </article>
 
+  {% set variant = "post" %}
+  {% include "components/newsletter-signup.njk" %}
+
   {% if collections.posts %}
     {% set currentPosts = collections.posts %}
     {% include "previousnextlinks.njk" %}

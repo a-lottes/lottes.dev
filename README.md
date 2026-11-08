@@ -92,7 +92,8 @@ Das CSS liegt in `public/css/` und wird von `_includes/layouts/base.njk` inline 
 
 JavaScript in `public/js/` (vanilla, ohne Dependencies): `theme.js` (Light/Dark/System-Toggle),
 `nav.js` (Menüs und Sprachwechsler), `network.js` (animiertes Netzwerk im Hero der Startseiten,
-aktiviert über `heroCanvas: true` im Frontmatter).
+aktiviert über `heroCanvas: true` im Frontmatter), `newsletter.js` (Anmeldeformular im Footer
+und am Ende jedes Blogartikels).
 
 ## Mehrsprachigkeit
 
@@ -129,6 +130,23 @@ Die Netlify-Konfiguration ist in `netlify.toml` hinterlegt:
 - Node Version: `20`
 
 Wichtig: Im Netlify UI darf Publish Directory nicht auf `public` stehen, sonst wird nur die Asset-Struktur statt der generierten Website ausgeliefert.
+
+## Newsletter
+
+Das Anmeldeformular (`_includes/components/newsletter-signup.njk`, im Footer und am Ende jedes
+Blogartikels) ruft die Netlify Function `netlify/functions/subscribe.js` auf, die einen
+Double-Opt-in-Kontakt in Brevo anlegt (`POST /v3/contacts/doubleOptinConfirmation`). Pro Sprache
+gibt es eine eigene Liste und eine eigene DOI-Vorlage in Brevo.
+
+Erforderliche Netlify-Umgebungsvariablen (Site settings → Environment variables), nie im Code
+oder in Git):
+
+- `BREVO_API_KEY`
+- `BREVO_LIST_ID_DE`, `BREVO_LIST_ID_EN`, `BREVO_LIST_ID_FR`
+- `BREVO_DOI_TEMPLATE_ID_DE`, `BREVO_DOI_TEMPLATE_ID_EN`, `BREVO_DOI_TEMPLATE_ID_FR`
+
+Die Bestätigungsseiten nach dem Klick auf den Opt-in-Link liegen unter
+`content/{de,en,fr}/newsletter-*/` (von Google ausgeschlossen via `robots: noindex, nofollow`).
 
 ## Content-Pflege
 

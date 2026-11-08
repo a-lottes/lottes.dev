@@ -1,13 +1,6 @@
 module.exports = {
     title: "Agentic and Generative AI",
     url: "https://lottes.dev/",
-    newsletter: [
-        {
-            url: "",
-            title: "",
-            description: ""
-        }
-    ],
     facebook_url: "",
     mastodon_url: "",
     twitter_url: "https://x.com/a_Lottes",

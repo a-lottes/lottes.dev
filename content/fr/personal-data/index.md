@@ -33,6 +33,10 @@ Les animations de `aspark.lottes.dev` utilisent la bibliothèque GSAP, chargée 
 
 `lottes.dev` mémorise le thème choisi (clair ou sombre) dans le stockage local de votre navigateur. `aspark.lottes.dev` mémorise, pour la durée de la session, que l'introduction a déjà été affichée. Ces informations restent sur votre appareil et ne sont jamais transmises.
 
+## Newsletter
+
+Si vous vous inscrivez à la newsletter, je traite votre adresse e-mail afin de vous envoyer des articles sur les agents IA, les applications d'IA et la collaboration humain-machine. La base juridique est votre consentement (article 6, paragraphe 1, point a du RGPD). L'inscription utilise un processus de double consentement : après l'inscription, vous recevez un e-mail de confirmation et n'êtes ajouté·e à la liste de diffusion qu'après avoir cliqué sur le lien qu'il contient. J'utilise le prestataire Brevo SA (Paris, France) comme sous-traitant pour l'envoi. Vous pouvez vous désabonner à tout moment via le lien présent dans chaque e-mail ou en m'écrivant. Voir la [politique de confidentialité de Brevo](https://www.brevo.com/legal/privacypolicy/).
+
 ## Contact par e-mail
 
 Si vous m'écrivez, j'utilise vos informations uniquement pour répondre à votre demande (article 6, paragraphe 1, point b ou f du RGPD) et je les supprime dès qu'elles ne sont plus nécessaires.
@@ -45,4 +49,4 @@ Les liens vers GitHub, LinkedIn, X ou YouTube sont de simples liens. Aucune donn
 
 Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation du traitement, de portabilité et d'opposition (articles 15 à 21 du RGPD). Vous pouvez également introduire une réclamation auprès d'une autorité de contrôle, par exemple l'Unabhängiges Datenschutzzentrum Saarland.
 
-Dernière mise à jour : septembre 2026
+Dernière mise à jour : novembre 2026

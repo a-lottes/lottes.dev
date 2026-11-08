@@ -5,6 +5,16 @@
 [build.environment]
   NODE_VERSION = "20"
 
+[functions]
+  directory = "netlify/functions"
+
+# ── Newsletter signup (footer + end of posts) ──────────────────────────
+# Keeps the function's implementation path out of the public-facing form.
+[[redirects]]
+  from = "/api/subscribe"
+  to = "/.netlify/functions/subscribe"
+  status = 200
+
 # ── Language switch on "/" ─────────────────────────────────────────────
 # Negotiated server-side from Accept-Language, so visitors and crawlers get a
 # real redirect instead of the meta-refresh page. The first matching rule wins.
