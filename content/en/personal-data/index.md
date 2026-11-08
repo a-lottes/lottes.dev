@@ -37,6 +37,10 @@ The Tokibot highscore lists on `tokibot.lottes.dev` are opt-in: only a gotchi wh
 
 `lottes.dev` remembers your chosen colour scheme (light or dark) in your browser's local storage. `aspark.lottes.dev` remembers for the length of the session that the intro has already played. Both stay on your device and are never transmitted.
 
+## Newsletter
+
+If you sign up for the newsletter, I process your email address to send you articles on agentic AI, AI applications and human–machine collaboration. The legal basis is your consent (Art. 6(1)(a) GDPR). Signup uses a double opt-in process: after signing up you receive a confirmation email and are only added to the mailing list once you click the link inside it. I use the email service provider Brevo SA (Paris, France) as processor for sending. You can unsubscribe at any time via the link in any email or by writing to me. See [Brevo's privacy policy](https://www.brevo.com/legal/privacypolicy/).
+
 ## Contact by email
 
 If you write to me, I use your details solely to answer your request (Art. 6(1)(b) or (f) GDPR) and delete them once they are no longer needed for that.
@@ -49,4 +53,4 @@ Links to GitHub, LinkedIn, X or YouTube are plain links. No data reaches these s
 
 You have the right of access, rectification, erasure, restriction of processing, data portability and objection (Art. 15–21 GDPR). You may also lodge a complaint with a data protection supervisory authority, for example the Unabhängiges Datenschutzzentrum Saarland.
 
-Last updated: September 2026
+Last updated: November 2026

@@ -11,6 +11,8 @@
     }
   },
   layout: "layouts/page.njk",
+  // Tag listings are link lists: crawlable for discovery, not worth indexing.
+  robots: "noindex, follow",
   permalink: "/{{ lang }}/blog/tags/{{ tag.tagName | slugify }}/{% if tag.pageNumber %}{{ pagePrefix }}{{ tag.pageNumber + 1 }}/{% endif %}",
 }
 ---

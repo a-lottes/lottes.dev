@@ -123,5 +123,6 @@ numberOfLatestPostsToShow: 3
 
   {% set postslist = collections.posts | filterCollectionLang | head(-1 * numberOfLatestPostsToShow) | reverse %}
   {% set postslistCounter = postsCount %}
+  {% set postslistNoImage = true %}
   {% include "postslist.njk" %}
 </div>
