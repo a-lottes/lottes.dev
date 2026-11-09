@@ -138,6 +138,8 @@
 
 .grid > li > .card {
     flex: 1;
+    /* Without this, a card's content can stretch it past its grid track */
+    min-width: 0;
 }
 
 /* Hero: positioning context for the signature canvas */

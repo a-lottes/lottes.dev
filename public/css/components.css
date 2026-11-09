@@ -405,6 +405,10 @@
     margin-bottom: var(--space-1);
 }
 
+.card__img img {
+    width: 100%;
+}
+
 /* Tags sit above the overlay link so they stay clickable */
 .card .tag {
     position: relative;
