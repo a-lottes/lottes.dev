@@ -4,7 +4,7 @@
     <div class="site-footer__top">
       <div class="site-footer__brand">
         <a class="brand" href="{{ "/" | locale_url }}" title="{{ "home" | i18n }} - {{ metadata.service }}">
-          <img class="brand__logo" src="/img/logo-lottes-bw.png" alt="lottes.dev" width="1265" height="312">
+          {% include "components/logo.svg.njk" %}
           <span class="brand__motto">Agentic AI
 Delivery
 Governance</span>

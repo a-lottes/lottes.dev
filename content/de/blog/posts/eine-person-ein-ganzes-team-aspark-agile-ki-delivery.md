@@ -4,6 +4,9 @@ description: Warum ich ein agiles KI-Team als Claude-Code-Plugin gebaut habe, wi
 date: 2026-07-13
 draft: false
 translationKey: aspark-one-person-whole-team
+image:
+  path: ../../../../public/img/blog/aspark-one-person-whole-team.jpg
+  alt: "Ein oranger Knoten in der Mitte, verbunden mit einem Ring aus fünf kleineren Knoten."
 tags:
   - agenten
   - agentische-workflows

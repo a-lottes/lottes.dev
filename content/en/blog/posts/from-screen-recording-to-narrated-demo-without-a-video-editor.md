@@ -4,6 +4,9 @@ description: How a raw recording of one aSPARK session became a captioned, brand
 date: 2026-09-19
 draft: false
 translationKey: screen-recording-to-narrated-demo
+image:
+  path: ../../../../public/img/blog/screen-recording-to-narrated-demo.jpg
+  alt: "A long film strip condenses into a short one above an orange audio waveform."
 tags:
   - claude-code
   - agents

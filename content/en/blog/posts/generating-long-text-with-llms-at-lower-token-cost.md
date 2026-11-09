@@ -4,6 +4,9 @@ description: Engineering lessons from production-like long-form LLM pipelines wi
 date: 2026-04-02
 draft: false
 translationKey: long-text-lower-token-cost
+image:
+  path: ../../../../public/img/blog/long-text-lower-token-cost.jpg
+  alt: "A long document is cut into segments that pass through a narrow orange slot."
 tags:
   - llm
   - prompt-engineering

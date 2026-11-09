@@ -4,6 +4,9 @@ description: "Warum vibecodete Microapps kein gelöstes Problem sind, wie sie zu
 date: 2026-11-03
 draft: false
 translationKey: vibe-coded-app-target
+image:
+  path: ../../../../public/img/blog/vibe-coded-app-target.jpg
+  alt: "Die grobe Skizze einer App wird zum präzisen Bauplan im Zentrum einer Zielscheibe."
 tags:
   - agenten
   - claude-code

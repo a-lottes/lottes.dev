@@ -4,6 +4,9 @@ description: "Was ich bei Kunden aus Industrie und Zulieferung gerade beobachte,
 date: 2026-10-09
 draft: false
 translationKey: fde-role-now
+image:
+  path: ../../../../public/img/blog/fde-role-now.jpg
+  alt: "Eine schmale Brücke verbindet eine Fabrik mit einem Netz aus Knoten, in der Mitte ein oranger Punkt."
 tags:
   - agentische-workflows
   - best-practices

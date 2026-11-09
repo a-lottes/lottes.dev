@@ -4,6 +4,9 @@ description: Wie aus der Rohaufnahme einer aSPARK-Session noch am selben Tag ein
 date: 2026-09-19
 draft: false
 translationKey: screen-recording-to-narrated-demo
+image:
+  path: ../../../../public/img/blog/screen-recording-to-narrated-demo.jpg
+  alt: "Ein langer Filmstreifen verdichtet sich zu einem kurzen, darunter läuft eine orange Tonspur."
 tags:
   - claude-code
   - agenten

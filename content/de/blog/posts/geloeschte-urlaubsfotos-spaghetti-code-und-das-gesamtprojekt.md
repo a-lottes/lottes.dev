@@ -4,6 +4,9 @@ description: Wie gelöschte Urlaubsbilder zu einem Open-Source-Tool führten —
 date: 2026-08-01
 draft: false
 translationKey: deleted-photos-spaghetti-code-whole-project
+image:
+  path: ../../../../public/img/blog/deleted-photos-spaghetti-code.jpg
+  alt: "Aus einem Knäuel von Linien mit leeren Bilderrahmen führt ein einzelner oranger Faden geradlinig heraus."
 tags:
   - agenten
   - agentische-workflows

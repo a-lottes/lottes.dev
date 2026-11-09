@@ -31,6 +31,7 @@ module.exports = {
     newsletter_description: "New posts on agentic AI, AI applications and human–machine collaboration – sent rarely, unsubscribe anytime.",
     newsletter_email_label: "Email address",
     newsletter_error: "Something went wrong. Please try again later.",
+    newsletter_home_title: "New posts straight to your inbox",
     newsletter_invalid_email: "Please enter a valid email address.",
     newsletter_success: "Almost there! Please confirm your signup via the link we just emailed you.",
     newsletter_title: "Newsletter",

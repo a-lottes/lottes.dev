@@ -4,6 +4,9 @@ description: How deleted vacation photos led to an open-source tool — and how 
 date: 2026-08-01
 draft: false
 translationKey: deleted-photos-spaghetti-code-whole-project
+image:
+  path: ../../../../public/img/blog/deleted-photos-spaghetti-code.jpg
+  alt: "A single orange thread runs straight out of a tangle of lines and empty picture frames."
 tags:
   - agents
   - agentic-workflows
