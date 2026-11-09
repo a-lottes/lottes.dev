@@ -60,8 +60,6 @@ exports.handler = async (event) => {
 
     const siteUrl = process.env.URL || "https://www.lottes.dev";
 
-    console.log("DEBUG newsletter signup", {lang, listId, templateId, keyPrefix: (process.env.BREVO_API_KEY || "").slice(0, 12)});
-
     try {
         const response = await fetch("https://api.brevo.com/v3/contacts/doubleOptinConfirmation", {
             method: "POST",
