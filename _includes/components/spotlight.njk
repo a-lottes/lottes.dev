@@ -1,0 +1,32 @@
+{%- set item = spotlight[lang] -%}
+<section class="section section--alt">
+  <div class="container feature">
+    <div>
+      <span class="section-head__label section-head__label--alt">{{ item.label }}</span>
+      <h2>{{ item.title }}</h2>
+      <p class="section-head__desc">{{ item.text }}</p>
+      {%- if item.points %}
+      <ul class="feature__list">
+        {%- for point in item.points %}
+        <li><strong>{{ point.term }}:</strong> {{ point.text }}</li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+      <p class="cluster">
+        {%- for action in item.actions %}
+        <a class="button{% if action.ghost %} button--ghost{% endif %}" href="{{ action.url }}">{{ action.label }}</a>
+        {%- endfor %}
+      </p>
+    </div>
+    <figure class="feature__media">
+      {%- if item.media.video %}
+      <video controls playsinline preload="none" poster="{{ item.media.poster }}" src="{{ item.media.video }}"></video>
+      {%- else %}
+      <img src="{{ item.media.image }}" alt="{{ item.media.alt }}" width="{{ item.media.width }}" height="{{ item.media.height }}" loading="lazy">
+      {%- endif %}
+      {%- if item.media.caption %}
+      <figcaption class="feature__caption">{{ item.media.caption }}</figcaption>
+      {%- endif %}
+    </figure>
+  </div>
+</section>

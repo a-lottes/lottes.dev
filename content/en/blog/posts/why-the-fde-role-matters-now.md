@@ -4,6 +4,9 @@ description: "What I'm seeing with industrial and supplier clients right now, wh
 date: 2026-10-09
 draft: false
 translationKey: fde-role-now
+image:
+  path: ../../../../public/img/blog/fde-role-now.jpg
+  alt: "A slender bridge links a factory to a network of nodes, with an orange point at its center."
 tags:
   - agentic-workflows
   - best-practices

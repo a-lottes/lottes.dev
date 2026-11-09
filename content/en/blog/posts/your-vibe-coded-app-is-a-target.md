@@ -4,6 +4,9 @@ description: "Why vibe-coded micro-apps aren't a solved problem, how they become
 date: 2026-11-03
 draft: false
 translationKey: vibe-coded-app-target
+image:
+  path: ../../../../public/img/blog/vibe-coded-app-target.jpg
+  alt: "A rough app sketch becomes a precise blueprint at the center of a target."
 tags:
   - agents
   - claude-code

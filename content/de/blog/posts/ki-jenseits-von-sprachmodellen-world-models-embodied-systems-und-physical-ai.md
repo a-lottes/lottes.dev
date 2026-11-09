@@ -4,6 +4,9 @@ description: Eine praxisnahe Kategorisierung moderner KI-Systeme jenseits von LL
 date: 2026-05-14
 draft: false
 translationKey: ai-beyond-language-models-physical-ai-and-world-models
+image:
+  path: ../../../../public/img/blog/ai-beyond-language-models.jpg
+  alt: "Ein Roboterarm aus Drahtgitterlinien greift auf einem Gitterterrain nach einem orangen Würfel."
 tags:
   - ki-modelle
   - world-models

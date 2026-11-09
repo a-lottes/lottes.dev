@@ -4,6 +4,9 @@ description: A practical way to categorize modern AI systems beyond LLMs, from p
 date: 2026-05-14
 draft: false
 translationKey: ai-beyond-language-models-physical-ai-and-world-models
+image:
+  path: ../../../../public/img/blog/ai-beyond-language-models.jpg
+  alt: "A wireframe robot arm reaches for an orange cube on a grid terrain."
 tags:
   - ai-models
   - world-models

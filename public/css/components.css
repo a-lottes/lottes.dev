@@ -95,20 +95,9 @@
 }
 
 .brand__logo {
-    width: clamp(5.5rem, 11vw, 7.5rem);
-    aspect-ratio: 1265 / 312;
-    object-fit: contain;
-}
-
-/* The mark is black on transparent, so it inverts to white for the dark theme. */
-:root[data-theme="dark"] .brand__logo {
-    filter: invert(1);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) .brand__logo {
-        filter: invert(1);
-    }
+    display: block;
+    width: clamp(7rem, 13vw, 9rem);
+    height: auto;
 }
 
 .brand__motto {
@@ -403,6 +392,13 @@
     object-fit: cover;
     border-radius: var(--radius-sm);
     margin-bottom: var(--space-1);
+}
+
+.card__img img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 /* Tags sit above the overlay link so they stay clickable */
@@ -787,9 +783,11 @@ a.tag[aria-current] {
 
 .newsletter__hp {
     position: absolute;
-    left: -9999px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
     width: 1px;
     height: 1px;
+    overflow: hidden;
     opacity: 0;
 }
 
@@ -871,6 +869,31 @@ a.tag[aria-current] {
     gap: var(--space-2);
     flex: 1 1 20rem;
     max-width: 26rem;
+}
+
+/* Wide band on the homepage */
+.newsletter--home {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+    gap: var(--space-6);
+    align-items: center;
+    padding: var(--space-6);
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-lg);
+}
+
+.newsletter--home .newsletter__title {
+    margin-bottom: var(--space-2);
+    font-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.newsletter--home .newsletter__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
 }
 
 /* Boxed card at the end of a blog post */
@@ -1474,7 +1497,7 @@ a.tag[aria-current] {
     color: var(--text-muted);
 }
 
-/* ---------- Feature block (homepage aSPARK showcase) ---------- */
+/* ---------- Feature block (homepage highlight) ---------- */
 
 .feature {
     display: grid;
@@ -1498,7 +1521,8 @@ a.tag[aria-current] {
     margin: 0;
 }
 
-.feature__media video {
+.feature__media video,
+.feature__media img {
     display: block;
     width: 100%;
     height: auto;

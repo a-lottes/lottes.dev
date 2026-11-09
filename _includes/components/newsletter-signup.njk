@@ -2,7 +2,11 @@
 {% set fieldId = "newsletter-email-" + variant %}
 <div class="newsletter newsletter--{{ variant }}" data-pagefind-ignore>
   <div class="newsletter__text">
-    <p class="newsletter__title">{{ "newsletter_title" | i18n }}</p>
+    {% if variant == "home" %}
+      <h2 class="newsletter__title">{{ "newsletter_home_title" | i18n }}</h2>
+    {% else %}
+      <p class="newsletter__title">{{ "newsletter_title" | i18n }}</p>
+    {% endif %}
     <p class="newsletter__desc">{{ "newsletter_description" | i18n }}</p>
   </div>
   <form class="newsletter__form" action="/api/subscribe" method="post" novalidate

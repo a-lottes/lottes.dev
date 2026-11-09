@@ -4,6 +4,9 @@ description: Engineering-Erkenntnisse aus produktionsnahen LLM-Pipelines mit beg
 date: 2026-04-02
 draft: false
 translationKey: long-text-lower-token-cost
+image:
+  path: ../../../../public/img/blog/long-text-lower-token-cost.jpg
+  alt: "Ein langes Dokument wird in Segmente geteilt, die durch einen schmalen orangen Spalt laufen."
 tags:
   - llm
   - prompt-engineering

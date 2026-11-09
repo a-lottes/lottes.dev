@@ -4,7 +4,7 @@
     {# Motto, tagline and feed link live in the footer to keep the header light. #}
     <a class="brand" href="{{ "/" | locale_url }}"
        title="{{ "home" | i18n }} - {{ metadata.title }} - {{ metadata.description }}">
-      <img class="brand__logo" src="/img/logo-lottes-bw.png" alt="lottes.dev" width="1265" height="312">
+      {% include "components/logo.svg.njk" %}
     </a>
 
     {% set navScope = "desktop" %}

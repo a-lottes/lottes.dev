@@ -4,6 +4,9 @@ description: "Why a feature loop doesn't fit a migration, what I was missing for
 date: 2026-10-04
 draft: false
 translationKey: agent-stop-condition
+image:
+  path: ../../../../public/img/blog/agent-stop-condition.jpg
+  alt: "A row of glowing blocks runs toward an orange gate where the path ends."
 tags:
   - agents
   - claude-code

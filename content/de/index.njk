@@ -13,7 +13,13 @@ numberOfLatestPostsToShow: 3
   <div class="hero__tooltip" id="hero-tooltip" hidden></div>
   <div class="container">
     <div class="hero__content">
-      <span class="hero__eyebrow">Agentic AI · Delivery-Führung · Governance</span>
+      <div class="hero__person">
+        <img class="hero__portrait" src="/img/andreas-lottes-256.png" width="88" height="88" alt="Porträt von Andreas Lottes">
+        <div>
+          <p class="hero__name">Andreas Lottes</p>
+          <span class="hero__eyebrow">Agentic AI · Delivery-Führung · Governance</span>
+        </div>
+      </div>
       <h1>{{ title }}</h1>
       <p class="lead">
         25 Jahre Softwareentwicklung, zuletzt als Führungskraft von Delivery-Teams mit bis zu 35 Menschen.
@@ -55,6 +61,10 @@ numberOfLatestPostsToShow: 3
 </div>
 
 <div class="container section">
+  {% set variant = "home" %}{% include "components/newsletter-signup.njk" %}
+</div>
+
+<div class="container section">
   <div class="section-head">
     <span class="section-head__label">Themen</span>
     <h2>Was dich hier erwartet</h2>
@@ -82,30 +92,7 @@ numberOfLatestPostsToShow: 3
   </ul>
 </div>
 
-<section class="section section--alt">
-  <div class="container feature">
-    <div>
-      <span class="section-head__label section-head__label--alt">Open Source</span>
-      <h2>aSPARK: Determinismus für Teams aus Menschen und Agenten</h2>
-      <p class="section-head__desc">Agenten machen Teams schneller. Sie machen es aber auch schwerer zu sagen, wer was entschieden hat, welche Regel galt und ob sich das Ergebnis reproduzieren lässt. aSPARK ist meine offene Antwort darauf.</p>
-      <ul class="feature__list">
-        <li><strong>Gates:</strong> jedes Feature durchläuft fünf Phasen, und nur ein Mensch öffnet die nächste</li>
-        <li><strong>Nachvollziehbarkeit:</strong> Stories, Code, Tests und Releases in einem lokalen Wissensgraphen verknüpft</li>
-        <li><strong>Policy-as-Code:</strong> Engineering-Standards, die geprüft und nicht nur aufgeschrieben werden</li>
-      </ul>
-      <p class="cluster">
-        <a class="button" href="https://aspark.lottes.dev/de/">aSPARK entdecken</a>
-        <a class="button button--ghost" href="https://github.com/a-lottes/aSPARK">Auf GitHub ansehen</a>
-      </p>
-    </div>
-    <figure class="feature__media">
-      <video controls playsinline preload="none"
-        poster="https://aspark.lottes.dev/assets/video/aspark-demo-poster.jpg"
-        src="https://aspark.lottes.dev/assets/video/aspark-demo-voice.mp4"></video>
-      <figcaption class="feature__caption">100-Sekunden-Demo: ein Feature durch die komplette aSPARK-Schleife.</figcaption>
-    </figure>
-  </div>
-</section>
+{% include "components/spotlight.njk" %}
 
 <div class="container section">
   {% set postsCount = collections.posts | filterCollectionLang | length %}
@@ -123,6 +110,5 @@ numberOfLatestPostsToShow: 3
 
   {% set postslist = collections.posts | filterCollectionLang | head(-1 * numberOfLatestPostsToShow) | reverse %}
   {% set postslistCounter = postsCount %}
-  {% set postslistNoImage = true %}
   {% include "postslist.njk" %}
 </div>

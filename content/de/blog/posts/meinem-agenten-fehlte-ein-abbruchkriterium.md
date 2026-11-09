@@ -4,6 +4,9 @@ description: "Warum ein Feature-Loop für Migrationen nicht passt, was mir für 
 date: 2026-10-04
 draft: false
 translationKey: agent-stop-condition
+image:
+  path: ../../../../public/img/blog/agent-stop-condition.jpg
+  alt: "Eine Reihe leuchtender Blöcke läuft auf ein oranges Tor zu, an dem der Weg endet."
 tags:
   - agenten
   - claude-code

@@ -32,6 +32,7 @@ module.exports = {
     newsletter_description: "Neue Artikel zu Agentic AI, KI-Anwendungen und Human-Machine Collaboration – selten versendet, jederzeit abbestellbar.",
     newsletter_email_label: "E-Mail-Adresse",
     newsletter_error: "Da ist etwas schiefgelaufen. Bitte versuche es später noch einmal.",
+    newsletter_home_title: "Neue Artikel direkt in dein Postfach",
     newsletter_invalid_email: "Bitte gib eine gültige E-Mail-Adresse ein.",
     newsletter_success: "Fast geschafft! Bitte bestätige deine Anmeldung über den Link, den wir dir gerade per E-Mail geschickt haben.",
     newsletter_title: "Newsletter",

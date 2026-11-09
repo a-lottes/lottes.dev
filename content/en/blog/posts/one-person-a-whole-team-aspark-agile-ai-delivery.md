@@ -4,6 +4,9 @@ description: Why I built an agile AI team as a Claude Code plugin, how the SPARK
 date: 2026-07-13
 draft: false
 translationKey: aspark-one-person-whole-team
+image:
+  path: ../../../../public/img/blog/aspark-one-person-whole-team.jpg
+  alt: "An orange node at the center, connected to a ring of five smaller nodes."
 tags:
   - agents
   - agentic-workflows
